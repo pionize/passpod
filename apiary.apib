@@ -1,0 +1,2301 @@
+FORMAT: 1A
+HOST: http://api.passpod.project.skyshi.com
+
+# Passpod
+
+
+## Auth [/auth]
+
+### Social Login [POST /auth/login/social]
+
++ Request (application/json)
+    + Attributes (Social LoginRequest)
+
+    + Body
+
+            {
+                "provider_type": "facebook",
+                "provider_id": "10209485407847211",
+                "provider_token": "EAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
+                    "active": true,
+                    "dob": null,
+                    "phone_number": null,
+                    "last_login": null,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "profile_picture": null,
+                    "role": "user",
+                    "created_at": 1519007793,
+                    "updated_at": 1519007793,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUxOTAyNzAyN30.IBZZA9cVdJh6i3Knqwc0OOTQi4udmwtEFLoZaUqvg7k"
+                }
+            }
+
+
+### Register [POST /auth/register]
+
++ Request (application/json)
+    + Attributes (RegisterRequest)
+
+    + Body
+
+            {
+                "first_name": "Andrew",
+                "last_name": "Junio",
+                "email": "developer@skyshi.com",
+                "password": "12345678"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "created_at": 1518973200,
+                    "updated_at": 1518973200,
+                    "id": "8a284be0-154a-11e8-b4b3-e936d74dc3cb",
+                    "active": false,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "email": "developer@skyshi.com",
+                    "first_name": "Andrew",
+                    "last_name": "Junior",
+                    "role": "user",
+                    "profile_picture": null,
+                    "last_login": 1519027053
+                }
+            }
+
+
+### Forgot Password [POST /auth/reset]
+
++ Request (application/json)
+    + Attributes (Forgot PasswordRequest)
+
+    + Body
+
+            {
+                "email": "wisnugrohosatrio@gmail.com"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Email sent",
+                "meta": {},
+                "data": {}
+            }
+
+### Verify Redirect [GET /auth/redirect{?token}]
++ Parameters
+    + token (string, required)
+
+        + Sample: U2FsdGVkX1+PvbfttWFkxVdMPJthZTIC8ECBW2P3JpEw9BOfc9H/P3vcZekSuPMq
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Account has been activated",
+                "meta": {},
+                "data": {}
+            }
+
+### Verify Account [GET /auth/verify{?token}]
++ Parameters
+    + token (string, required)
+
+        + Sample: U2FsdGVkX1%20PvbfttWFkxVdMPJthZTIC8ECBW2P3JpEw9BOfc9H/P3vcZekSuPMq
+
++ Request (application/json)
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Account has been activated",
+                "meta": {},
+                "data": {}
+            }
+
+
+### Reset Password [POST /auth/reset-password]
+
++ Request (application/json)
+    + Attributes (Reset PasswordRequest)
+
+    + Body
+
+            {
+                "token": "U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==",
+                "new_password": "12345678"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Password has been updated",
+                "meta": {},
+                "data": {}
+            }
+
+
+### Local Login [POST /auth/login]
+
++ Request (application/json)
+    + Attributes (Local LoginRequest)
+
+    + Body
+
+            {
+                "email": "andrew@skyshi.com",
+                "password": "12345678"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
+                    "first_name": "Andrew",
+                    "last_name": "Junior",
+                    "email": "andrew@skyshi.com",
+                    "active": true,
+                    "dob": null,
+                    "phone_number": null,
+                    "last_login": null,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "profile_picture": null,
+                    "role": "user",
+                    "created_at": 1519022807,
+                    "updated_at": 1519023161,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzU1ZGEwLTE1NDAtMTFlOC04ZGE0LWVkMWM3NjA4Y2ZlMCIsImlhdCI6MTUxOTAyMzMyNX0.VLJiv6UKepdIoF-zaB4HwEddArz88dmm-rDd5jVBR5w"
+                }
+            }
+
+## Users [/users]
+
+### View User [GET /users/{id}]
+
++ Parameters
+    + id: a7c55da0-1540-11e8-8da4-ed1c7608cfe0 (string, required)
+
++ Request 
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
+                    "first_name": "Andrew",
+                    "last_name": "Junior",
+                    "email": "andrew@skyshi.com",
+                    "active": true,
+                    "dob": null,
+                    "phone_number": null,
+                    "last_login": 1519027506,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "profile_picture": null,
+                    "role": "user",
+                    "created_at": 1519022807,
+                    "updated_at": 1519027506
+                }
+            }
+
+
+### List Users [GET /users{?page,limit}]
++ Parameters
+    + page (number, required)
+
+        + Sample: 1
+    + limit (number, required)
+
+        + Sample: 10
+
++ Request 
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {
+                    "page": 1,
+                    "limit": 10
+                },
+                "data": [
+                    {
+                        "id": "36a26090-1523-11e8-b898-4ddf1cf72be7",
+                        "first_name": "Gregorius",
+                        "last_name": "Bangkit",
+                        "email": "gregkyt@gmail.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": "10204472385006558",
+                        "provider_type": "facebook",
+                        "provider_token": "EAAQiGg8LuYMBAAlRG9v3p1hJ9DV9MfDoD1tJ9cAr5OIJN7TfDx08H6cXuVbJZAxvkeEMNYY2TZBnuuttpD0gViALYCkAwixtPdVFl9QbW1pAZBzgf5JteuQKSiVGLIm9CyiUaSW9oCURfQrpbMxdK2bZBOhCh6h847JPZAWEcjXhts2Jxnqz7L6q3uVuRMtBBiNd4hO0FPMdQfondwpaPeG8ZAvJYBJBoZD",
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": "http://cdn.localhost.com/image/profile/profile-0628db431e914adaa955cc46e8d653e9.jpg",
+                        "role": "user",
+                        "created_at": 1519010161,
+                        "updated_at": 1519010161
+                    },
+                    {
+                        "id": "6d730960-1133-11e8-b815-ef31569eb8a0",
+                        "first_name": "admin",
+                        "last_name": "passpod",
+                        "email": "admin@passpod.id",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": 1519027447,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "admin",
+                        "created_at": 1519007793,
+                        "updated_at": 1519027447
+                    },
+                    {
+                        "id": "8a284be0-154a-11e8-b4b3-e936d74dc3cb",
+                        "first_name": "Andrew",
+                        "last_name": "Junior",
+                        "email": "scorpyku@gmail.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "user",
+                        "created_at": 1519027052,
+                        "updated_at": 1519027431
+                    },
+                    {
+                        "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
+                        "first_name": "Andrew",
+                        "last_name": "Junior",
+                        "email": "andrew@skyshi.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": 1519027525,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "user",
+                        "created_at": 1519022807,
+                        "updated_at": 1519027525
+                    },
+                    {
+                        "id": "bdaad270-153c-11e8-bfb5-8fddf774c2f8",
+                        "first_name": "Yusuf",
+                        "last_name": "Aji Wibowo",
+                        "email": "ucupper@gmail.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": true,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "user",
+                        "created_at": 1519021125,
+                        "updated_at": 1519026177
+                    },
+                    {
+                        "id": "c35872c0-152f-11e8-bfb5-8fddf774c2f8",
+                        "first_name": "Yusuf Aji",
+                        "last_name": "Wibowo",
+                        "email": "yusuf@skyshi.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": "google",
+                        "provider_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNlMTg3MTc3Zjk5ODdjMTkxMDg1MTA3ZjY4M2E2ZWEyNzdhZmJjOGQifQ.eyJhenAiOiIxMTUzODkwMjg5MDYtZW5lbHRtYjZmZ285ZTR1NGN2cHVvc2MzcWRmNnZxM2kuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxMTUzODkwMjg5MDYtY2FiaDhhNGVrcnBscm5lOG40MmpiOXMyb2RvOWwzaDUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU3Mzg0MzUwNzQ3ODQzODI5MTIiLCJoZCI6InNreXNoaS5jb20iLCJlbWFpbCI6Inl1c3VmQHNreXNoaS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNTE5MDE5MTQ5LCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJpYXQiOjE1MTkwMTU1NDksIm5hbWUiOiJZdXN1ZiBBamkgV2lib3dvIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS8tQXBycVNtOVdSWmMvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQUNTSUxqVVlSbkZpNVlSOV8ySEh4NDNyR2VEQjhxUDlEZy9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiWXVzdWYgQWppIiwiZmFtaWx5X25hbWUiOiJXaWJvd28ifQ.Ux5uPxocY9tFw4cu7JbGoto9lV_w4liNp-oAScCxwhFA8EjTpqJ_jux6kxKUAzCz7FvgVaI1-vdponNv0O76coaKMwG08gZtcKWklY0X6T55gpAU28D65jrLb3mXtX0s0_77zEe8BuNu78PlNhtc-d-ueSOaNThez8qRHmVfhkUobz5k-y4nW0Ws4GV4UI6NGtLMC_8XGTF4LPQTRf_eSqJbdkjJ4R1OIaUI7eY60uej2yjlAqd_LWro81VlYwOdgHutGtBpEBc60Bt4GgfxuBWssTS21ueIgCJLjusn14fRmzddFfs07Byhflxuy2vphcqPzD91oP7tDDnyASna-Q",
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": "http://cdn.localhost.com/image/profile/profile-9fcfd8c8c423424e6afa91af889a3d60.jpg",
+                        "role": "user",
+                        "created_at": 1519015551,
+                        "updated_at": 1519015551
+                    },
+                    {
+                        "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce5",
+                        "first_name": "user",
+                        "last_name": "passpod",
+                        "email": "user@passpod.id",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "user",
+                        "created_at": 1519007793,
+                        "updated_at": 1519007793
+                    },
+                    {
+                        "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                        "first_name": "Satrio",
+                        "last_name": "Wisnugroho",
+                        "email": "wisnugrohosatrio@gmail.com",
+                        "active": true,
+                        "dob": null,
+                        "phone_number": null,
+                        "last_login": null,
+                        "reset_password_flag": false,
+                        "phone_number_verify_flag": false,
+                        "provider_id": null,
+                        "provider_type": null,
+                        "provider_token": null,
+                        "language_code": "ID",
+                        "currency_code": "IDR",
+                        "profile_picture": null,
+                        "role": "user",
+                        "created_at": 1519007793,
+                        "updated_at": 1519007793
+                    }
+                ]
+            }
+
+
+### Get Profile [GET /users/me]
+
++ Request 
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
+                    "first_name": "Andrew",
+                    "last_name": "Junior",
+                    "email": "andrew@skyshi.com",
+                    "active": true,
+                    "dob": null,
+                    "phone_number": null,
+                    "last_login": 1519027592,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "profile_picture": null,
+                    "role": "user",
+                    "created_at": 1519022807,
+                    "updated_at": 1519027592
+                }
+            }
+
+
+### Update Profile [PUT /users]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Update ProfileRequest)
+
+    + Body
+
+            {
+                "first_name": "Satrio",
+                "last_name": "Wisnugroho",
+                "phone_number": "08231231233",
+                "language_code": "ID",
+                "currency_code": "IDR",
+                "password": "12345678"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "User Data",
+                "meta": {},
+                "data": {
+                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
+                    "first_name": "Andrew",
+                    "last_name": "Ongi",
+                    "email": "andrew@skyshi.com",
+                    "active": true,
+                    "dob": null,
+                    "phone_number": "08562905595",
+                    "last_login": 1519027707,
+                    "reset_password_flag": false,
+                    "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "language_code": "ID",
+                    "currency_code": "IDR",
+                    "profile_picture": null,
+                    "role": "user",
+                    "created_at": 1519022807,
+                    "updated_at": 1518973200
+                }
+            }
+
+
+## Banners [/banners]
+
+### View all banners [GET /banners]
+
++ Request 
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "All Banner data",
+                "meta": {},
+                "data": [
+                    {
+                        "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
+                        "title": "Banner main",
+                        "filename": "bannermain.jpg",
+                        "priority": 3,
+                        "link": null,
+                        "created_at": "2018-02-19T16:58:27.000Z",
+                        "updated_at": "2018-02-20T08:09:05.000Z"
+                    }
+                ]
+            }
+
+### Register new banner [POST /banners]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Register new bannerRequest)
+
+    + Body
+
+            {
+                "title": "Banner main",
+                "filename": "bannermain.jpg",
+                "priority": "3",
+                "created_at": "2018-02-19T16:58:27Z",
+                "updated_at": "2018-02-19T16:58:27Z"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success creating new banner",
+                "meta": {},
+                "data": {
+                    "created_at": "2018-02-19T16:58:27.000Z",
+                    "updated_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
+                    "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
+                    "title": "Banner main",
+                    "filename": "bannermain.jpg",
+                    "priority": "3"
+                }
+            }
+
+
+## Coupons [/coupons]
+
+### Get All [GET /coupons]
+
++ Request 
+    + Headers
+
+            Authorization: {{authorization}}
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Coupon Data",
+                "meta": {},
+                "data": [
+                    {
+                        "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                        "code": "YEYEAH",
+                        "title": "Discount akhir tahun lagi!",
+                        "status": "unavailable",
+                        "image": null,
+                        "max_usage": "10",
+                        "max_usage_per_user": "2",
+                        "platform": "all",
+                        "first_order_only": false,
+                        "first_user_only": false,
+                        "product_type": "all",
+                        "discount_type": "PERCENTAGE_CUT",
+                        "discount_amount": "0",
+                        "start_at": "2018-02-23T10:38:07.000Z",
+                        "end_at": "2018-03-23T10:38:07.000Z",
+                        "description": "Something is happening! Take cover!",
+                        "min_amount": 500000,
+                        "country_code": null,
+                        "created_at": "2018-02-23T03:38:07.000Z",
+                        "updated_at": "2018-02-23T03:38:07.000Z"
+                    },
+                    {
+                        "id": "3057b660-1774-11e8-9284-07fb71fb3431",
+                        "code": "BANGBANG",
+                        "title": "Discount 80% at Abang Abang Yeah!",
+                        "status": "available",
+                        "image": null,
+                        "max_usage": "1",
+                        "max_usage_per_user": "1",
+                        "platform": "all",
+                        "first_order_only": false,
+                        "first_user_only": false,
+                        "product_type": "all",
+                        "discount_type": "PRICE_CUT",
+                        "discount_amount": "200000",
+                        "start_at": "2018-02-23T10:38:07.000Z",
+                        "end_at": "2018-05-23T10:38:07.000Z",
+                        "description": null,
+                        "min_amount": 0,
+                        "country_code": null,
+                        "created_at": "2018-02-23T03:38:07.000Z",
+                        "updated_at": "2018-02-23T03:38:07.000Z"
+                    },
+                    {
+                        "id": "4d45e980-1775-11e8-9284-07fb71fb3431",
+                        "code": "OYISAM",
+                        "title": "Diskon khusus orang Malang!",
+                        "status": "available",
+                        "image": null,
+                        "max_usage": "1",
+                        "max_usage_per_user": "2",
+                        "platform": "all",
+                        "first_order_only": false,
+                        "first_user_only": false,
+                        "product_type": "all",
+                        "discount_type": "PERCENTAGE_CUT",
+                        "discount_amount": "1",
+                        "start_at": "2018-02-23T10:38:07.000Z",
+                        "end_at": "2018-04-23T10:38:07.000Z",
+                        "description": "Oyi saam! Diskon henam!",
+                        "min_amount": 0,
+                        "country_code": null,
+                        "created_at": "2018-02-23T03:38:07.000Z",
+                        "updated_at": "2018-02-23T03:38:07.000Z"
+                    }
+                ]
+            }
+
+
+### Create new coupon [POST /coupons]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Create new couponRequest)
+
+    + Body
+
+            {
+                "code": "BANGBANG",
+                "title": "holiday!!"
+                "status": "available",
+                "max_usage": "1",
+                "max_usage_per_user": "1",
+                "discount_type": "PRICE_CUT",
+                "discount_amount": "200000",
+                "start_at": "2018-02-18T00:00:00Z",
+                "end_at": "2018-02-21T00:00:00Z",
+                "description": null,
+                "min_amount": 0
+            }
+
+
++ Response 200
+
+### Get one coupon [GET /coupons/{id}]
+
++ Parameters
+    + id: 262c2580-1775-11e8-9284-07fb71fb3431 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success acquiring coupon",
+                "meta": {},
+                "data": {
+                    "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                    "code": "YEYEAH",
+                    "title": "Discount akhir tahun lagi!",
+                    "status": "unavailable",
+                    "image": null,
+                    "max_usage": "10",
+                    "max_usage_per_user": "2",
+                    "platform": "all",
+                    "first_order_only": false,
+                    "first_user_only": false,
+                    "product_type": "all",
+                    "discount_type": "PERCENTAGE_CUT",
+                    "discount_amount": "0",
+                    "start_at": "2018-02-23T10:38:07.000Z",
+                    "end_at": "2018-03-23T10:38:07.000Z",
+                    "description": "Something is happening! Take cover!",
+                    "min_amount": 500000,
+                    "country_code": null,
+                    "created_at": "2018-02-23T03:38:07.000Z",
+                    "updated_at": "2018-02-23T03:38:07.000Z"
+                }
+            }
+
+### Update coupon [PUT /coupons/{id}]
+
++ Parameters
+    + id: 262c2580-1775-11e8-9284-07fb71fb3431 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Update couponRequest)
+
+    + Body
+
+            {
+                "code": "BANGGUBANG",
+                "status": "available",
+                "max_usage": "1",
+                "max_usage_per_user": "1",
+                "discount_type": "PRICE_CUT",
+                "discount_amount": "200000",
+                "start_at": "2018-02-18T00:00:00Z",
+                "end_at": "2018-02-21T00:00:00Z",
+                "description": null,
+                "min_amount": 0
+            }
+
+
++ Response 200 
+
+### Delete coupon [DELETE]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+
++ Response 200 
+
+
+
+## Images [/images]
+
+### Upload Images [POST /images]
++ Attributes
+    + images (string, required)
+
+    + type (string, required)
+
+        + Sample: `profile`, `destination-image`
+
++ Request (application/x-www-form-urlencoded)
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Upload success",
+                "meta": {},
+                "data": {
+                    "images": [
+                        {
+                            "name": "profile-693e9af84d38fca89a8f61a2fc7183_0.png"
+                        }
+                    ]
+                }
+            }
+
+
+## Top Destinations [/top_destinations]
+
+### Get top destination by Id [GET /top_destinations/{id}]
+
++ Parameters
+    + id: ae98e040-15f7-11e8-aa79-83b62653d13c (string, required)
+
++ Request (application/json)
+
++ Response 200 
+    
+            {
+                "code": 200,
+                "status": true,
+                "message": "Top destinations data for 789fb630-1aac-11e8-8e4b-c76e6258985d",
+                "meta": {},
+                "data": {
+                    "id": "789fb630-1aac-11e8-8e4b-c76e6258985d",
+                    "name": "Chiang Mai",
+                    "remote_id": "6d730960-1133-11e8-b815-ef21569eb8a0",
+                    "image_file": null,
+                    "experience_count": 0,
+                    "link": null,
+                    "created_at": "2018-02-26T04:21:09.000Z",
+                    "updated_at": "2018-02-26T04:21:09.000Z",
+                    "deleted_at": null
+                }
+            }
+
+
+### Delete top destination [DELETE /top_destinations/{id}]
+
++ Parameters
+    + id: ae98e040-15f7-11e8-aa79-83b62653d13c (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+
++ Response 200 
+
+
+
+### Update top destination [PUT /top_destinations/{id}]
+
++ Parameters
+    + id: ae98e040-15f7-11e8-aa79-83b62653d13c (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Update top destinationRequest)
+
+    + Body
+
+            {
+                "name": "Chiang Mau",
+                "remote_id": "6d730960-1133-11e8-b815-ef21569eb8a0",
+                "banner_file": "lalala.jpg",
+                "experience_count": 0,
+                "created_at": "2018-02-20T11:30:49Z",
+                "updated_at": "2018-02-20T11:30:49Z"
+            }
+
+
++ Response 200 
+
+
+
+### Create new top destination [POST /top_destinations]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Create new top destinationRequest)
+
+    + Body
+
+            {
+                "name": "Chiang Mai",
+                "remote_id": "6d730960-1133-11e8-b815-ef21569eb8a0",
+                "banner_file": "lalala.jpg",
+                "experience_count": 0
+            }
+
+
++ Response 200 
+
+
+
+### Get all top destinations [GET /top_destinations]
+
++ Request (application/json)
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "All top destinations",
+                "meta": {},
+                "data": [
+                    {
+                        "id": "789fb630-1aac-11e8-8e4b-c76e6258985d",
+                        "name": "Chiang Mai",
+                        "remote_id": "6d730960-1133-11e8-b815-ef21569eb8a0",
+                        "image_file": null,
+                        "experience_count": 0,
+                        "link": null,
+                        "created_at": "2018-02-26T04:21:09.000Z",
+                        "updated_at": "2018-02-26T04:21:09.000Z",
+                        "deleted_at": null
+                    }
+                ]
+            }
+
+
+
+## Markup Prices [/markup_prices]
+
+### Get one markup prices [GET /markup_prices/{id}]
+
++ Parameters
+    + id: 6d730960-1133-11e8-b815-ef31569eb8a0 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+
++ Response 200 
+
+
+
+### Update one markup prices [PUT /markup_prices/{id}]
+
++ Parameters
+    + id: 8c6a1250-16ba-11e8-a226-09f99edc5548 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Update one markup pricesRequest)
+
+    + Body
+
+            {
+                "attraction_id": "6d730960-1133-11e8-b815-ef31569eb8a0",
+                "markup_value": "1200"
+            }
+
+
++ Response 200 
+
+
+
+
+### Get all markup prices [GET /markup_prices]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+
++ Response 200 
+
+
+
+### Create new markup prices [POST /markup_prices]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Create new markup pricesRequest)
+
+    + Body
+
+            {
+                "attraction_id": "6d730960-1133-11e8-b815-ef31569eb8a0",
+                "markup_value": "120"
+            }
+
+
++ Response 200 
+
+
+### Delete one markup prices [DELETE /markup_prices/{id}]
+
++ Parameters
+    + id: 3c7eabb0-16bb-11e8-a6bb-7fa88db32eaf (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+
++ Response 200 
+
+
+## Attractions [/attractions]
+
+
+### Detail [GET /attractions/{id}]
+
++ Parameters
+    + id: d5a03ea2-e06e-5d01-84b7-94530b1059f7 (string, required)
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Attraction Detail",
+                "meta": {},
+                "data": {
+                    "uuid": "d5a03ea2-e06e-5d01-84b7-94530b1059f7",
+                    "updatedAt": "2018-02-01 10:45:33",
+                    "title": "Universal Studios Singapore E-ticket",
+                    "titleTranslated": "Universal Studios Singapore E-ticket",
+                    "description": "Experience different cutting-edge rides, shows, and attractions based on your favourite blockbuster films and television series at Universal Studios Singapore. This skip-the-line e-ticket will let guests have access to the seven zones of the park, including Hollywood, New York, Sci-Fi City, Ancient Egypt, Lost World, Far Far Away, and Madagascar.\n\nIn Hollywood, ticket holders can try rollercoasters and other movie-themed attractions. They will also see thrilling, timed fireworks bursting on the sky at night when in Lake Hollywood Spectacular. Here, they can watch as the fireworks dance and light up the night to the tune of an upbeat musical score. The New York City themed zone is where they'll see the streets of the Big Apple. They can also join their feathered friends at Sesame Street Stage Shows, where they can sing along to the feet-tapping tunes of \"Our Favourite Things\" and \"Dance with Bert and Ernie.\"\n\nExplore the unknown at Sci-Fi City, where portals seem to connect to another world. It is also where guests can witness an intergalactic battle of good versus evil, aptly called Battlestar Galactica: HUMAN vs. CYLON. Join the ride with Optimus Prime and the Autobots at TRANSFORMERS the Ride: The Ultimate 3D Battle. The goal here is to become a freedom fighter against the forces of evil. The tropical jungle awaits in Madagascar, where guests can join a river boat adventure or ride a carousel at King Julien's Beach Party-Go-Round. When hunger calls, try some Southeast Asian food at Marty's Casa Del Wild Food Court or some fast food favourites at Gloria's Snack Shack.",
+                    "descriptionTranslated": "Experience different cutting-edge rides, shows, and attractions based on your favourite blockbuster films and television series at Universal Studios Singapore. This skip-the-line e-ticket will let guests have access to the seven zones of the park, including Hollywood, New York, Sci-Fi City, Ancient Egypt, Lost World, Far Far Away, and Madagascar.\n\nIn Hollywood, ticket holders can try rollercoasters and other movie-themed attractions. They will also see thrilling, timed fireworks bursting on the sky at night when in Lake Hollywood Spectacular. Here, they can watch as the fireworks dance and light up the night to the tune of an upbeat musical score. The New York City themed zone is where they'll see the streets of the Big Apple. They can also join their feathered friends at Sesame Street Stage Shows, where they can sing along to the feet-tapping tunes of \"Our Favourite Things\" and \"Dance with Bert and Ernie.\"\n\nExplore the unknown at Sci-Fi City, where portals seem to connect to another world. It is also where guests can witness an intergalactic battle of good versus evil, aptly called Battlestar Galactica: HUMAN vs. CYLON. Join the ride with Optimus Prime and the Autobots at TRANSFORMERS the Ride: The Ultimate 3D Battle. The goal here is to become a freedom fighter against the forces of evil. The tropical jungle awaits in Madagascar, where guests can join a river boat adventure or ride a carousel at King Julien's Beach Party-Go-Round. When hunger calls, try some Southeast Asian food at Marty's Casa Del Wild Food Court or some fast food favourites at Gloria's Snack Shack.",
+                    "highlights": "Experience cutting-edge rides, shows, and attractions at Universal Studios Singapore\nVisit the seven themed zones of the park like Ancient Egypt, Lost World, and Madagascar\nMeet your favourite movie and TV characters like Shrek, Puss in Boots, and the Madagascar gang\nGet instant confirmation and receive your e-ticket via email after booking",
+                    "highlightsTranslated": "Experience cutting-edge rides, shows, and attractions at Universal Studios Singapore\nVisit the seven themed zones of the park like Ancient Egypt, Lost World, and Madagascar\nMeet your favourite movie and TV characters like Shrek, Puss in Boots, and the Madagascar gang\nGet instant confirmation and receive your e-ticket via email after booking",
+                    "additionalInfo": "Changes on operating hours due to private events:\nThu, 13 Jul 2017- 10:00 to 19:00\nThu, 20 Jul 2017- 10:00 to 18:00\n\nWhat to wear:\n- A comfortable set of clothes\n- A good pair of walking shoes\n\nWhat to bring:\n- Bottled water\n- Face towel",
+                    "additionalInfoTranslated": "Changes on operating hours due to private events:\nThu, 13 Jul 2017- 10:00 to 19:00\nThu, 20 Jul 2017- 10:00 to 18:00\n\nWhat to wear:\n- A comfortable set of clothes\n- A good pair of walking shoes\n\nWhat to bring:\n- Bottled water\n- Face towel",
+                    "priceIncludes": "Admission fee",
+                    "priceIncludesTranslated": "",
+                    "priceExcludes": "Personal expenses\nTips\nTransfer services",
+                    "priceExcludesTranslated": "\n\n",
+                    "validFrom": null,
+                    "validThrough": null,
+                    "itinerary": "",
+                    "itineraryTranslated": "",
+                    "warnings": "- The park shall remain operational in case of light rains. The decision to proceed is up to the ticket holder.\n\nSafety and insurance:\n- Children below 12 years old must be accompanied by a paying adult at all times.\n- Detailed information about ride restrictions can be found at the Guest Services Windows located at the front part of the park. It is also available at the Guest Services Lobby inside the park.",
+                    "warningsTranslated": "- The park shall remain operational in case of light rains. The decision to proceed is up to the ticket holder.\n\nSafety and insurance:\n- Children below 12 years old must be accompanied by a paying adult at all times.\n- Detailed information about ride restrictions can be found at the Guest Services Windows located at the front part of the park. It is also available at the Guest Services Lobby inside the park.",
+                    "safety": "",
+                    "safetyTranslated": "",
+                    "latitude": "1.2544975",
+                    "longitude": "103.8251792",
+                    "minPax": 1,
+                    "maxPax": 20,
+                    "basePrice": 66.9,
+                    "currency": {
+                        "code": "SGD",
+                        "symbol": "S$",
+                        "uuid": "cd15153e-dfd1-5039-8aa3-115bec58e86e"
+                    },
+                    "isFlatPaxPrice": true,
+                    "reviewCount": 3,
+                    "reviewAverageScore": 4.3,
+                    "typeName": "Attraction",
+                    "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                    "photosUrl": "https://s3.amazonaws.com/playground.bemyguest.com.sg",
+                    "businessHoursFrom": "10:00",
+                    "businessHoursTo": "20:00",
+                    "averageDelivery": 64,
+                    "hotelPickup": false,
+                    "airportPickup": false,
+                    "hasOptions": false,
+                    "allProductTypesHaveOptions": false,
+                    "photos": [
+                        {
+                            "caption": null,
+                            "uuid": "d184f229-a517-5bdc-9c0d-3bcd74598c2c",
+                            "paths": {
+                                "original": "/images/content/original/137656i500d95fcd6f100de346f53c774e90569.jpg",
+                                "75x50": "/images/content/75x50/137656i500d95fcd6f100de346f53c774e90569.jpg",
+                                "175x112": "/images/content/175x112/137656i500d95fcd6f100de346f53c774e90569.jpg",
+                                "680x325": "/images/content/680x325/137656i500d95fcd6f100de346f53c774e90569.jpg",
+                                "1280x720": "/images/content/1280x720/137656i500d95fcd6f100de346f53c774e90569.jpg",
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "6de3c1ff-60db-5f91-bd4e-d8543bc93ee1",
+                            "paths": {
+                                "original": "/images/content/original/104017ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "75x50": "/images/content/75x50/104017ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "175x112": "/images/content/175x112/104017ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "680x325": "/images/content/680x325/104017ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "d874ed4f-a981-5eb1-b36a-ffa844901685",
+                            "paths": {
+                                "original": "/images/content/original/104016ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "75x50": "/images/content/75x50/104016ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "175x112": "/images/content/175x112/104016ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "680x325": "/images/content/680x325/104016ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "9d1ee311-9cf9-507c-b63f-37e2bb5a1111",
+                            "paths": {
+                                "original": "/images/content/original/104004i9293e30e18e611590cbeab0be627d341.jpg",
+                                "75x50": "/images/content/75x50/104004i9293e30e18e611590cbeab0be627d341.jpg",
+                                "175x112": "/images/content/175x112/104004i9293e30e18e611590cbeab0be627d341.jpg",
+                                "680x325": "/images/content/680x325/104004i9293e30e18e611590cbeab0be627d341.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "5da2d84e-edd9-53a8-886c-779cfc55cc44",
+                            "paths": {
+                                "original": "/images/content/original/104015ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "75x50": "/images/content/75x50/104015ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "175x112": "/images/content/175x112/104015ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "680x325": "/images/content/680x325/104015ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "084aae2f-bbe0-5d97-b75f-f962fee72b1f",
+                            "paths": {
+                                "original": "/images/content/original/104019i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "75x50": "/images/content/75x50/104019i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "175x112": "/images/content/175x112/104019i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "680x325": "/images/content/680x325/104019i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "32194abb-462b-5d0c-85ab-c00c13853455",
+                            "paths": {
+                                "original": "/images/content/original/104020i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "75x50": "/images/content/75x50/104020i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "175x112": "/images/content/175x112/104020i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "680x325": "/images/content/680x325/104020i86fa0d740e6a588bf3d85578f8edd219.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        },
+                        {
+                            "caption": null,
+                            "uuid": "61fd9485-b10c-5aff-baa2-d59bbc37d9f2",
+                            "paths": {
+                                "original": "/images/content/original/104018ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "75x50": "/images/content/75x50/104018ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "175x112": "/images/content/175x112/104018ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "680x325": "/images/content/680x325/104018ib0f0330734394e2b8edcc3f2303644f9.jpg",
+                                "1280x720": null,
+                                "1920x1080": null,
+                                "2048x1536": null
+                            }
+                        }
+                    ],
+                    "categories": [
+                        {
+                            "name": "Themeparks",
+                            "uuid": "9384f408-a941-58ba-b958-4a814c23d1bc"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "city": "Sentosa",
+                            "cityUuid": "29ad1bd7-2000-5321-aff8-f71a6464142b",
+                            "state": "Sentosa",
+                            "stateUuid": "ab7d9ac9-036d-11e5-a2a9-d07e352b4840",
+                            "country": "Singapore",
+                            "countryUuid": "885e90a3-a83d-56d3-b5e8-040b4017c825"
+                        }
+                    ],
+                    "guideLanguages": [
+                        {
+                            "name": "english",
+                            "uuid": "790395c0-23b6-5dd9-8a6b-ca61b95dcfd4"
+                        }
+                    ],
+                    "audioHeadsetLanguages": [
+                        {
+                            "name": "english",
+                            "uuid": "790395c0-23b6-5dd9-8a6b-ca61b95dcfd4"
+                        }
+                    ],
+                    "writtenLanguages": [
+                        {
+                            "name": "english",
+                            "uuid": "790395c0-23b6-5dd9-8a6b-ca61b95dcfd4"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "method": "GET",
+                            "rel": "self",
+                            "href": "https://apidemo.bemyguest.com.sg/v2/products/d5a03ea2-e06e-5d01-84b7-94530b1059f7"
+                        },
+                        {
+                            "method": "GET",
+                            "rel": "productTypes",
+                            "href": "https://apidemo.bemyguest.com.sg/v2/products/d5a03ea2-e06e-5d01-84b7-94530b1059f7/product-types"
+                        }
+                    ]
+                }
+            }
+
+
+### List Categories [GET /attractions/categories]
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Category List",
+                "meta": {},
+                "data": [
+                    {
+                        "name": "Shopping",
+                        "uuid": "9e637f20-1771-50b3-944d-900881e993ee"
+                    },
+                    {
+                        "name": "Transport",
+                        "uuid": "f3480020-2236-5547-834d-8fd59c2ea966",
+                        "children": [
+                            {
+                                "name": "Water",
+                                "uuid": "dbaff91a-1960-538b-9eba-e86a1971962f"
+                            },
+                            {
+                                "name": "Land",
+                                "uuid": "a46e7f5b-9af2-5784-9c1d-b24988971c5f"
+                            },
+                            {
+                                "name": "Air",
+                                "uuid": "cf181545-f754-58e5-8f57-eba44c384737"
+                            },
+                            {
+                                "name": "Airport Lounge",
+                                "uuid": "823d1bf7-283a-5699-837e-b67d890904cd"
+                            },
+                            {
+                                "name": "Airport Fast Track",
+                                "uuid": "6a67e471-a922-5f3a-843b-5d8a3f3e5675"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Family Fun",
+                        "uuid": "69e80c2c-2317-5968-8616-f456878416f6",
+                        "children": [
+                            {
+                                "name": "Themeparks",
+                                "uuid": "9384f408-a941-58ba-b958-4a814c23d1bc"
+                            },
+                            {
+                                "name": "Zoo",
+                                "uuid": "f3334db3-b5cf-550a-b701-b061e8cc8c0c"
+                            },
+                            {
+                                "name": "Aquarium",
+                                "uuid": "b29669a2-3b91-5f31-a262-4f0f43bf06b6"
+                            },
+                            {
+                                "name": "Safari",
+                                "uuid": "85e3bd25-ec37-5e6d-92a8-5b36c83e39b9"
+                            },
+                            {
+                                "name": "Island hopping",
+                                "uuid": "28f3ab30-8563-516b-8c19-abb3e5cdc1e5"
+                            },
+                            {
+                                "name": "Other attractions",
+                                "uuid": "8d059e9d-f5d5-5883-addb-882199861aef"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Eat & Drink",
+                        "uuid": "832d6e4b-4a4f-56a4-bbdb-4f8d8f853d82",
+                        "children": [
+                            {
+                                "name": "Fine dining",
+                                "uuid": "780c5fda-75dd-5c16-bae9-1404a6b20e9e"
+                            },
+                            {
+                                "name": "Food tasting",
+                                "uuid": "f38a888b-608e-53c9-8327-86b3b72903a1"
+                            },
+                            {
+                                "name": "Street food",
+                                "uuid": "188b0e0c-8dbf-52b9-b922-c7db5ac64109"
+                            },
+                            {
+                                "name": "Drinks tasting",
+                                "uuid": "4cf7b7db-6312-5ffb-9825-e2331a2c50fb"
+                            },
+                            {
+                                "name": "Nightlife",
+                                "uuid": "b678a4c1-ab1c-5cdc-8f30-ac13f9ddd27d"
+                            },
+                            {
+                                "name": "Cooking class",
+                                "uuid": "1b8fe9de-f662-5fdf-bdbc-4e24d2b125c5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Adventure",
+                        "uuid": "e5b28a41-3cbd-5990-98f1-2cda5cd17560",
+                        "children": [
+                            {
+                                "name": "Water",
+                                "uuid": "def01318-f24e-5f85-8794-83093f7f26cb",
+                                "children": [
+                                    {
+                                        "name": "Canoeing",
+                                        "uuid": "f9fca254-e286-5889-b398-ae81e5804246"
+                                    },
+                                    {
+                                        "name": "Rafting",
+                                        "uuid": "f1b4b564-e0d7-56cd-aca6-ff5a8952c8b6"
+                                    },
+                                    {
+                                        "name": "Surfing",
+                                        "uuid": "3cb9bcba-026a-5251-990a-0e409b79de1c"
+                                    },
+                                    {
+                                        "name": "wakeboarding",
+                                        "uuid": "3da3e8a1-1f3e-5a12-989e-5e9cb2536160"
+                                    },
+                                    {
+                                        "name": "snorkelling",
+                                        "uuid": "085a06a4-2b65-5447-9276-fb7edf687e92"
+                                    },
+                                    {
+                                        "name": "diving",
+                                        "uuid": "b7312fa4-eb07-5e20-8fa4-a3236c963947"
+                                    },
+                                    {
+                                        "name": "fishing",
+                                        "uuid": "5eafd1f4-b633-5a58-bc57-935262fbd048"
+                                    },
+                                    {
+                                        "name": "island hopping",
+                                        "uuid": "7dd6ddef-6fd1-52ec-9588-4cddcb375948"
+                                    },
+                                    {
+                                        "name": "seawalking/underwater scooter/aqua nut",
+                                        "uuid": "d7d2c890-19d1-5571-b45c-e425d398d41b"
+                                    },
+                                    {
+                                        "name": "parasailing",
+                                        "uuid": "80a69fc2-4f7f-54af-a7ab-0881f24edb28"
+                                    },
+                                    {
+                                        "name": "jet ski/water rocket",
+                                        "uuid": "a65a2c02-80d3-5997-9244-f9ba6106d200"
+                                    },
+                                    {
+                                        "name": "flyfish/banana",
+                                        "uuid": "16c42222-e200-52c0-b34d-f2a1720c8970"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Land",
+                                "uuid": "1815b91a-6248-5676-9628-5079a2e1ac6c",
+                                "children": [
+                                    {
+                                        "name": "Horseback riding",
+                                        "uuid": "ac1945bc-27c7-5f4f-894d-3e249fd08722"
+                                    },
+                                    {
+                                        "name": "Canyoning",
+                                        "uuid": "522ad893-632b-52a4-8125-3cd0e81fe55e"
+                                    },
+                                    {
+                                        "name": "Cycling",
+                                        "uuid": "d1b65dd5-a709-5b36-9b33-76b25dbf3152"
+                                    },
+                                    {
+                                        "name": "Trekking/Hiking",
+                                        "uuid": "05e5d7d9-7191-54cd-907d-15ef1eabcb91"
+                                    },
+                                    {
+                                        "name": "Golf",
+                                        "uuid": "e0ad80b0-9294-517a-9906-38355da6a747"
+                                    },
+                                    {
+                                        "name": "Skating",
+                                        "uuid": "6c0dae5e-ae85-5ba4-9fe7-264f27e8c5f1"
+                                    },
+                                    {
+                                        "name": "Motorbiking",
+                                        "uuid": "cfbd86a0-4ce8-5e45-81cb-ca300d5c7fda"
+                                    },
+                                    {
+                                        "name": "Supercar",
+                                        "uuid": "6d4a0b81-8ab4-5d94-8359-5587dd046c22"
+                                    },
+                                    {
+                                        "name": "Running Tours",
+                                        "uuid": "1aaf3813-68d8-5433-9c27-94880d6fcac7"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Mountains",
+                                "uuid": "449fefdd-b519-543b-82c2-7c31e2553197",
+                                "children": [
+                                    {
+                                        "name": "Rock Climbing",
+                                        "uuid": "16d4096a-4dc9-558a-bdc8-4fa0fdc3fc36"
+                                    },
+                                    {
+                                        "name": "Mountaneering",
+                                        "uuid": "402b999c-7846-560f-bd70-5e7219770288"
+                                    },
+                                    {
+                                        "name": "Ski/snowboard",
+                                        "uuid": "a5d47f55-f0ff-50cc-880e-54c2255f3213"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Air",
+                                "uuid": "8fd0f545-ae0c-5989-b26c-61c4dda074d0",
+                                "children": [
+                                    {
+                                        "name": "Balloon flight",
+                                        "uuid": "46726b4f-1dd1-57c2-9592-bb167709d537"
+                                    },
+                                    {
+                                        "name": "Helicopter flight",
+                                        "uuid": "6e401012-67a0-54f6-9159-dadc1629a703"
+                                    },
+                                    {
+                                        "name": "Paragliding",
+                                        "uuid": "88348e99-0e1f-52e1-940b-1f0587f803f2"
+                                    },
+                                    {
+                                        "name": "Seaplane/ultralight",
+                                        "uuid": "e03fde92-b1c4-557f-a51f-d5f04a99a111"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Extreme",
+                                "uuid": "ac275323-b6e4-5cf7-ab54-f997d2ed1653",
+                                "children": [
+                                    {
+                                        "name": "Bungee-jumping",
+                                        "uuid": "ecb1780a-31de-5334-9e49-0cbfc8cda016"
+                                    },
+                                    {
+                                        "name": "Skydiving",
+                                        "uuid": "2639f895-c414-5824-8387-7ba6a532e587"
+                                    },
+                                    {
+                                        "name": "Zip-lining",
+                                        "uuid": "8e893c55-c366-5745-bbfc-62897b5a9ea9"
+                                    },
+                                    {
+                                        "name": "Space travel",
+                                        "uuid": "ddf9eb59-5bee-5dfc-b66a-7c903362026e"
+                                    },
+                                    {
+                                        "name": "Jet flight/ultralight",
+                                        "uuid": "aeeb4277-29de-5c4a-a424-20b2cd19a86e"
+                                    },
+                                    {
+                                        "name": "Zorb Ball",
+                                        "uuid": "2899b2ac-4a4b-5650-8cab-2726a4db40e6"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Culture",
+                        "uuid": "036319cf-bff3-554f-adfc-97fc9639f767",
+                        "children": [
+                            {
+                                "name": "Sightseeing",
+                                "uuid": "798bc728-97e0-5924-badb-0bceafb825de",
+                                "children": [
+                                    {
+                                        "name": "Sightseeing tour",
+                                        "uuid": "8bf1af4c-cf52-5219-beb1-fe09d0812044"
+                                    },
+                                    {
+                                        "name": "Cultural tour",
+                                        "uuid": "d2828fdb-a185-52db-b984-c8e35be6ead7"
+                                    },
+                                    {
+                                        "name": "Cruising",
+                                        "uuid": "0a5cc227-fdab-519f-a49f-4e564c9bdd80"
+                                    },
+                                    {
+                                        "name": "City hop on-hop off",
+                                        "uuid": "df8a68f2-c165-53e4-a7db-a09df6429070"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Local performance",
+                                "uuid": "467a0ad5-2d32-5df4-83d8-92d185343e2e",
+                                "children": [
+                                    {
+                                        "name": "Music performance",
+                                        "uuid": "d2299705-8da4-52ce-937d-0142b6e5c306"
+                                    },
+                                    {
+                                        "name": "Dance performance",
+                                        "uuid": "f6a5b828-bec3-5c77-84aa-8f3bf326ce5c"
+                                    },
+                                    {
+                                        "name": "Sport performance",
+                                        "uuid": "0fb6fe35-2cb7-5bb0-afc6-0bedb8c727ee"
+                                    },
+                                    {
+                                        "name": "Cooking show",
+                                        "uuid": "a90ce1d8-e6de-5c8c-a06b-dae2df4e5f13"
+                                    },
+                                    {
+                                        "name": "Other performance",
+                                        "uuid": "fcd8d53a-b271-5993-9815-0468136988c5"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Learning",
+                                "uuid": "0a3aeecd-49af-585b-8290-81631d0203e0",
+                                "children": [
+                                    {
+                                        "name": "Cooking class",
+                                        "uuid": "d7921b1d-9459-564d-97e2-adb8bb1a65d1"
+                                    },
+                                    {
+                                        "name": "Local arts and crafts class",
+                                        "uuid": "e566e6a1-f833-5879-aaeb-211c378eafc8"
+                                    },
+                                    {
+                                        "name": "Local traditions and rituals class",
+                                        "uuid": "3f14a8e9-cb4e-52ea-a2ee-1eb44828d151"
+                                    },
+                                    {
+                                        "name": "Other Learning",
+                                        "uuid": "651b9a5e-7fd9-5c7f-b245-52a78d6db907"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Community-based Tourism",
+                                "uuid": "9429f54c-dfcc-5f5f-b860-ed19db9424e9"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nature",
+                        "uuid": "16160c37-7ec8-521b-903b-5543d523932b",
+                        "children": [
+                            {
+                                "name": "Wildlife",
+                                "uuid": "8dd83a91-779c-55c0-b2c7-1d7153df0d0b"
+                            },
+                            {
+                                "name": "Nature parks and reserves",
+                                "uuid": "41172dda-beab-513d-868e-5beca8dde63d"
+                            },
+                            {
+                                "name": "Star Gazing",
+                                "uuid": "8bce2437-5351-5889-8a00-af097828bb59"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Wellness",
+                        "uuid": "23e73bb0-2003-5683-8612-8d87a50d977d",
+                        "children": [
+                            {
+                                "name": "Treatment",
+                                "uuid": "9a0e30e8-8a33-55f6-8005-e08e85688c54"
+                            },
+                            {
+                                "name": "Yoga",
+                                "uuid": "d5ca42be-1a60-54f4-bc35-2bbe5a29c984"
+                            },
+                            {
+                                "name": "Spiritual/Meditation",
+                                "uuid": "4ca76bb4-114f-547a-aa17-70fd352852e4"
+                            },
+                            {
+                                "name": "Detox",
+                                "uuid": "0c5bd54c-6250-5011-ab7e-d18e92a75389"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Events",
+                        "uuid": "ce90f60f-f56a-5c5a-a515-25c621a68b39"
+                    },
+                    {
+                        "name": "Once-in-a-lifetime",
+                        "uuid": "911af720-6797-5b03-8ea1-af956a592cc9"
+                    }
+                ]
+            }
+
+
+### List with Query [GET /attractions{?q}]
++ Parameters
+    + q (string, required)
+
+        + Sample: indonesia
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Attraction List",
+                "meta": {
+                    "page": 1,
+                    "limit": 10,
+                    "total": 7,
+                    "total_pages": 1
+                },
+                "data": [
+                    {
+                        "uuid": "0f89a9d7-48e3-53f2-b7f4-5b8f62972827",
+                        "updatedAt": "2017-08-08 13:51:13",
+                        "title": "Waterbom Bali E-voucher",
+                        "titleTranslated": "Waterbom Bali E-voucher",
+                        "validFrom": "2015-10-15",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 29.57,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0f89a9d7-48e3-53f2-b7f4-5b8f62972827"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0f89a9d7-48e3-53f2-b7f4-5b8f62972827/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "ff2d71cd-559b-5abe-83eb-65ce12b2db48",
+                        "updatedAt": "2017-08-08 13:51:13",
+                        "title": "Bali Safari and Marine Park E-Voucher",
+                        "titleTranslated": "Bali Safari and Marine Park E-Voucher",
+                        "validFrom": "2015-10-22",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 65.67,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/ff2d71cd-559b-5abe-83eb-65ce12b2db48"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/ff2d71cd-559b-5abe-83eb-65ce12b2db48/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1",
+                        "updatedAt": "2018-01-30 11:04:13",
+                        "title": "Bali Bird Park E-voucher",
+                        "titleTranslated": "Bali Bird Park E-voucher",
+                        "validFrom": null,
+                        "validThrough": null,
+                        "basePrice": 9.39,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "80d6b225-ae2f-5ebf-b315-5fc5ad73d74e",
+                        "updatedAt": "2018-01-30 10:55:01",
+                        "title": "Sunrise Trekking at Mount Batur",
+                        "titleTranslated": "Sunrise Trekking at Mount Batur",
+                        "validFrom": null,
+                        "validThrough": null,
+                        "basePrice": 67.94,
+                        "typeName": "Day Tour",
+                        "typeUuid": "5a5682b8-c8d6-5f15-97ef-de4c66ea5695",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/80d6b225-ae2f-5ebf-b315-5fc5ad73d74e"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/80d6b225-ae2f-5ebf-b315-5fc5ad73d74e/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "390eb044-1fe2-5d28-b0a2-d8bbdbdf5988",
+                        "updatedAt": "2017-08-08 13:51:08",
+                        "title": "Devdan Show E-Voucher",
+                        "titleTranslated": "Devdan Show E-Voucher",
+                        "validFrom": "2015-11-27",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 24.63,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/390eb044-1fe2-5d28-b0a2-d8bbdbdf5988"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/390eb044-1fe2-5d28-b0a2-d8bbdbdf5988/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "e9643d1a-3b7e-5d77-953d-3aea3c70995b",
+                        "updatedAt": "2017-11-29 09:17:39",
+                        "title": "Night Safari E-voucher",
+                        "titleTranslated": "Night Safari E-voucher",
+                        "validFrom": "2015-10-16",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 101.39,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/e9643d1a-3b7e-5d77-953d-3aea3c70995b"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/e9643d1a-3b7e-5d77-953d-3aea3c70995b/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "1fedbfa2-e32c-5096-a42a-db7b1ddcb319",
+                        "updatedAt": "2018-01-30 11:22:36",
+                        "title": "Elephant Safari Park E-Voucher",
+                        "titleTranslated": "Elephant Safari Park E-Voucher",
+                        "validFrom": null,
+                        "validThrough": null,
+                        "basePrice": 27.4,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/1fedbfa2-e32c-5096-a42a-db7b1ddcb319"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/1fedbfa2-e32c-5096-a42a-db7b1ddcb319/product-types"
+                            }
+                        ]
+                    }
+                ]
+            }
+
+### List Countries [GET /attractions/countries]
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Country List",
+                "meta": {},
+                "data": [
+                    {
+                        "name": "Angola",
+                        "code": "AO",
+                        "uuid": "c251c659-435f-5377-965a-6a1ba92a59fa"
+                    },
+                    {
+                        "name": "Burkina Faso",
+                        "code": "BF",
+                        "uuid": "b440c300-3ede-5e79-9346-24228c145a65"
+                    },
+                    {
+                        "name": "Burundi",
+                        "code": "BI",
+                        "uuid": "bd1679a9-caa7-5c54-80ea-c600eb840793",
+                        "states": {
+                            "data": [
+                                {
+                                    "name": "Bujumbura Mairie Province",
+                                    "uuid": "5ddcb6cd-aa8f-54dc-a200-dca71c283576",
+                                    "cities": {
+                                        "data": [
+                                            {
+                                                "name": "Bujumbura",
+                                                "uuid": "839bc146-4850-55de-90ed-ad0392dabfc8"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Benin",
+                        "code": "BJ",
+                        "uuid": "608cc29d-885b-50ee-823c-49ca42fa9603"
+                    },
+                    {
+                        "name": "Botswana",
+                        "code": "BW",
+                        "uuid": "aa497df8-2e4d-5d68-ba93-a88a0a9469ff"
+                    },
+                    {
+                        "name": "Congo",
+                        "code": "CD",
+                        "uuid": "380d898f-1775-5a25-9ba8-0fe4b1ab7cbe"
+                    },
+                    {
+                        "name": "Central African Republic",
+                        "code": "CF",
+                        "uuid": "08065aea-6a93-5ab1-ada2-3d7ba69165ce"
+                    },
+                    {
+                        "name": "Congo",
+                        "code": "CG",
+                        "uuid": "1f609756-3dc4-51f9-ae3f-5c7385a1841c"
+                    },
+                    {
+                        "name": "Ivory Coast",
+                        "code": "CI",
+                        "uuid": "431686b0-545c-5f89-accc-5e45b30f2543",
+                        "states": {
+                            "data": [
+                                {
+                                    "name": "Abidjan",
+                                    "uuid": "b95edeef-9c59-597c-a054-7bb7ba889d7e",
+                                    "cities": {
+                                        "data": [
+                                            {
+                                                "name": "Abidjan",
+                                                "uuid": "50c88b14-f0e4-5ecd-9ace-4e7e86af26de"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+
+
+### List by Country UUID [GET /attractions/countries/{id}{?page,limit}]
+
++ Parameters
+    + id: 6d00a09f-f616-5c08-9007-edd20bfd11cc (string, required)
+    + page (number, required)
+
+        + Sample: 1
+    + limit (number, required)
+
+        + Sample: 3
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Attraction List",
+                "meta": {
+                    "page": 1,
+                    "limit": 3,
+                    "total": 7,
+                    "total_pages": 3
+                },
+                "data": [
+                    {
+                        "uuid": "0f89a9d7-48e3-53f2-b7f4-5b8f62972827",
+                        "updatedAt": "2017-08-08 13:51:13",
+                        "title": "Waterbom Bali E-voucher",
+                        "titleTranslated": "Waterbom Bali E-voucher",
+                        "validFrom": "2015-10-15",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 29.57,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0f89a9d7-48e3-53f2-b7f4-5b8f62972827"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0f89a9d7-48e3-53f2-b7f4-5b8f62972827/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "ff2d71cd-559b-5abe-83eb-65ce12b2db48",
+                        "updatedAt": "2017-08-08 13:51:13",
+                        "title": "Bali Safari and Marine Park E-Voucher",
+                        "titleTranslated": "Bali Safari and Marine Park E-Voucher",
+                        "validFrom": "2015-10-22",
+                        "validThrough": "2018-03-31",
+                        "basePrice": 65.67,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/ff2d71cd-559b-5abe-83eb-65ce12b2db48"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/ff2d71cd-559b-5abe-83eb-65ce12b2db48/product-types"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1",
+                        "updatedAt": "2018-01-30 11:04:13",
+                        "title": "Bali Bird Park E-voucher",
+                        "titleTranslated": "Bali Bird Park E-voucher",
+                        "validFrom": null,
+                        "validThrough": null,
+                        "basePrice": 9.39,
+                        "typeName": "Attraction",
+                        "typeUuid": "d3c54653-dd05-598f-b193-f6683d1064ab",
+                        "links": [
+                            {
+                                "method": "GET",
+                                "rel": "self",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1"
+                            },
+                            {
+                                "method": "GET",
+                                "rel": "productTypes",
+                                "href": "https://apidemo.bemyguest.com.sg/v2/products/0a44057a-78af-5fd1-a6b0-3cf9ce03d0c1/product-types"
+                            }
+                        ]
+                    }
+                ]
+            }
+
+# Data Structures
+
+## RegisterRequest (object)
+
+
+### Properties
++ `first_name`: `Skyshi` (string, required) 
++ `last_name`: `Tampomas` (string, required) 
++ `email`: `developer@skyshi.com` (string, required) 
++ `password`: `12345678` (string, required) 
+
+
+## Reset PasswordRequest (object)
+
+
+### Properties
++ `token`: `U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==` (string, required) 
++ `new_password`: `12345678` (string, required) 
+
+
+## Create new couponRequest (object)
+
+
+### Properties
++ `code`: `BANGBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Create users wishlists relation with attraction ID for current userRequest (object)
+
+
+### Properties
++ `code`: `BANGBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Local LoginRequest (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
++ `password`: `12345678` (string, required) 
+
+
+## Verify PhoneRequest (object)
+
+
+### Properties
++ `code`: `568124` (string, required) 
+
+
+## Update couponRequest (object)
+
+
+### Properties
++ `code`: `BANGGUBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Create new top destinationRequest (object)
+
+
+### Properties
++ `name`: `Chiang Mai` (string, required) 
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
++ `banner_file`: `lalala.jpg` (string, required) 
++ `experience_count`: `0` (number, required) 
+
+
+## Eligible UsersCreate coupons eligibleusers relation with userRequest (object)
+
+
+### Properties
++ `code`: `BANGBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Create users wishlists relation with attraction IDRequest (object)
+
+
+### Properties
++ `code`: `BANGBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Update one markup pricesRequest (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `markup_value`: `1200` (string, required) 
+
+
+## Update single bannerRequest (object)
+
+
+### Properties
++ `title`: `Banner main` (string, required) 
++ `filename`: `bannermain.jpg` (string, required) 
++ `priority`: `3` (number, required) 
++ `link` (string, required, nullable) 
+
+
+## Update top destinationRequest (object)
+
+
+### Properties
++ `name`: `Chiang Mau` (string, required) 
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
++ `banner_file`: `lalala.jpg` (string, required) 
++ `experience_count`: `0` (number, required) 
++ `created_at`: `2/20/2018 11:30:49 AM` (string, required) 
++ `updated_at`: `2/20/2018 11:30:49 AM` (string, required) 
+
+
+## Send OTPRequest (object)
+
+
+### Properties
++ `phone_number`: `+628231231233` (string, required) 
+
+
+## Forgot PasswordRequest (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
+
+
+## ClaimersCreate coupons claimer relationship with userRequest (object)
+
+
+### Properties
++ `code`: `BANGBANG` (string, required) 
++ `status`: `available` (string, required) 
++ `max_usage`: `1` (string, required) 
++ `max_usage_per_user`: `1` (string, required) 
++ `discount_type`: `PRICE_CUT` (string, required) 
++ `discount_amount`: `200000` (string, required) 
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
++ `description` (string, required, nullable) 
++ `min_amount`: `0` (number, required) 
+
+
+## Update ProfileRequest (object)
+
+
+### Properties
++ `first_name`: `Satrio` (string, required) 
++ `last_name`: `Wisnugroho` (string, required) 
++ `country_code`: `ID` (string, required) 
++ `language_code`: `ID` (string, required) 
++ `currency_code`: `IDR` (string, required) 
++ `old_password`: `password` (string, required) 
++ `password`: `12345678` (string, required) 
++ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required) 
+
+
+## Create new markup pricesRequest (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `markup_value`: `120` (string, required) 
+
+
+## Social LoginRequest (object)
+
+
+### Properties
++ `provider_type`: `facebook` (string, required) 
++ `provider_id`: `10209485407847211` (string, required) 
++ `provider_token`: `EAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required) 
+
+
+## Register new bannerRequest (object)
+
+
+### Properties
++ `title`: `Banner main` (string, required) 
++ `filename`: `bannermain.jpg` (string, required) 
++ `priority`: `3` (string, required) 
++ `created_at`: `2/19/2018 4:58:27 PM` (string, required) 
++ `updated_at`: `2/19/2018 4:58:27 PM` (string, required)
