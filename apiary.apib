@@ -11,44 +11,41 @@ HOST: http://api.passpod.project.skyshi.com
 + Request (application/json)
     + Attributes (Social LoginRequest)
 
-    + Body
-
-            {
-                "provider_type": "facebook",
-                "provider_id": "10209485407847211",
-                "provider_token": "EAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD"
-            }
-
-
 + Response 200 
 
             {
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
                     "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
                     "first_name": "Satrio",
                     "last_name": "Wisnugroho",
                     "email": "wisnugrohosatrio@gmail.com",
                     "active": true,
                     "dob": null,
+                    "country_calling_code": null,
                     "phone_number": null,
-                    "last_login": null,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
                     "provider_id": null,
                     "provider_type": null,
                     "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "profile_picture": null,
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "created_at": 1519007793,
-                    "updated_at": 1519007793,
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUxOTAyNzAyN30.IBZZA9cVdJh6i3Knqwc0OOTQi4udmwtEFLoZaUqvg7k"
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
 
@@ -57,39 +54,41 @@ HOST: http://api.passpod.project.skyshi.com
 + Request (application/json)
     + Attributes (RegisterRequest)
 
-    + Body
-
-            {
-                "first_name": "Andrew",
-                "last_name": "Junio",
-                "email": "developer@skyshi.com",
-                "password": "12345678"
-            }
-
-
 + Response 200 
 
             {
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "created_at": 1518973200,
-                    "updated_at": 1518973200,
-                    "id": "8a284be0-154a-11e8-b4b3-e936d74dc3cb",
-                    "active": false,
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
+                    "active": true,
+                    "dob": null,
+                    "country_calling_code": null,
+                    "phone_number": null,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
+                    "provider_id": null,
+                    "provider_type": null,
+                    "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "email": "developer@skyshi.com",
-                    "first_name": "Andrew",
-                    "last_name": "Junior",
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "profile_picture": null,
-                    "last_login": 1519027053
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
 
@@ -155,14 +154,6 @@ HOST: http://api.passpod.project.skyshi.com
 + Request (application/json)
     + Attributes (Reset PasswordRequest)
 
-    + Body
-
-            {
-                "token": "U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==",
-                "new_password": "12345678"
-            }
-
-
 + Response 200 
 
             {
@@ -179,43 +170,41 @@ HOST: http://api.passpod.project.skyshi.com
 + Request (application/json)
     + Attributes (Local LoginRequest)
 
-    + Body
-
-            {
-                "email": "andrew@skyshi.com",
-                "password": "12345678"
-            }
-
-
 + Response 200 
 
             {
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
-                    "first_name": "Andrew",
-                    "last_name": "Junior",
-                    "email": "andrew@skyshi.com",
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
                     "active": true,
                     "dob": null,
+                    "country_calling_code": null,
                     "phone_number": null,
-                    "last_login": null,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
                     "provider_id": null,
                     "provider_type": null,
                     "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "profile_picture": null,
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "created_at": 1519022807,
-                    "updated_at": 1519023161,
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE3YzU1ZGEwLTE1NDAtMTFlOC04ZGE0LWVkMWM3NjA4Y2ZlMCIsImlhdCI6MTUxOTAyMzMyNX0.VLJiv6UKepdIoF-zaB4HwEddArz88dmm-rDd5jVBR5w"
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
 ## Users [/users]
@@ -223,7 +212,7 @@ HOST: http://api.passpod.project.skyshi.com
 ### View User [GET /users/{id}]
 
 + Parameters
-    + id: a7c55da0-1540-11e8-8da4-ed1c7608cfe0 (string, required)
+    + id: e7e596d0-10ad-11e8-8bed-776a5cc09ce6 (string, required)
 
 + Request 
     + Headers
@@ -236,28 +225,35 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
-                    "first_name": "Andrew",
-                    "last_name": "Junior",
-                    "email": "andrew@skyshi.com",
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
                     "active": true,
                     "dob": null,
+                    "country_calling_code": null,
                     "phone_number": null,
-                    "last_login": 1519027506,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
                     "provider_id": null,
                     "provider_type": null,
                     "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "profile_picture": null,
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "created_at": 1519022807,
-                    "updated_at": 1519027506
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
 
@@ -471,28 +467,35 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
-                    "first_name": "Andrew",
-                    "last_name": "Junior",
-                    "email": "andrew@skyshi.com",
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
                     "active": true,
                     "dob": null,
+                    "country_calling_code": null,
                     "phone_number": null,
-                    "last_login": 1519027592,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
                     "provider_id": null,
                     "provider_type": null,
                     "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "profile_picture": null,
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "created_at": 1519022807,
-                    "updated_at": 1519027592
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
 
@@ -523,30 +526,293 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "User Data",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "id": "a7c55da0-1540-11e8-8da4-ed1c7608cfe0",
-                    "first_name": "Andrew",
-                    "last_name": "Ongi",
-                    "email": "andrew@skyshi.com",
+                    "firebase_device_registration_ids": null,
+                    "recently_views": null,
+                    "id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "first_name": "Satrio",
+                    "last_name": "Wisnugroho",
+                    "email": "wisnugrohosatrio@gmail.com",
                     "active": true,
                     "dob": null,
-                    "phone_number": "08562905595",
-                    "last_login": 1519027707,
+                    "country_calling_code": null,
+                    "phone_number": null,
+                    "firebase_device_group_key": null,
+                    "last_login": 1522139011,
                     "reset_password_flag": false,
                     "phone_number_verify_flag": false,
                     "provider_id": null,
                     "provider_type": null,
                     "provider_token": null,
+                    "country_code": "ID",
                     "language_code": "ID",
                     "currency_code": "IDR",
-                    "profile_picture": null,
+                    "profile_picture": "https://cdn.passpod.project.skyshi.com/image/profile/user.png",
                     "role": "user",
-                    "created_at": 1519022807,
-                    "updated_at": 1518973200
-                }
+                    "created_at": 1522138984,
+                    "updated_at": 1522139011,
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU3ZTU5NmQwLTEwYWQtMTFlOC04YmVkLTc3NmE1Y2MwOWNlNiIsImlhdCI6MTUyMjEzOTE4MX0.2LlyJMbfQSEfMocraJDyOUhoBzWpK8HPBadu0zyv7j8"
+                },
+                "meta": {}
             }
 
+### Notification List [GET /users/notifications/]
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
+
+
+
++ Response 200 
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Notification list for user #e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+            "i18n": {},
+            "data": [
+                {
+                    "id": "1ef2cd30-323e-11e8-9504-ab142df15245",
+                    "user_id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "type": "REGISTRATION_SUCCESS",
+                    "title": "Registration succeed!",
+                    "message": "You have successfully registered to Passpod!",
+                    "language_code": "en",
+                    "action": null,
+                    "created_at": "2018-03-28T04:11:42.000Z",
+                    "updated_at": "2018-03-28T04:11:42.000Z"
+                }
+            ],
+            "meta": {
+                "page": 1,
+                "limit": 100,
+                "count": 1
+            }
+        }
+
+### Get Saved Coupons [GET /users/saved_coupons]
+
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success getting saved coupons of current user",
+            "i18n": {},
+            "data": [
+                {
+                    "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                    "discount_amount": 0,
+                    "code": "YEYEAH",
+                    "title": "Discount akhir tahun lagi!",
+                    "status": "unavailable",
+                    "image_file": null,
+                    "max_usage": 10,
+                    "max_usage_per_user": 2,
+                    "platform": "all",
+                    "first_order_only": false,
+                    "first_user_only": false,
+                    "product_type": "all",
+                    "discount_type": "PERCENTAGE_CUT",
+                    "start_at": "2018-03-27T14:20:30.000Z",
+                    "end_at": "2018-04-27T14:20:30.000Z",
+                    "description": "Something is happening! Take cover!",
+                    "min_amount": 500000,
+                    "country_code": null,
+                    "created_at": "2018-03-27T06:20:30.000Z",
+                    "updated_at": "2018-03-27T06:20:30.000Z",
+                    "userSavedCoupon": {
+                        "id": "7bd9ee20-325c-11e8-9f3f-71fac4b473f5",
+                        "user_id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                        "coupon_id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                        "created_at": "2018-03-28T07:49:03.000Z",
+                        "updated_at": "2018-03-28T07:49:03.000Z"
+                    }
+                }
+            ],
+            "meta": {}
+        }
+        
+### Add Coupon to Wishlist [POST /users/saved_coupons/]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Add Attraction to Current User WishlistRequest)
+
+    + Body
+
+            {
+                "couponUUID": "262c2580-1775-11e8-9284-07fb71fb3431"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success adding saved coupons of current user",
+                "i18n": {},
+                "data": {
+                    "id": "7bd9ee20-325c-11e8-9f3f-71fac4b473f5",
+                    "user_id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "coupon_id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                    "created_at": "2018-03-28T07:49:03.106Z",
+                    "updated_at": "2018-03-28T07:49:03.106Z"
+                },
+                "meta": {}
+            }
+            
+### Remove Coupon From User Wishlist [DELETE /users/saved_coupons/{id}]
+
++ Parameters
+    + id: 262c2580-1775-11e8-9284-07fb71fb3431 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Remove Attraction from Current User WishlistRequest)
+
+    + Body
+
+            {
+                "couponUUID": "262c2580-1775-11e8-9284-07fb71fb3431"
+            }
+
+
++ Response 200 
+
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success removing saved coupons of current user",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
+            
+### Get Current User Wishlist [GET /users/wishlists{?language_code,currency_code}]
++ Parameters
+    + language_code (string, required)
+
+        + Sample: ID
+    + currency_code (string, required)
+
+        + Sample: IDR
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success getting wishlists of user #e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                "i18n": {},
+                "data": [{
+                    "local_photos": [{
+                        "caption": "No Image Found",
+                        "paths": {
+                            "680x325": "http://localhost:5000/image/attractions/680x325-no-image-found.png",
+                            "1280x720": "http://localhost:5000/image/attractions/1280x720-no-image-found.png"
+                        }
+                    }],
+                    "available_dates": [
+                        "2018-03-26",
+                        "2018-03-27",
+                        "2018-03-28",
+                        "2018-03-29",
+                        "2018-03-30",
+                        "2018-03-31"
+                    ],
+                    "id": "642cf2e0-f2bf-5120-a496-6383be750b62",
+                    "short_id": "SyUnuvBUqM",
+                    "base_price": 304314.31299999997,
+                    "business_hours_from": "11:00",
+                    "business_hours_to": "18:00",
+                    "latitude": "4.6248581",
+                    "longitude": "101.1545003",
+                    "city": {
+                        "id": "936c0577-6eb1-56e8-baef-06b76aff9c04",
+                        "name": "Ipoh"
+                    },
+                    "available": true,
+                    "local_photo": {
+                        "caption": "No Image Found",
+                        "paths": {
+                            "680x325": "http://localhost:5000/image/attractions/680x325-no-image-found.png",
+                            "1280x720": "http://localhost:5000/image/attractions/1280x720-no-image-found.png"
+                        }
+                    },
+                    "title": "Tiket Masuk Lost World of Tambun",
+                    "highlights": "Kunjungi Lost World of Tambun di Ipoh\nJelajahi taman bermain dengan enam area yang berbeda\nDapatkan konfirmasi instant lewat email\nGet instant confirmation via email after booking",
+                    "description": "Berbagai wahana seru akan anda temui di Lost World of Tambun, sebuah taman bermain bagi keluarga yang menawarkan atraksi-atraksi menarik bagi anak-anak dan orang dewasa.\r\n\r\n\r\nDi dalam area taman, anda bisa bermain di kolam berombak terbesar di Malaysia, Jungle Wave Pool. Ombak yang dihasilkan di kolam ini bisa mencapai ketinggian lebih dari 90 sentimeter. Kemudian ada Adventure River, sebuah wahana bagi para pengunjung untuk mengarungi sungai buatan terpanjang di negara ini dengan menggunakan perahu karet besar. Banyak pengunjung terlihat bersantai di Sandy Bay, berjemur di bawah sinar matahari sambil ditemani oleh minuman dingin yang menyegarkan.\r\n\r\n\r\nArea yang kedua adalah Amusement Park, tempat anak-anak bisa sangat bersenang-senang di wahana ringan seperti Perak Parade dan Adventure Express. Ada pula atraksi untuk orang dewasa seperti Lupe's Adventure, sebuah wahana roller coaster yang memiliki turunan curam dan juga alur yang berkelok.\r\n\r\n\r\nKehidupan liar margasatwa sangatlah nyata di Petting Zoo, area ketiga ini merupakan tempat tinggal lebih dari 55 spesies binatang. Di sini, anak-anak bisa memancing di sungai yang mengelilingi Rabbit Wonderland atau bahkan bertemu dengan bintangnya kebun binatang, Ruby the Raccoon. Rakun ini sedemikian terkenalnya sehingga penghuni area tersebut dinamakan Ruby and Friends. Di Tortoise Kingdom, anda dapat bertemu dengan Chinese Box Turtle dan Senterrapin. Di area ini pula para pengunjung dapat melihat air terjun buatan setinggi 9 meter.\r\n\r\n\r\nDi Tiger Valley, pengunjung dapat melihat kucing-kucing liar besar di taman bermain ini. Menyaksikan mereka menyantap makanan, mengelilingi kandangnya dan juga berinteraksi dengan pawangnya. Berbeda dengan Tin Valley, area ini memperkenalkan pengunjung ke beberapa industri-industri tertua di Malaysia.\r\n\r\n\r\nYang terakhir, pompa adrenalin anda di Adventure Park dengan meluncur di zipline, berjalan di ketinggian di atas tali, menaiki kayak dan melakukan aktivitas seru menggunakan zorb ball.\r\n",
+                    "additional_info": "Perlu diketahui:\r\n- Tiket ini dapat digunakan untuk masuk ke enam area di dalam Lost World of Tambun.\r\n- Ada beberapa wahana berbayar terdapat di dalam taman. Daftar lengkap wahana-wahana tersebut bisa didapat di pintu masuk.\r\n\r\nYang perlu dipakai/bawa:\r\n- Pakaian renang\r\n- Pakaian ganti/tambahan\r\n- Tabir surya\r\n",
+                    "normal_price": 305029.97631540004
+                }],
+                "meta": {
+                    "page": 1,
+                    "limit": 10,
+                    "count": 1
+                }
+            }
+            
+### Add Attraction to Wishlist [POST /users/wishlists]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Add Attraction to WishlistRequest)
+
+    + Body
+
+            {
+                "attractionUUID": "642cf2e0-f2bf-5120-a496-6383be750b62"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success adding wishlist for current user",
+                "i18n": {},
+                "data": {
+                    "id": "f6b4e6a0-3260-11e8-8be1-097d95eb5180",
+                    "user_id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                    "attraction_id": "642cf2e0-f2bf-5120-a496-6383be750b62",
+                    "created_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
+                    "updated_at": {
+                        "fn": "NOW",
+                        "args": []
+                    }
+                },
+                "meta": {}
+            }
 
 ## Banners [/banners]
 
@@ -2076,6 +2342,268 @@ HOST: http://api.passpod.project.skyshi.com
 
 # Data Structures
 
+## Delete oneRequest (object)
+
+
+### Properties
++ `name`: `modem-1` (string, required) 
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
++ `supplier`: `vodafone` (string, required) 
++ `status`: `broken` (string, required) 
++ `purchase_price`: `700.0000` (string, required) 
++ `warehouse`: `sing-tel-ware` (string, required) 
++ `currency_code`: `USD` (string, required) 
+
+
+## Add Attraction to WishlistRequest (object)
+
+
+### Properties
++ `attractionUUID`: `642cf2e0-f2bf-5120-a496-6383be750b62` (string, required) 
+
+
+## Voucher ReadyRequest (object)
+
+
+### Properties
++ `type`: `vouchers_ready` (string, required) 
++ `timestamp`: `2017-11-26 10:43:14` (string, required) 
++ `links`: `2017-11-26 10:43:14` (Links, required) 
++ `item`: `2017-11-26 10:43:14` (Item, required) 
+
+
+## Links (object)
+
+
+### Properties
++ `self`: `https://api.bemyguest.com.sg/v2/bookings/8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
+
+
+## Item (object)
+
+
+### Properties
++ `uuid`: `8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
++ `code`: `UVWXP81` (string, required) 
++ `partnerReference` (string, required, nullable) 
++ `status`: `approved` (string, required) 
++ `productTypeTitle`: `Universal Studios Singapore E-ticket` (string, required) 
++ `productTypeTitleTranslated`: `Universal Studios Singapore E-ticket` (string, required) 
++ `productTypeUuid`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
++ `currencyCode`: `SGD` (string, required) 
++ `currencyUuid`: `cd15153e-dfd1-5039-8aa3-115bec58e86e` (string, required) 
++ `totalAmount`: `113.5` (number, required) 
++ `amountBreakdown`: `113.5` (array[AmountBreakdown], required) 
++ `arrivalDate`: `2017-12-25` (string, required) 
++ `createdAt`: `2017-11-06 14:31:59` (string, required) 
++ `updatedAt`: `2017-12-12 16:16:36` (string, required) 
++ `salutation`: `Mr.` (string, required) 
++ `firstName`: `John` (string, required) 
++ `lastName`: `Doe` (string, required) 
++ `email`: `john@sample.com` (string, required) 
++ `phone`: `+222333111` (string, required) 
++ `adults`: `1` (number, required) 
++ `children`: `1` (number, required) 
++ `seniors`: `0` (number, required) 
++ `options`: `[]` (array[string], required) 
++ `completedAt` (string, required, nullable) 
++ `cancellationRequestAt` (string, required, nullable) 
++ `refundDate` (string, required, nullable) 
++ `refundAmount` (string, required, nullable) 
++ `refundTransaction` (string, required, nullable) 
+
+
+## AmountBreakdown (object)
+
+
+### Properties
++ `name`: `adult` (string, required) 
++ `quantity`: `1` (number, required) 
++ `price`: `65` (number, required) 
+
+
+## Set maintenance statusRequest (object)
+
+
+### Properties
++ `value`: `true` (boolean, required) 
+
+
+## ClaimersDelete coupons claimer relationship with userRequest (object)
+
+
+### Properties
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
+
+
+## Add to Cart ModemRequest (object)
+
+
+### Properties
++ `productable_id` (string, required) 
++ `productable_type`: `product` (string, required) 
++ `order_detail`: `product` (OrderDetail, required) 
+
+
+## OrderDetail (object)
+
+
+### Properties
++ `qty`: `1` (number, required) 
+
+
+## Local Login  AdminRequest (object)
+
+
+### Properties
++ `email`: `admin@passpod.id` (string, required) 
++ `password`: `password` (string, required) 
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
+
+
+## Add Attraction to Current User WishlistRequest (object)
+
+
+### Properties
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
+
+
+## Resend Activation mailRequest (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
+
+
+## Update one ModemRequest (object)
+
+
+### Properties
++ `title`: `Modem One` (string, required) 
++ `description`: `Vodafone modem available to rent.` (string, required) 
++ `price`: `100` (number, required) 
++ `currency_code`: `USD` (string, required) 
++ `image_file`: `image-data.jpg` (string, required) 
++ `product_type`: `modem` (string, required) 
++ `status`: `active` (string, required) 
++ `details`: `active` (Details, required) 
+
+
+## Details (object)
+
+
+### Properties
++ `country_id`: `10a34500-5b55-53f8-baae-6f7f038eaa56` (string, required) 
+
+
+## Eligible UsersDelete coupons eligibleusers relation with userRequest (object)
+
+
+### Properties
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
+
+
+## ClaimersCreate coupons claimer relationship with userRequest (object)
+
+
+### Properties
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
+
+
+## Social LoginRequest (object)
+
+
+### Properties
++ `provider_type`: `facebook` (string, required) 
++ `provider_id`: `10209485407847211` (string, required) 
++ `provider_token`: `zEAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required) 
++ `notification_key`: `fhh33XfKLe4:APA91bEXCK09U4j2t33r7EE1-kMm0ryx4YR0bVsNguAePGruhsO5nCODvAiHYcVNunW-3UnJzvjhugFXDEvSQ1ECCiHnXFNLZ9xAyythGgboS0Lg9Xz7LJ8154WtvYUoS_kQ7zV7lxqE` (string, optional) 
+
+
+## Create DestinationRequest (object)
+
+
+### Properties
++ `name`: `Java` (string, required) 
++ `image_file`: `Java` (ImageFile, required) 
++ `experience_count`: `0` (number, required) 
++ `priority`: `1` (number, required) 
+
+
+## ImageFile (object)
+
+
+### Properties
++ `wide`: `singapore-wide.jpg` (string, required) 
++ `narrow`: `singapore-narrow.jpg` (string, required) 
+
+
+## Update couponRequest (object)
+
+
+### Properties
++ `id`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
++ `code`: `YEYEAH` (string, required) 
++ `title`: `Discount akhir tahun lagi!` (string, required) 
++ `status`: `unavailable` (string, required) 
++ `image_file`: `sample-image.jpg` (string, required) 
++ `max_usage`: `10` (string, required) 
++ `max_usage_per_user`: `2` (string, required) 
++ `platform`: `all` (string, required) 
++ `first_order_only`: `false` (boolean, required) 
++ `first_user_only`: `false` (boolean, required) 
++ `product_type`: `all` (string, required) 
++ `discount_type`: `PERCENTAGE_CUT` (string, required) 
++ `discount_amount`: `0` (string, required) 
++ `start_at`: `3/8/2018 9:57:32 AM` (string, required) 
++ `end_at`: `4/8/2018 9:57:32 AM` (string, required) 
++ `description`: `Something is happening! Take cover!` (string, required) 
++ `min_amount`: `500000` (number, required) 
++ `country_code` (string, required, nullable) 
+
+
+## Update oneRequest (object)
+
+
+### Properties
++ `name`: `modem-1` (string, required) 
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
++ `supplier`: `vodafone` (string, required) 
++ `status`: `broken` (string, required) 
++ `purchase_price`: `700.0000` (string, required) 
++ `warehouse`: `sing-tel-ware` (string, required) 
++ `currency_code`: `USD` (string, required) 
+
+
+## Add to Cart AttractionRequest (object)
+
+
+### Properties
++ `productable_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
++ `productable_type`: `attraction` (string, required) 
++ `order_detail`: `attraction` (OrderDetail24, required) 
+
+
+## OrderDetail24 (object)
+
+
+### Properties
++ `attraction_package_id`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
++ `date`: `2018-03-16` (string, required) 
++ `adults`: `1` (number, required) 
++ `children`: `0` (number, required) 
++ `seniors`: `0` (number, required) 
++ `time_slot_id` (string, required, nullable) 
+
+
+## Update one markup pricesRequest (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `markup_value`: `1200` (string, required) 
+
+
 ## RegisterRequest (object)
 
 
@@ -2084,6 +2612,113 @@ HOST: http://api.passpod.project.skyshi.com
 + `last_name`: `Tampomas` (string, required) 
 + `email`: `developer@skyshi.com` (string, required) 
 + `password`: `12345678` (string, required) 
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
+
+
+## Request Phone Number Ownership Verification Send OTPRequest (object)
+
+
+### Properties
++ `phone_number`: `+628231231233` (string, required) 
+
+
+## Update UserRequest (object)
+
+
+### Properties
++ `first_name`: `Satrio` (string, required) 
++ `last_name`: `Wisnugroho` (string, required) 
++ `country_code`: `ID` (string, required) 
++ `language_code`: `ID` (string, required) 
++ `currency_code`: `IDR` (string, required) 
++ `old_password`: `password` (string, required) 
++ `password`: `12345678` (string, required) 
++ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required) 
+
+
+## Checkout for Current UserRequest (object)
+
+
+### Properties
++ `salutation`: `Mr.` (string, required) 
++ `first_name`: `Satrio` (string, required) 
++ `last_name`: `Wisnugroho` (string, required) 
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
++ `phone_number`: `+6282138844644` (string, required) 
+
+
+## Remove Attraction from Current User WishlistRequest (object)
+
+
+### Properties
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
+
+
+## Create new markup pricesRequest (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `markup_value`: `120` (string, required) 
+
+
+## Local Login  Normal UserRequest (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
++ `password`: `password` (string, required) 
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
+
+
+## Update single bannerRequest (object)
+
+
+### Properties
++ `title`: `Banner Ones` (string, required) 
++ `priority`: `3` (number, required) 
++ `image_file`: `3` (ImageFile34, required) 
+
+
+## ImageFile34 (object)
+
+
+### Properties
++ `mobile`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg` (string, required) 
++ `original`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg` (string, required) 
+
+
+## Update DestinationRequest (object)
+
+
+### Properties
++ `priority`: `100` (number, required) 
+
+
+## Register new bannerRequest (object)
+
+
+### Properties
++ `title`: `Banner One` (string, required) 
++ `priority`: `3` (number, required) 
++ `image_file`: `3` (ImageFile34, required) 
+
+
+## Verify Phone Number ChangeRequest (object)
+
+
+### Properties
++ `code`: `82233332593` (string, required) 
+
+
+## Add popular attractionRequest (object)
+
+
+### Properties
++ `attraction_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
++ `modifier_type`: `origin` (string, required) 
++ `modifier_value`: `id` (string, required) 
++ `priority`: `1` (number, required) 
 
 
 ## Reset PasswordRequest (object)
@@ -2098,10 +2733,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 
 ### Properties
++ `title`: `Diskon akhir tahun` (string, required) 
 + `code`: `BANGBANG` (string, required) 
 + `status`: `available` (string, required) 
 + `max_usage`: `1` (string, required) 
 + `max_usage_per_user`: `1` (string, required) 
++ `image_file`: `sample-image.jpg` (string, required) 
 + `discount_type`: `PRICE_CUT` (string, required) 
 + `discount_amount`: `200000` (string, required) 
 + `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
@@ -2110,20 +2747,87 @@ HOST: http://api.passpod.project.skyshi.com
 + `min_amount`: `0` (number, required) 
 
 
-## Create users wishlists relation with attraction ID for current userRequest (object)
+## Create new couponErrorResponse (object)
 
 
 ### Properties
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
++ `code`: `400` (number, required) 
++ `status`: `false` (boolean, required) 
++ `message`: `Bad Request` (string, required) 
++ `meta`: `{}` (object, required) 
++ `data`: `{}` (array[Datum], required) 
+
+
+## Datum (object)
+
+
+### Properties
++ `title.presence` (TitlePresence, required) 
+
+
+## TitlePresence (object)
+
+
+### Properties
++ `en`: `Title can't be blank` (string, required) 
++ `id`: `Title can't be blank` (string, required) 
+
+
+## Update popular attractionRequest (object)
+
+
+### Properties
++ `attraction_id`: `258c5832-1ac6-11e8-8572-100ba914aaac` (string, required) 
++ `origin`: `eng` (string, required) 
++ `priority`: `1` (number, required) 
+
+
+## Eligible UsersCreate coupons eligibleusers relation with userRequest (object)
+
+
+### Properties
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
+
+
+## Forgot PasswordRequest (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
+
+
+## Create new ModemRequest (object)
+
+
+### Properties
++ `title`: `Sample Modem One` (string, required) 
++ `description`: `Vodafone modem available to rent.` (string, required) 
++ `price`: `100` (number, required) 
++ `currency_code`: `USD` (string, required) 
++ `image_file`: `image-data.jpg` (string, required) 
++ `product_type`: `modem` (string, required) 
++ `status`: `active` (string, required) 
++ `details`: `active` (Details, required) 
+
+
+## Create newRequest (object)
+
+
+### Properties
++ `name`: `modem-1` (string, required) 
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
++ `supplier`: `vodafone` (string, required) 
++ `status`: `broken` (string, required) 
++ `purchase_price`: `700.0000` (string, required) 
++ `warehouse`: `sing-tel-ware` (string, required) 
++ `currency_code`: `USD` (string, required) 
+
+
+## Verify Phone Number OwnershipRequest (object)
+
+
+### Properties
++ `code`: `568124` (string, required) 
 
 
 ## Local LoginRequest (object)
@@ -2131,30 +2835,36 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Properties
 + `email`: `wisnugrohosatrio@gmail.com` (string, required) 
++ `password`: `password` (string, required) 
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (string, required) 
+
+
+## Request Phone Number ChangeRequest (object)
+
+
+### Properties
++ `phone_number`: `+6282233332593` (string, required) 
+
+
+## RegisterRequest54 (object)
+
+
+### Properties
++ `first_name`: `Skyshi` (string, required) 
++ `last_name`: `Tampomas` (string, required) 
++ `email`: `developessr@skyshi.com` (string, required) 
 + `password`: `12345678` (string, required) 
++ `notification_key`: `dF_3FA64NAg:APA91bFkli43f9zA7JAOJt9rzRGIdzLUncUWkTlTP944us2z6_A4s1PbUlozj_lXfzeEg340LxNxbYKu1cCDVjPZIsk5jV8H8e4uyft6ElzZB-jTv4aLQu0jRxmPugZCqSLXFPBrNke-` (string, required) 
 
 
-## Verify PhoneRequest (object)
-
-
-### Properties
-+ `code`: `568124` (string, required) 
-
-
-## Update couponRequest (object)
+## Booking Status ChangedRequest (object)
 
 
 ### Properties
-+ `code`: `BANGGUBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
++ `type`: `booking_status_changed` (string, required) 
++ `timestamp`: `2017-11-26 10:43:14` (string, required) 
++ `links`: `2017-11-26 10:43:14` (Links, required) 
++ `item`: `2017-11-26 10:43:14` (Item, required) 
 
 
 ## Create new top destinationRequest (object)
@@ -2165,56 +2875,6 @@ HOST: http://api.passpod.project.skyshi.com
 + `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
 + `banner_file`: `lalala.jpg` (string, required) 
 + `experience_count`: `0` (number, required) 
-
-
-## Eligible UsersCreate coupons eligibleusers relation with userRequest (object)
-
-
-### Properties
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
-
-
-## Create users wishlists relation with attraction IDRequest (object)
-
-
-### Properties
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
-
-
-## Update one markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `1200` (string, required) 
-
-
-## Update single bannerRequest (object)
-
-
-### Properties
-+ `title`: `Banner main` (string, required) 
-+ `filename`: `bannermain.jpg` (string, required) 
-+ `priority`: `3` (number, required) 
-+ `link` (string, required, nullable) 
 
 
 ## Update top destinationRequest (object)
@@ -2229,35 +2889,6 @@ HOST: http://api.passpod.project.skyshi.com
 + `updated_at`: `2/20/2018 11:30:49 AM` (string, required) 
 
 
-## Send OTPRequest (object)
-
-
-### Properties
-+ `phone_number`: `+628231231233` (string, required) 
-
-
-## Forgot PasswordRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-
-
-## ClaimersCreate coupons claimer relationship with userRequest (object)
-
-
-### Properties
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
-
 
 ## Update ProfileRequest (object)
 
@@ -2270,32 +2901,4 @@ HOST: http://api.passpod.project.skyshi.com
 + `currency_code`: `IDR` (string, required) 
 + `old_password`: `password` (string, required) 
 + `password`: `12345678` (string, required) 
-+ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required) 
-
-
-## Create new markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `120` (string, required) 
-
-
-## Social LoginRequest (object)
-
-
-### Properties
-+ `provider_type`: `facebook` (string, required) 
-+ `provider_id`: `10209485407847211` (string, required) 
-+ `provider_token`: `EAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required) 
-
-
-## Register new bannerRequest (object)
-
-
-### Properties
-+ `title`: `Banner main` (string, required) 
-+ `filename`: `bannermain.jpg` (string, required) 
-+ `priority`: `3` (string, required) 
-+ `created_at`: `2/19/2018 4:58:27 PM` (string, required) 
-+ `updated_at`: `2/19/2018 4:58:27 PM` (string, required)
++ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
