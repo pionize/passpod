@@ -920,6 +920,112 @@ HOST: http://api.passpod.project.skyshi.com
 
 ## Banners [/banners]
 
+### View single banner [GET /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)
+
++ Request
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Banner data for 43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "i18n": {},
+                "data": {
+                    "image_file": {
+                        "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                        "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                    },
+                    "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                    "title": "Banner One",
+                    "priority": 3,
+                    "created_at": "2018-03-27T09:38:11.000Z",
+                    "updated_at": "2018-03-27T09:38:11.000Z",
+                    "image_url": {
+                        "original": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                        "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                    }
+                },
+                "meta": {}
+            }
+
+### Update single banner [PUT /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Update single bannerRequest)
+
+    + Body
+
+            {
+                "title": "Banner Ones",
+                "priority": 3,
+                "image_file": {
+                    "mobile": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg",
+                    "original": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg"
+                }
+            }
+
+
++ Response 200
+
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Banner data for 43fdba00-1de8-11e8-aa29-09de6febcf21",
+            "i18n": {},
+            "data": {
+                "image_file": {
+                    "original": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.png",
+                    "mobile": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.png"
+                },
+                "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "title": "Banner One",
+                "priority": 3,
+                "created_at": "2018-03-27T09:38:11.000Z",
+                "updated_at": "2018-03-27T09:38:11.000Z",
+                "image_url": {
+                    "original": "https://cdn.passpod.project.skyshi.com/image/banner/9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.png",
+                    "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.png"
+                }
+            },
+            "meta": {}
+        }
+
+### Delete single banner [DELETE /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)}]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success deleting banner #43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
+
 ### View all banners [GET /banners]
 
 + Request
@@ -932,19 +1038,56 @@ HOST: http://api.passpod.project.skyshi.com
             {
                 "code": 200,
                 "status": true,
-                "message": "All Banner data",
-                "meta": {},
+                "message": "All banner datas",
+                "i18n": {},
                 "data": [
                     {
-                        "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
-                        "title": "Banner main",
-                        "filename": "bannermain.jpg",
+                        "image_file": {
+                            "original": "616e8aa0-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "616e8aa0-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        },
+                        "id": "6bb96de0-1de9-11e8-94e1-f38955ee3931",
+                        "title": "Banner Two",
+                        "priority": 1,
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/616e8aa0-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/616e8aa0-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        }
+                    },
+                    {
+                        "image_file": {
+                            "original": "777f3150-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "777f3150-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        },
+                        "id": "7fdc9c70-1de9-11e8-94e1-f38955ee3931",
+                        "title": "Banner Number Three",
+                        "priority": 2,
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/777f3150-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/777f3150-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        }
+                    },
+                    {
+                        "image_file": {
+                            "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                            "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                        },
+                        "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                        "title": "Banner One",
                         "priority": 3,
-                        "link": null,
-                        "created_at": "2018-02-19T16:58:27.000Z",
-                        "updated_at": "2018-02-20T08:09:05.000Z"
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                        }
                     }
-                ]
+                ],
+                "meta": {}
             }
 
 ### Register new banner [POST /banners]
@@ -959,11 +1102,12 @@ HOST: http://api.passpod.project.skyshi.com
     + Body
 
             {
-                "title": "Banner main",
-                "filename": "bannermain.jpg",
-                "priority": "3",
-                "created_at": "2018-02-19T16:58:27Z",
-                "updated_at": "2018-02-19T16:58:27Z"
+                "title": "Banner One",
+                "priority": 3,
+                "image_file": {
+                    "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png",
+                    "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png"
+                }
             }
 
 
@@ -973,18 +1117,25 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "Success creating new banner",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "created_at": "2018-02-19T16:58:27.000Z",
+                    "image_file": {
+                        "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png",
+                        "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png"
+                    },
+                    "created_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
                     "updated_at": {
                         "fn": "NOW",
                         "args": []
                     },
-                    "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
-                    "title": "Banner main",
-                    "filename": "bannermain.jpg",
-                    "priority": "3"
-                }
+                    "id": "27b8cc00-332c-11e8-9b6b-230f5c5aec4e",
+                    "title": "Banner One",
+                    "priority": 3
+                },
+                "meta": {}
             }
 
 
@@ -1003,76 +1154,84 @@ HOST: http://api.passpod.project.skyshi.com
             {
                 "code": 200,
                 "status": true,
-                "message": "Coupon Data",
-                "meta": {},
+                "message": "Success getting coupon data",
+                "i18n": {},
                 "data": [
                     {
                         "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                        "discount_amount": 0,
                         "code": "YEYEAH",
                         "title": "Discount akhir tahun lagi!",
                         "status": "unavailable",
-                        "image": null,
-                        "max_usage": "10",
-                        "max_usage_per_user": "2",
+                        "image_file": null,
+                        "max_usage": 10,
+                        "max_usage_per_user": 2,
                         "platform": "all",
                         "first_order_only": false,
                         "first_user_only": false,
                         "product_type": "all",
                         "discount_type": "PERCENTAGE_CUT",
-                        "discount_amount": "0",
-                        "start_at": "2018-02-23T10:38:07.000Z",
-                        "end_at": "2018-03-23T10:38:07.000Z",
+                        "start_at": "2018-03-27T16:38:11.000Z",
+                        "end_at": "2018-04-27T16:38:11.000Z",
                         "description": "Something is happening! Take cover!",
                         "min_amount": 500000,
                         "country_code": null,
-                        "created_at": "2018-02-23T03:38:07.000Z",
-                        "updated_at": "2018-02-23T03:38:07.000Z"
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": null
                     },
                     {
                         "id": "3057b660-1774-11e8-9284-07fb71fb3431",
+                        "discount_amount": 200000,
                         "code": "BANGBANG",
                         "title": "Discount 80% at Abang Abang Yeah!",
                         "status": "available",
-                        "image": null,
-                        "max_usage": "1",
-                        "max_usage_per_user": "1",
+                        "image_file": null,
+                        "max_usage": 1,
+                        "max_usage_per_user": 1,
                         "platform": "all",
                         "first_order_only": false,
                         "first_user_only": false,
                         "product_type": "all",
                         "discount_type": "PRICE_CUT",
-                        "discount_amount": "200000",
-                        "start_at": "2018-02-23T10:38:07.000Z",
-                        "end_at": "2018-05-23T10:38:07.000Z",
+                        "start_at": "2018-03-27T16:38:11.000Z",
+                        "end_at": "2018-06-27T16:38:11.000Z",
                         "description": null,
                         "min_amount": 0,
                         "country_code": null,
-                        "created_at": "2018-02-23T03:38:07.000Z",
-                        "updated_at": "2018-02-23T03:38:07.000Z"
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": null
                     },
                     {
                         "id": "4d45e980-1775-11e8-9284-07fb71fb3431",
+                        "discount_amount": 1,
                         "code": "OYISAM",
                         "title": "Diskon khusus orang Malang!",
                         "status": "available",
-                        "image": null,
-                        "max_usage": "1",
-                        "max_usage_per_user": "2",
+                        "image_file": null,
+                        "max_usage": 1,
+                        "max_usage_per_user": 2,
                         "platform": "all",
                         "first_order_only": false,
                         "first_user_only": false,
                         "product_type": "all",
                         "discount_type": "PERCENTAGE_CUT",
-                        "discount_amount": "1",
-                        "start_at": "2018-02-23T10:38:07.000Z",
-                        "end_at": "2018-04-23T10:38:07.000Z",
+                        "start_at": "2018-03-27T16:38:11.000Z",
+                        "end_at": "2018-05-27T16:38:11.000Z",
                         "description": "Oyi saam! Diskon henam!",
                         "min_amount": 0,
                         "country_code": null,
-                        "created_at": "2018-02-23T03:38:07.000Z",
-                        "updated_at": "2018-02-23T03:38:07.000Z"
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": null
                     }
-                ]
+                ],
+                "meta": {
+                    "page": 1,
+                    "limit": 10,
+                    "count": 3
+                }
             }
 
 
@@ -1088,21 +1247,63 @@ HOST: http://api.passpod.project.skyshi.com
     + Body
 
             {
-                "code": "BANGBANG",
-                "title": "holiday!!"
-                "status": "available",
-                "max_usage": "1",
-                "max_usage_per_user": "1",
-                "discount_type": "PRICE_CUT",
-                "discount_amount": "200000",
-                "start_at": "2018-02-18T00:00:00Z",
-                "end_at": "2018-02-21T00:00:00Z",
-                "description": null,
-                "min_amount": 0
+                "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                "code": "YEYEAH",
+                "title": "Discount akhir tahun lagi!",
+                "status": "unavailable",
+                "image_file": "sample-image.jpg",
+                "max_usage": "10",
+                "max_usage_per_user": "2",
+                "platform": "all",
+                "first_order_only": false,
+                "first_user_only": false,
+                "product_type": "all",
+                "discount_type": "PERCENTAGE_CUT",
+                "discount_amount": "0",
+                "start_at": "2018-03-08T09:57:32Z",
+                "end_at": "2018-04-08T09:57:32Z",
+                "description": "Something is happening! Take cover!",
+                "min_amount": 500000,
+                "country_code": null
             }
 
 
 + Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success creating new coupon",
+                "i18n": {},
+                "data": {
+                    "id": "4fdf6f50-3330-11e8-9b6b-230f5c5aec4e",
+                    "discount_amount": 200000,
+                    "created_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
+                    "updated_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
+                    "platform": "all",
+                    "first_order_only": false,
+                    "first_user_only": false,
+                    "product_type": "all",
+                    "title": "Diskon akhir tahun",
+                    "code": "BANGBAN1G",
+                    "status": "available",
+                    "max_usage": "1",
+                    "max_usage_per_user": "1",
+                    "image_file": "sample-image.jpg",
+                    "discount_type": "PRICE_CUT",
+                    "start_at": "2018-02-18T00:00:00.000Z",
+                    "end_at": "2018-02-21T00:00:00.000Z",
+                    "description": null,
+                    "min_amount": 0
+                },
+                "meta": {}
+            }
 
 ### Get one coupon [GET /coupons/{id}]
 
@@ -1121,29 +1322,31 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "Success acquiring coupon",
-                "meta": {},
+                "i18n": {},
                 "data": {
                     "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                    "discount_amount": 0,
                     "code": "YEYEAH",
                     "title": "Discount akhir tahun lagi!",
                     "status": "unavailable",
-                    "image": null,
-                    "max_usage": "10",
-                    "max_usage_per_user": "2",
+                    "image_file": null,
+                    "max_usage": 10,
+                    "max_usage_per_user": 2,
                     "platform": "all",
                     "first_order_only": false,
                     "first_user_only": false,
                     "product_type": "all",
                     "discount_type": "PERCENTAGE_CUT",
-                    "discount_amount": "0",
-                    "start_at": "2018-02-23T10:38:07.000Z",
-                    "end_at": "2018-03-23T10:38:07.000Z",
+                    "start_at": "2018-03-27T16:38:11.000Z",
+                    "end_at": "2018-04-27T16:38:11.000Z",
                     "description": "Something is happening! Take cover!",
                     "min_amount": 500000,
                     "country_code": null,
-                    "created_at": "2018-02-23T03:38:07.000Z",
-                    "updated_at": "2018-02-23T03:38:07.000Z"
-                }
+                    "created_at": "2018-03-27T09:38:11.000Z",
+                    "updated_at": "2018-03-27T09:38:11.000Z",
+                    "image_url": null
+                },
+                "meta": {}
             }
 
 ### Update coupon [PUT /coupons/{id}]
@@ -1161,20 +1364,59 @@ HOST: http://api.passpod.project.skyshi.com
     + Body
 
             {
-                "code": "BANGGUBANG",
-                "status": "available",
-                "max_usage": "1",
-                "max_usage_per_user": "1",
-                "discount_type": "PRICE_CUT",
-                "discount_amount": "200000",
-                "start_at": "2018-02-18T00:00:00Z",
-                "end_at": "2018-02-21T00:00:00Z",
-                "description": null,
-                "min_amount": 0
+                "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                "code": "YEYEAH",
+                "title": "Discount akhir tahun lagi!",
+                "status": "unavailable",
+                "image_file": "sample-image.jpg",
+                "max_usage": "10",
+                "max_usage_per_user": "2",
+                "platform": "all",
+                "first_order_only": false,
+                "first_user_only": false,
+                "product_type": "all",
+                "discount_type": "PERCENTAGE_CUT",
+                "discount_amount": "0",
+                "start_at": "2018-03-08T09:57:32Z",
+                "end_at": "2018-04-08T09:57:32Z",
+                "description": "Something is happening! Take cover!",
+                "min_amount": 500000,
+                "country_code": null
             }
 
 
 + Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success acquiring coupon",
+                "i18n": {},
+                "data": {
+                    "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                    "discount_amount": 0,
+                    "code": "YEYEAH",
+                    "title": "Discount akhir tahun lagi!",
+                    "status": "unavailable",
+                    "image_file": null,
+                    "max_usage": 10,
+                    "max_usage_per_user": 2,
+                    "platform": "all",
+                    "first_order_only": false,
+                    "first_user_only": false,
+                    "product_type": "all",
+                    "discount_type": "PERCENTAGE_CUT",
+                    "start_at": "2018-03-27T16:38:11.000Z",
+                    "end_at": "2018-04-27T16:38:11.000Z",
+                    "description": "Something is happening! Take cover!",
+                    "min_amount": 500000,
+                    "country_code": null,
+                    "created_at": "2018-03-27T09:38:11.000Z",
+                    "updated_at": "2018-03-27T09:38:11.000Z",
+                    "image_url": null
+                },
+                "meta": {}
+            }
 
 ### Delete coupon [DELETE]
 
@@ -1186,7 +1428,14 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Response 200
 
-
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success deleting coupon",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
 
 ## Images [/images]
 
