@@ -775,6 +775,26 @@ HOST: http://api.passpod.project.skyshi.com
                 }
             }
             
+### Remove Attraction from Wishlist [DELETE /users/wishlists/{id}]
++ Parameters
+    + id (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success removing wishlist entry for current user",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
+            
 ### Add Attraction to Wishlist [POST /users/wishlists]
 
 + Request (application/json)
@@ -811,6 +831,90 @@ HOST: http://api.passpod.project.skyshi.com
                         "args": []
                     }
                 },
+                "meta": {}
+            }
+            
+### Resend Activation mail [POST /auth/resend-activation-mail]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Resend Activation mailRequest)
+
+    + Body
+
+            {
+                "email": "wisnugrohosatrio@gmail.com"
+            }
+
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Activation mail resent!",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
+            
+### Verify Phone Number Change [POST /users/phone/verify]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Verify Phone Number ChangeRequest)
+
+    + Body
+
+            {
+                "code": "82233332593"
+            }
+
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success getting saved coupons of current user",
+                "i18n": {},
+                "data": [
+                    {
+                        "id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                        "discount_amount": 0,
+                        "code": "YEYEAH",
+                        "title": "Discount akhir tahun lagi!",
+                        "status": "unavailable",
+                        "image_file": null,
+                        "max_usage": 10,
+                        "max_usage_per_user": 2,
+                        "platform": "all",
+                        "first_order_only": false,
+                        "first_user_only": false,
+                        "product_type": "all",
+                        "discount_type": "PERCENTAGE_CUT",
+                        "start_at": "2018-03-27T14:20:30.000Z",
+                        "end_at": "2018-04-27T14:20:30.000Z",
+                        "description": "Something is happening! Take cover!",
+                        "min_amount": 500000,
+                        "country_code": null,
+                        "created_at": "2018-03-27T06:20:30.000Z",
+                        "updated_at": "2018-03-27T06:20:30.000Z",
+                        "userSavedCoupon": {
+                            "id": "7bd9ee20-325c-11e8-9f3f-71fac4b473f5",
+                            "user_id": "e7e596d0-10ad-11e8-8bed-776a5cc09ce6",
+                            "coupon_id": "262c2580-1775-11e8-9284-07fb71fb3431",
+                            "created_at": "2018-03-28T07:49:03.000Z",
+                            "updated_at": "2018-03-28T07:49:03.000Z"
+                        }
+                    }
+                ],
                 "meta": {}
             }
 
