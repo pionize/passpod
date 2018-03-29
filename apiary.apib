@@ -9,9 +9,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Social Login [POST /auth/login/social]
 
 + Request (application/json)
-    + Attributes (Social LoginRequest)
+    + Attributes (Social Login Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -52,9 +52,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Register [POST /auth/register]
 
 + Request (application/json)
-    + Attributes (RegisterRequest)
+    + Attributes (Register Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -95,7 +95,7 @@ HOST: http://api.passpod.project.skyshi.com
 ### Forgot Password [POST /auth/reset]
 
 + Request (application/json)
-    + Attributes (Forgot PasswordRequest)
+    + Attributes (Forgot Password Request)
 
     + Body
 
@@ -104,7 +104,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -120,7 +120,7 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: U2FsdGVkX1+PvbfttWFkxVdMPJthZTIC8ECBW2P3JpEw9BOfc9H/P3vcZekSuPMq
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -138,7 +138,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -152,9 +152,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Reset Password [POST /auth/reset-password]
 
 + Request (application/json)
-    + Attributes (Reset PasswordRequest)
+    + Attributes (Reset Password Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -168,9 +168,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Local Login [POST /auth/login]
 
 + Request (application/json)
-    + Attributes (Local LoginRequest)
+    + Attributes (Local Login Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -214,12 +214,12 @@ HOST: http://api.passpod.project.skyshi.com
 + Parameters
     + id: e7e596d0-10ad-11e8-8bed-776a5cc09ce6 (string, required)
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -266,12 +266,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: 10
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -456,12 +456,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get Profile [GET /users/me]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -506,7 +506,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update ProfileRequest)
+    + Attributes (Update Profile Request)
 
     + Body
 
@@ -520,7 +520,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -559,7 +559,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Notification List [GET /users/notifications/]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
@@ -567,7 +567,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 
 
-+ Response 200 
++ Response 200
 
         {
             "code": 200,
@@ -596,12 +596,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get Saved Coupons [GET /users/saved_coupons]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
         {
             "code": 200,
@@ -641,7 +641,7 @@ HOST: http://api.passpod.project.skyshi.com
             ],
             "meta": {}
         }
-        
+
 ### Add Coupon to Wishlist [POST /users/saved_coupons/]
 
 + Request (application/json)
@@ -649,7 +649,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Add Attraction to Current User WishlistRequest)
+    + Attributes (Add Attraction to Current User Wishlist Request)
 
     + Body
 
@@ -658,7 +658,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -674,7 +674,7 @@ HOST: http://api.passpod.project.skyshi.com
                 },
                 "meta": {}
             }
-            
+
 ### Remove Coupon From User Wishlist [DELETE /users/saved_coupons/{id}]
 
 + Parameters
@@ -685,7 +685,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Remove Attraction from Current User WishlistRequest)
+    + Attributes (Remove Attraction from Current User Wishlist Request)
 
     + Body
 
@@ -694,7 +694,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
             {
@@ -705,7 +705,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Get Current User Wishlist [GET /users/wishlists{?language_code,currency_code}]
 + Parameters
     + language_code (string, required)
@@ -774,7 +774,7 @@ HOST: http://api.passpod.project.skyshi.com
                     "count": 1
                 }
             }
-            
+
 ### Remove Attraction from Wishlist [DELETE /users/wishlists/{id}]
 + Parameters
     + id (string, required)
@@ -784,7 +784,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -794,7 +794,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Add Attraction to Wishlist [POST /users/wishlists]
 
 + Request (application/json)
@@ -802,7 +802,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Add Attraction to WishlistRequest)
+    + Attributes (Add Attraction to Wishlist Request)
 
     + Body
 
@@ -811,7 +811,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -833,7 +833,7 @@ HOST: http://api.passpod.project.skyshi.com
                 },
                 "meta": {}
             }
-            
+
 ### Resend Activation mail [POST /auth/resend-activation-mail]
 
 + Request (application/json)
@@ -841,7 +841,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Resend Activation mailRequest)
+    + Attributes (Resend Activation mail Request)
 
     + Body
 
@@ -860,7 +860,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Verify Phone Number Change [POST /users/phone/verify]
 
 + Request (application/json)
@@ -868,7 +868,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Verify Phone Number ChangeRequest)
+    + Attributes (Verify Phone Number Change Request)
 
     + Body
 
@@ -877,7 +877,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -924,13 +924,13 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Parameters
     + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)
-    
-+ Request 
+
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -954,7 +954,7 @@ HOST: http://api.passpod.project.skyshi.com
                 },
                 "meta": {}
             }
-            
+
 ### Update single banner [PUT /banners/{id}]
 
 + Parameters
@@ -979,7 +979,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
         {
@@ -1015,7 +1015,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1028,12 +1028,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### View all banners [GET /banners]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1097,8 +1097,8 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Register new bannerRequest)
-    
+    + Attributes (Register new banner Request)
+
     + Body
 
             {
@@ -1110,7 +1110,8 @@ HOST: http://api.passpod.project.skyshi.com
                 }
             }
 
-+ Response 200 
+
++ Response 200
 
             {
                 "code": 200,
@@ -1142,12 +1143,13 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get All [GET /coupons]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
+
++ Response 200
 
             {
                 "code": 200,
@@ -1240,7 +1242,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Create new couponRequest)
+    + Attributes (Create new coupon Request)
 
     + Body
 
@@ -1313,7 +1315,8 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-+ Response 200 
+
++ Response 200
 
             {
                 "code": 200,
@@ -1356,7 +1359,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update couponRequest)
+    + Attributes (Update coupon Request)
 
     + Body
 
@@ -1381,7 +1384,8 @@ HOST: http://api.passpod.project.skyshi.com
                 "country_code": null
             }
 
-+ Response 200 
+
++ Response 200
 
             {
                 "code": 200,
@@ -1421,7 +1425,8 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-+ Response 200 
+
++ Response 200
 
             {
                 "code": 200,
@@ -1447,7 +1452,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1473,8 +1478,8 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
-    
++ Response 200
+
             {
                 "code": 200,
                 "status": true,
@@ -1505,7 +1510,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization: {{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1519,7 +1524,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update top destinationRequest)
+    + Attributes (Update top destination Request)
 
     + Body
 
@@ -1533,7 +1538,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1544,7 +1549,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Create new top destinationRequest)
+    + Attributes (Create new top destination Request)
 
     + Body
 
@@ -1556,7 +1561,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1564,7 +1569,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1601,7 +1606,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1615,7 +1620,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Update one markup pricesRequest)
+    + Attributes (Update one markup prices Request)
 
     + Body
 
@@ -1625,7 +1630,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1638,7 +1643,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1649,7 +1654,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Create new markup pricesRequest)
+    + Attributes (Create new markup prices Request)
 
     + Body
 
@@ -1659,7 +1664,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 ### Delete one markup prices [DELETE /markup_prices/{id}]
@@ -1673,7 +1678,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 ## Attractions [/attractions]
@@ -1684,7 +1689,7 @@ HOST: http://api.passpod.project.skyshi.com
 + Parameters
     + id: d5a03ea2-e06e-5d01-84b7-94530b1059f7 (string, required)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1895,13 +1900,13 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### List Categories [GET /attractions/categories]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2309,12 +2314,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: indonesia
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2493,12 +2498,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### List Countries [GET /attractions/countries]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2598,12 +2603,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: 3
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2688,565 +2693,1868 @@ HOST: http://api.passpod.project.skyshi.com
                 ]
             }
 
+## Search [/search]
+
+### Search by query [GET /suggest/{?q}]
++ Parameters
+    + q (string, required)
+
+        + Sample: s
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Suggestion",
+            "i18n": {},
+            "data": [
+                {
+                    "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5701",
+                    "text": "Seoul",
+                    "type": "destination",
+                    "city": null,
+                    "popularity": 5
+                },
+                {
+                    "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5695",
+                    "text": "Singapore",
+                    "type": "destination",
+                    "city": null,
+                    "popularity": 19
+                },
+                {
+                    "id": "ec1897a3-86fb-525c-914b-bfe39a4d5396",
+                    "text": "Tiket Masuk Jurong Bird Park dengan Trem (dengan pilihan makan siang)",
+                    "type": "attraction",
+                    "city": "Singapore",
+                    "popularity": 0
+                },
+                {
+                    "id": "e8f0b93c-ee5d-54b7-8813-8004c26c658c",
+                    "text": "Night Safari: Tanggal buka dan tiket masuk dengan Trem Berpanduan Bahasa Inggris",
+                    "type": "attraction",
+                    "city": "Singapore",
+                    "popularity": 0
+                },
+                {
+                    "id": "dd15d4fc-4ca2-4ff9-a663-0c45a7de47a9",
+                    "text": "Marina Bay Sands: Dek Observasi Sands SkyPark",
+                    "type": "attraction",
+                    "city": "Singapore",
+                    "popularity": 0
+                },
+                {
+                    "id": "dadee289-0f4f-5fff-8145-8b562a35cd70",
+                    "text": "Skyline Luge Sentosa",
+                    "type": "attraction",
+                    "city": "Sentosa",
+                    "popularity": 0
+                },
+                {
+                    "id": "d5a03ea2-e06e-5d01-84b7-94530b1059f7",
+                    "text": "E-tiket Universal Studio Singapore ",
+                    "type": "attraction",
+                    "city": "Sentosa",
+                    "popularity": 0
+                },
+                {
+                    "id": "d4398f47-9fc0-5f38-ba2d-d04a5fe8327e",
+                    "text": "Singapore Zoo : Tiket masuk dengan tiket trem (dengan pilihan sarapan)",
+                    "type": "attraction",
+                    "city": "Singapore",
+                    "popularity": 0
+                },
+                {
+                    "id": "d221b76f-fb0a-435c-917f-00db8dd8d6e0",
+                    "text": "Tiket Masuk ArtScience Museum™",
+                    "type": "attraction",
+                    "city": "Singapore",
+                    "popularity": 0
+                },
+                {
+                    "id": "ac1ae895-1992-5666-b3c3-cec52e7c64c4",
+                    "text": "Tiger Sky Tower Singapura",
+                    "type": "attraction",
+                    "city": "Sentosa",
+                    "popularity": 0
+                }
+            ],
+            "meta": {}
+        }
+
+### Get Popular Searches [GET /suggest/{?popular}]
++ Parameters
+    + popular (boolean, required)
+
+        + Sample: true
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Suggestion",
+                "i18n": {},
+                "data": [
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5695",
+                        "text": "Singapore",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 19
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5701",
+                        "text": "Seoul",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 5
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5698",
+                        "text": "Kuala Lumpur",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 4
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5702",
+                        "text": "Phuket",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 3
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5699",
+                        "text": "Bangkok",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 3
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5700",
+                        "text": "Osaka",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5697",
+                        "text": "Tokyo",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5696",
+                        "text": "Hong Kong",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "ec1897a3-86fb-525c-914b-bfe39a4d5396",
+                        "text": "Tiket Masuk Jurong Bird Park dengan Trem (dengan pilihan makan siang)",
+                        "type": "attraction",
+                        "city": "Singapore",
+                        "popularity": 0
+                    },
+                    {
+                        "id": "ec1897a3-86fb-525c-914b-bfe39a4d5396",
+                        "text": "Jurong Bird Park: Admission with Tram Ride (with Lunch Option)",
+                        "type": "attraction",
+                        "city": "Singapore",
+                        "popularity": 0
+                    }
+                ],
+                "meta": {}
+            }
+
+## Presets [/presets]
+
+### Get about preset [GET /presets/about{?language}]
++ Parameters
+    + language (string, required)
+
+        + Sample: id
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing about presets",
+            "i18n": {},
+            "data": {
+                "appName": "Passpod Application",
+                "officialPage": "https://passpod.id/",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            "meta": {}
+        }
+
+### Get currency code list preset [GET /presets/countries]
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing country list presets",
+            "i18n": {},
+            "data": [
+                {
+                    "code": "AFG",
+                    "country": "Afghanistan"
+                },
+                {
+                    "code": "ALA",
+                    "country": "Aland Islands"
+                },
+                {
+                    "code": "ALB",
+                    "country": "Albania"
+                },
+                {
+                    "code": "DZA",
+                    "country": "Algeria"
+                },
+                {
+                    "code": "ASM",
+                    "country": "American Samoa"
+                },
+                {
+                    "code": "AND",
+                    "country": "Andorra"
+                },
+                {
+                    "code": "AGO",
+                    "country": "Angola"
+                },
+                {
+                    "code": "AIA",
+                    "country": "Anguilla"
+                },
+                {
+                    "code": "AQ",
+                    "country": " "
+                },
+                {
+                    "code": "ATG",
+                    "country": "Antigua and Barbuda"
+                },
+                {
+                    "code": "ARG",
+                    "country": "Argentina"
+                },
+                {
+                    "code": "ARM",
+                    "country": "Armenia"
+                },
+                {
+                    "code": "ABW",
+                    "country": "Aruba"
+                },
+                {
+                    "code": "AUS",
+                    "country": "Australia"
+                },
+                {
+                    "code": "AUT",
+                    "country": "Austria"
+                },
+                {
+                    "code": "AZE",
+                    "country": "Azerbaijan"
+                },
+                {
+                    "code": "BHS",
+                    "country": "Bahamas"
+                },
+                {
+                    "code": "BHR",
+                    "country": "Bahrain"
+                },
+                {
+                    "code": "BGD",
+                    "country": "Bangladesh"
+                },
+                {
+                    "code": "BRB",
+                    "country": "Barbados"
+                },
+                {
+                    "code": "BLR",
+                    "country": "Belarus"
+                },
+                {
+                    "code": "BEL",
+                    "country": "Belgium"
+                },
+                {
+                    "code": "BLZ",
+                    "country": "Belize"
+                },
+                {
+                    "code": "BEN",
+                    "country": "Benin"
+                },
+                {
+                    "code": "BMU",
+                    "country": "Bermuda"
+                },
+                {
+                    "code": "BTN",
+                    "country": "Bhutan"
+                },
+                {
+                    "code": "BOL",
+                    "country": "Bolivia"
+                },
+                {
+                    "code": "BIH",
+                    "country": "Bosnia and Herzegovina"
+                },
+                {
+                    "code": "BWA",
+                    "country": "Botswana"
+                },
+                {
+                    "code": "BVT",
+                    "country": "Bouvet Island"
+                },
+                {
+                    "code": "BRA",
+                    "country": "Brazil"
+                },
+                {
+                    "code": "VGB",
+                    "country": "British Virgin Islands"
+                },
+                {
+                    "code": "IOT",
+                    "country": "British Indian Ocean Territory"
+                },
+                {
+                    "code": "BRN",
+                    "country": "Brunei Darussalam"
+                },
+                {
+                    "code": "BGR",
+                    "country": "Bulgaria"
+                },
+                {
+                    "code": "BFA",
+                    "country": "Burkina Faso"
+                },
+                {
+                    "code": "BDI",
+                    "country": "Burundi"
+                },
+                {
+                    "code": "KHM",
+                    "country": "Cambodia"
+                },
+                {
+                    "code": "CMR",
+                    "country": "Cameroon"
+                },
+                {
+                    "code": "CAN",
+                    "country": "Canada"
+                },
+                {
+                    "code": "CPV",
+                    "country": "Cape Verde"
+                },
+                {
+                    "code": "CYM",
+                    "country": "Cayman Islands"
+                },
+                {
+                    "code": "CAF",
+                    "country": "Central African Republic"
+                },
+                {
+                    "code": "TCD",
+                    "country": "Chad"
+                },
+                {
+                    "code": "CHL",
+                    "country": "Chile"
+                },
+                {
+                    "code": "CHN",
+                    "country": "China"
+                },
+                {
+                    "code": "HKG",
+                    "country": "Hong Kong, SAR China"
+                },
+                {
+                    "code": "MAC",
+                    "country": "Macao, SAR China"
+                },
+                {
+                    "code": "CXR",
+                    "country": "Christmas Island"
+                },
+                {
+                    "code": "CCK",
+                    "country": "Cocos (Keeling) Islands"
+                },
+                {
+                    "code": "COL",
+                    "country": "Colombia"
+                },
+                {
+                    "code": "COM",
+                    "country": "Comoros"
+                },
+                {
+                    "code": "COG",
+                    "country": "Congo (Brazzaville)"
+                },
+                {
+                    "code": "COD",
+                    "country": "Congo, (Kinshasa)"
+                },
+                {
+                    "code": "COK",
+                    "country": "Cook Islands"
+                },
+                {
+                    "code": "CRI",
+                    "country": "Costa Rica"
+                },
+                {
+                    "code": "CIV",
+                    "country": "Côte d'Ivoire"
+                },
+                {
+                    "code": "HRV",
+                    "country": "Croatia"
+                },
+                {
+                    "code": "CUB",
+                    "country": "Cuba"
+                },
+                {
+                    "code": "CYP",
+                    "country": "Cyprus"
+                },
+                {
+                    "code": "CZE",
+                    "country": "Czech Republic"
+                },
+                {
+                    "code": "DNK",
+                    "country": "Denmark"
+                },
+                {
+                    "code": "DJI",
+                    "country": "Djibouti"
+                },
+                {
+                    "code": "DMA",
+                    "country": "Dominica"
+                },
+                {
+                    "code": "DOM",
+                    "country": "Dominican Republic"
+                },
+                {
+                    "code": "ECU",
+                    "country": "Ecuador"
+                },
+                {
+                    "code": "EGY",
+                    "country": "Egypt"
+                },
+                {
+                    "code": "SLV",
+                    "country": "El Salvador"
+                },
+                {
+                    "code": "GNQ",
+                    "country": "Equatorial Guinea"
+                },
+                {
+                    "code": "ERI",
+                    "country": "Eritrea"
+                },
+                {
+                    "code": "EST",
+                    "country": "Estonia"
+                },
+                {
+                    "code": "ETH",
+                    "country": "Ethiopia"
+                },
+                {
+                    "code": "FLK",
+                    "country": "Falkland Islands (Malvinas)"
+                },
+                {
+                    "code": "FRO",
+                    "country": "Faroe Islands"
+                },
+                {
+                    "code": "FJI",
+                    "country": "Fiji"
+                },
+                {
+                    "code": "FIN",
+                    "country": "Finland"
+                },
+                {
+                    "code": "FRA",
+                    "country": "France"
+                },
+                {
+                    "code": "GUF",
+                    "country": "French Guiana"
+                },
+                {
+                    "code": "PYF",
+                    "country": "French Polynesia"
+                },
+                {
+                    "code": "ATF",
+                    "country": "French Southern Territories"
+                },
+                {
+                    "code": "GAB",
+                    "country": "Gabon"
+                },
+                {
+                    "code": "GMB",
+                    "country": "Gambia"
+                },
+                {
+                    "code": "GEO",
+                    "country": "Georgia"
+                },
+                {
+                    "code": "DEU",
+                    "country": "Germany"
+                },
+                {
+                    "code": "GHA",
+                    "country": "Ghana"
+                },
+                {
+                    "code": "GIB",
+                    "country": "Gibraltar"
+                },
+                {
+                    "code": "GRC",
+                    "country": "Greece"
+                },
+                {
+                    "code": "GRL",
+                    "country": "Greenland"
+                },
+                {
+                    "code": "GRD",
+                    "country": "Grenada"
+                },
+                {
+                    "code": "GLP",
+                    "country": "Guadeloupe"
+                },
+                {
+                    "code": "GUM",
+                    "country": "Guam"
+                },
+                {
+                    "code": "GTM",
+                    "country": "Guatemala"
+                },
+                {
+                    "code": "GGY",
+                    "country": "Guernsey"
+                },
+                {
+                    "code": "GIN",
+                    "country": "Guinea"
+                },
+                {
+                    "code": "GNB",
+                    "country": "Guinea-Bissau"
+                },
+                {
+                    "code": "GUY",
+                    "country": "Guyana"
+                },
+                {
+                    "code": "HTI",
+                    "country": "Haiti"
+                },
+                {
+                    "code": "HMD",
+                    "country": "Heard and Mcdonald Islands"
+                },
+                {
+                    "code": "VAT",
+                    "country": "Holy See (Vatican City State)"
+                },
+                {
+                    "code": "HND",
+                    "country": "Honduras"
+                },
+                {
+                    "code": "HUN",
+                    "country": "Hungary"
+                },
+                {
+                    "code": "ISL",
+                    "country": "Iceland"
+                },
+                {
+                    "code": "IND",
+                    "country": "India"
+                },
+                {
+                    "code": "IDN",
+                    "country": "Indonesia"
+                },
+                {
+                    "code": "IRN",
+                    "country": "Iran, Islamic Republic of"
+                },
+                {
+                    "code": "IRQ",
+                    "country": "Iraq"
+                },
+                {
+                    "code": "IRL",
+                    "country": "Ireland"
+                },
+                {
+                    "code": "IMN",
+                    "country": "Isle of Man"
+                },
+                {
+                    "code": "ISR",
+                    "country": "Israel"
+                },
+                {
+                    "code": "ITA",
+                    "country": "Italy"
+                },
+                {
+                    "code": "JAM",
+                    "country": "Jamaica"
+                },
+                {
+                    "code": "JPN",
+                    "country": "Japan"
+                },
+                {
+                    "code": "JEY",
+                    "country": "Jersey"
+                },
+                {
+                    "code": "JOR",
+                    "country": "Jordan"
+                },
+                {
+                    "code": "KAZ",
+                    "country": "Kazakhstan"
+                },
+                {
+                    "code": "KEN",
+                    "country": "Kenya"
+                },
+                {
+                    "code": "KIR",
+                    "country": "Kiribati"
+                },
+                {
+                    "code": "PRK",
+                    "country": "Korea (North)"
+                },
+                {
+                    "code": "KOR",
+                    "country": "Korea (South)"
+                },
+                {
+                    "code": "KWT",
+                    "country": "Kuwait"
+                },
+                {
+                    "code": "KGZ",
+                    "country": "Kyrgyzstan"
+                },
+                {
+                    "code": "LAO",
+                    "country": "Lao PDR"
+                },
+                {
+                    "code": "LVA",
+                    "country": "Latvia"
+                },
+                {
+                    "code": "LBN",
+                    "country": "Lebanon"
+                },
+                {
+                    "code": "LSO",
+                    "country": "Lesotho"
+                },
+                {
+                    "code": "LBR",
+                    "country": "Liberia"
+                },
+                {
+                    "code": "LBY",
+                    "country": "Libya"
+                },
+                {
+                    "code": "LIE",
+                    "country": "Liechtenstein"
+                },
+                {
+                    "code": "LTU",
+                    "country": "Lithuania"
+                },
+                {
+                    "code": "LUX",
+                    "country": "Luxembourg"
+                },
+                {
+                    "code": "MKD",
+                    "country": "Macedonia, Republic of"
+                },
+                {
+                    "code": "MDG",
+                    "country": "Madagascar"
+                },
+                {
+                    "code": "MWI",
+                    "country": "Malawi"
+                },
+                {
+                    "code": "MYS",
+                    "country": "Malaysia"
+                },
+                {
+                    "code": "MDV",
+                    "country": "Maldives"
+                },
+                {
+                    "code": "MLI",
+                    "country": "Mali"
+                },
+                {
+                    "code": "MLT",
+                    "country": "Malta"
+                },
+                {
+                    "code": "MHL",
+                    "country": "Marshall Islands"
+                },
+                {
+                    "code": "MTQ",
+                    "country": "Martinique"
+                },
+                {
+                    "code": "MRT",
+                    "country": "Mauritania"
+                },
+                {
+                    "code": "MUS",
+                    "country": "Mauritius"
+                },
+                {
+                    "code": "MYT",
+                    "country": "Mayotte"
+                },
+                {
+                    "code": "MEX",
+                    "country": "Mexico"
+                },
+                {
+                    "code": "FSM",
+                    "country": "Micronesia, Federated States of"
+                },
+                {
+                    "code": "MDA",
+                    "country": "Moldova"
+                },
+                {
+                    "code": "MCO",
+                    "country": "Monaco"
+                },
+                {
+                    "code": "MNG",
+                    "country": "Mongolia"
+                },
+                {
+                    "code": "MNE",
+                    "country": "Montenegro"
+                },
+                {
+                    "code": "MSR",
+                    "country": "Montserrat"
+                },
+                {
+                    "code": "MAR",
+                    "country": "Morocco"
+                },
+                {
+                    "code": "MOZ",
+                    "country": "Mozambique"
+                },
+                {
+                    "code": "MMR",
+                    "country": "Myanmar"
+                },
+                {
+                    "code": "NAM",
+                    "country": "Namibia"
+                },
+                {
+                    "code": "NRU",
+                    "country": "Nauru"
+                },
+                {
+                    "code": "NPL",
+                    "country": "Nepal"
+                },
+                {
+                    "code": "NLD",
+                    "country": "Netherlands"
+                },
+                {
+                    "code": "ANT",
+                    "country": "Netherlands Antilles"
+                },
+                {
+                    "code": "NCL",
+                    "country": "New Caledonia"
+                },
+                {
+                    "code": "NZL",
+                    "country": "New Zealand"
+                },
+                {
+                    "code": "NIC",
+                    "country": "Nicaragua"
+                },
+                {
+                    "code": "NER",
+                    "country": "Niger"
+                },
+                {
+                    "code": "NGA",
+                    "country": "Nigeria"
+                },
+                {
+                    "code": "NIU",
+                    "country": "Niue"
+                },
+                {
+                    "code": "NFK",
+                    "country": "Norfolk Island"
+                },
+                {
+                    "code": "MNP",
+                    "country": "Northern Mariana Islands"
+                },
+                {
+                    "code": "NOR",
+                    "country": "Norway"
+                },
+                {
+                    "code": "OMN",
+                    "country": "Oman"
+                },
+                {
+                    "code": "PAK",
+                    "country": "Pakistan"
+                },
+                {
+                    "code": "PLW",
+                    "country": "Palau"
+                },
+                {
+                    "code": "PSE",
+                    "country": "Palestinian Territory"
+                },
+                {
+                    "code": "PAN",
+                    "country": "Panama"
+                },
+                {
+                    "code": "PNG",
+                    "country": "Papua New Guinea"
+                },
+                {
+                    "code": "PRY",
+                    "country": "Paraguay"
+                },
+                {
+                    "code": "PER",
+                    "country": "Peru"
+                },
+                {
+                    "code": "PHL",
+                    "country": "Philippines"
+                },
+                {
+                    "code": "PCN",
+                    "country": "Pitcairn"
+                },
+                {
+                    "code": "POL",
+                    "country": "Poland"
+                },
+                {
+                    "code": "PRT",
+                    "country": "Portugal"
+                },
+                {
+                    "code": "PRI",
+                    "country": "Puerto Rico"
+                },
+                {
+                    "code": "QAT",
+                    "country": "Qatar"
+                },
+                {
+                    "code": "REU",
+                    "country": "Réunion"
+                },
+                {
+                    "code": "ROU",
+                    "country": "Romania"
+                },
+                {
+                    "code": "RUS",
+                    "country": "Russian Federation"
+                },
+                {
+                    "code": "RWA",
+                    "country": "Rwanda"
+                },
+                {
+                    "code": "BLM",
+                    "country": "Saint-Barthélemy"
+                },
+                {
+                    "code": "SHN",
+                    "country": "Saint Helena"
+                },
+                {
+                    "code": "KNA",
+                    "country": "Saint Kitts and Nevis"
+                },
+                {
+                    "code": "LCA",
+                    "country": "Saint Lucia"
+                },
+                {
+                    "code": "MAF",
+                    "country": "Saint-Martin (French part)"
+                },
+                {
+                    "code": "SPM",
+                    "country": "Saint Pierre and Miquelon"
+                },
+                {
+                    "code": "VCT",
+                    "country": "Saint Vincent and Grenadines"
+                },
+                {
+                    "code": "WSM",
+                    "country": "Samoa"
+                },
+                {
+                    "code": "SMR",
+                    "country": "San Marino"
+                },
+                {
+                    "code": "STP",
+                    "country": "Sao Tome and Principe"
+                },
+                {
+                    "code": "SAU",
+                    "country": "Saudi Arabia"
+                },
+                {
+                    "code": "SEN",
+                    "country": "Senegal"
+                },
+                {
+                    "code": "SRB",
+                    "country": "Serbia"
+                },
+                {
+                    "code": "SYC",
+                    "country": "Seychelles"
+                },
+                {
+                    "code": "SLE",
+                    "country": "Sierra Leone"
+                },
+                {
+                    "code": "SGP",
+                    "country": "Singapore"
+                },
+                {
+                    "code": "SVK",
+                    "country": "Slovakia"
+                },
+                {
+                    "code": "SVN",
+                    "country": "Slovenia"
+                },
+                {
+                    "code": "SLB",
+                    "country": "Solomon Islands"
+                },
+                {
+                    "code": "SOM",
+                    "country": "Somalia"
+                },
+                {
+                    "code": "ZAF",
+                    "country": "South Africa"
+                },
+                {
+                    "code": "SGS",
+                    "country": "South Georgia and the South Sandwich Islands"
+                },
+                {
+                    "code": "SSD",
+                    "country": "South Sudan"
+                },
+                {
+                    "code": "ESP",
+                    "country": "Spain"
+                },
+                {
+                    "code": "LKA",
+                    "country": "Sri Lanka"
+                },
+                {
+                    "code": "SDN",
+                    "country": "Sudan"
+                },
+                {
+                    "code": "SUR",
+                    "country": "Suriname"
+                },
+                {
+                    "code": "SJM",
+                    "country": "Svalbard and Jan Mayen Islands"
+                },
+                {
+                    "code": "SWZ",
+                    "country": "Swaziland"
+                },
+                {
+                    "code": "SWE",
+                    "country": "Sweden"
+                },
+                {
+                    "code": "CHE",
+                    "country": "Switzerland"
+                },
+                {
+                    "code": "SYR",
+                    "country": "Syrian Arab Republic (Syria)"
+                },
+                {
+                    "code": "TWN",
+                    "country": "Taiwan, Republic of China"
+                },
+                {
+                    "code": "TJK",
+                    "country": "Tajikistan"
+                },
+                {
+                    "code": "TZA",
+                    "country": "Tanzania, United Republic of"
+                },
+                {
+                    "code": "THA",
+                    "country": "Thailand"
+                },
+                {
+                    "code": "TLS",
+                    "country": "Timor-Leste"
+                },
+                {
+                    "code": "TGO",
+                    "country": "Togo"
+                },
+                {
+                    "code": "TKL",
+                    "country": "Tokelau"
+                },
+                {
+                    "code": "TON",
+                    "country": "Tonga"
+                },
+                {
+                    "code": "TTO",
+                    "country": "Trinidad and Tobago"
+                },
+                {
+                    "code": "TUN",
+                    "country": "Tunisia"
+                },
+                {
+                    "code": "TUR",
+                    "country": "Turkey"
+                },
+                {
+                    "code": "TKM",
+                    "country": "Turkmenistan"
+                },
+                {
+                    "code": "TCA",
+                    "country": "Turks and Caicos Islands"
+                },
+                {
+                    "code": "TUV",
+                    "country": "Tuvalu"
+                },
+                {
+                    "code": "UGA",
+                    "country": "Uganda"
+                },
+                {
+                    "code": "UKR",
+                    "country": "Ukraine"
+                },
+                {
+                    "code": "ARE",
+                    "country": "United Arab Emirates"
+                },
+                {
+                    "code": "GBR",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "USA",
+                    "country": "United States of America"
+                },
+                {
+                    "code": "UMI",
+                    "country": "US Minor Outlying Islands"
+                },
+                {
+                    "code": "URY",
+                    "country": "Uruguay"
+                },
+                {
+                    "code": "UZB",
+                    "country": "Uzbekistan"
+                },
+                {
+                    "code": "VUT",
+                    "country": "Vanuatu"
+                },
+                {
+                    "code": "VEN",
+                    "country": "Venezuela (Bolivarian Republic)"
+                },
+                {
+                    "code": "VNM",
+                    "country": "Viet Nam"
+                },
+                {
+                    "code": "VIR",
+                    "country": "Virgin Islands, US"
+                },
+                {
+                    "code": "WLF",
+                    "country": "Wallis and Futuna Islands"
+                },
+                {
+                    "code": "ESH",
+                    "country": "Western Sahara"
+                },
+                {
+                    "code": "YEM",
+                    "country": "Yemen"
+                },
+                {
+                    "code": "ZMB",
+                    "country": "Zambia"
+                },
+                {
+                    "code": "ZWE",
+                    "country": "Zimbabwe"
+                }
+            ],
+            "meta": {}
+        }
+
+### Get country list preset [GET /presets/currencies]
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing currency list presets",
+            "i18n": {},
+            "data": [
+                {
+                    "code": "IDR",
+                    "name": "Rupiah",
+                    "country": "Indonesia",
+                    "support": true
+                },
+                {
+                    "code": "SGD",
+                    "name": "Singapore Dollar",
+                    "country": "Singapore",
+                    "support": true
+                }
+            ],
+            "meta": {}
+        }
+
+### Get language list preset [GET /presets/languages]
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing language list presets",
+            "i18n": {},
+            "data": [
+                {
+                    "code": "ind",
+                    "name": "Indonesian",
+                    "support": true
+                },
+                {
+                    "code": "eng",
+                    "name": "English",
+                    "support": true
+                }
+            ],
+            "meta": {}
+        }
+
+## Maintenance Status [/maintenance-status]
+
+### Maintenance status [GET /]
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing maintenance status preset",
+            "i18n": {},
+            "data": {
+                "maintenance_status": "false"
+            },
+            "meta": {}
+        }
+
+### Set maintenance status [PUT /]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Set maintenance status Request)
+
+    + Body
+
+            {
+                "value": true
+            }
+
+
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success setting maintenance status preset",
+            "i18n": {},
+            "data": {},
+            "meta": {}
+        }
+
 # Data Structures
 
-## Delete oneRequest (object)
+## Delete one Request (object)
+
+### Properties
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
+
+
+## Add Attraction to Wishlist Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `attractionUUID`: `642cf2e0-f2bf-5120-a496-6383be750b62` (string, required)
 
 
-## Add Attraction to WishlistRequest (object)
+## Voucher Ready Request (object)
 
 
 ### Properties
-+ `attractionUUID`: `642cf2e0-f2bf-5120-a496-6383be750b62` (string, required) 
-
-
-## Voucher ReadyRequest (object)
-
-
-### Properties
-+ `type`: `vouchers_ready` (string, required) 
-+ `timestamp`: `2017-11-26 10:43:14` (string, required) 
-+ `links`: `2017-11-26 10:43:14` (Links, required) 
-+ `item`: `2017-11-26 10:43:14` (Item, required) 
++ `type`: `vouchers_ready` (string, required)
++ `timestamp`: `2017-11-26 10:43:14` (string, required)
++ `links`: `2017-11-26 10:43:14` (Links, required)
++ `item`: `2017-11-26 10:43:14` (Item, required)
 
 
 ## Links (object)
 
 
 ### Properties
-+ `self`: `https://api.bemyguest.com.sg/v2/bookings/8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
++ `self`: `https://api.bemyguest.com.sg/v2/bookings/8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required)
 
 
 ## Item (object)
 
 
 ### Properties
-+ `uuid`: `8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
-+ `code`: `UVWXP81` (string, required) 
-+ `partnerReference` (string, required, nullable) 
-+ `status`: `approved` (string, required) 
-+ `productTypeTitle`: `Universal Studios Singapore E-ticket` (string, required) 
-+ `productTypeTitleTranslated`: `Universal Studios Singapore E-ticket` (string, required) 
-+ `productTypeUuid`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
-+ `currencyCode`: `SGD` (string, required) 
-+ `currencyUuid`: `cd15153e-dfd1-5039-8aa3-115bec58e86e` (string, required) 
-+ `totalAmount`: `113.5` (number, required) 
-+ `amountBreakdown`: `113.5` (array[AmountBreakdown], required) 
-+ `arrivalDate`: `2017-12-25` (string, required) 
-+ `createdAt`: `2017-11-06 14:31:59` (string, required) 
-+ `updatedAt`: `2017-12-12 16:16:36` (string, required) 
-+ `salutation`: `Mr.` (string, required) 
-+ `firstName`: `John` (string, required) 
-+ `lastName`: `Doe` (string, required) 
-+ `email`: `john@sample.com` (string, required) 
-+ `phone`: `+222333111` (string, required) 
-+ `adults`: `1` (number, required) 
-+ `children`: `1` (number, required) 
-+ `seniors`: `0` (number, required) 
-+ `options`: `[]` (array[string], required) 
-+ `completedAt` (string, required, nullable) 
-+ `cancellationRequestAt` (string, required, nullable) 
-+ `refundDate` (string, required, nullable) 
-+ `refundAmount` (string, required, nullable) 
-+ `refundTransaction` (string, required, nullable) 
++ `uuid`: `8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required)
++ `code`: `UVWXP81` (string, required)
++ `partnerReference` (string, required, nullable)
++ `status`: `approved` (string, required)
++ `productTypeTitle`: `Universal Studios Singapore E-ticket` (string, required)
++ `productTypeTitleTranslated`: `Universal Studios Singapore E-ticket` (string, required)
++ `productTypeUuid`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required)
++ `currencyCode`: `SGD` (string, required)
++ `currencyUuid`: `cd15153e-dfd1-5039-8aa3-115bec58e86e` (string, required)
++ `totalAmount`: `113.5` (number, required)
++ `amountBreakdown`: `113.5` (array[AmountBreakdown], required)
++ `arrivalDate`: `2017-12-25` (string, required)
++ `createdAt`: `2017-11-06 14:31:59` (string, required)
++ `updatedAt`: `2017-12-12 16:16:36` (string, required)
++ `salutation`: `Mr.` (string, required)
++ `firstName`: `John` (string, required)
++ `lastName`: `Doe` (string, required)
++ `email`: `john@sample.com` (string, required)
++ `phone`: `+222333111` (string, required)
++ `adults`: `1` (number, required)
++ `children`: `1` (number, required)
++ `seniors`: `0` (number, required)
++ `options`: `[]` (array[string], required)
++ `completedAt` (string, required, nullable)
++ `cancellationRequestAt` (string, required, nullable)
++ `refundDate` (string, required, nullable)
++ `refundAmount` (string, required, nullable)
++ `refundTransaction` (string, required, nullable)
 
 
 ## AmountBreakdown (object)
 
 
 ### Properties
-+ `name`: `adult` (string, required) 
-+ `quantity`: `1` (number, required) 
-+ `price`: `65` (number, required) 
++ `name`: `adult` (string, required)
++ `quantity`: `1` (number, required)
++ `price`: `65` (number, required)
 
 
-## Set maintenance statusRequest (object)
-
-
-### Properties
-+ `value`: `true` (boolean, required) 
-
-
-## ClaimersDelete coupons claimer relationship with userRequest (object)
+## Set maintenance status Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `value`: `true` (boolean, required)
 
 
-## Add to Cart ModemRequest (object)
+## ClaimersDelete coupons claimer relationship with user Request (object)
 
 
 ### Properties
-+ `productable_id` (string, required) 
-+ `productable_type`: `product` (string, required) 
-+ `order_detail`: `product` (OrderDetail, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
+
+
+## Add to Cart Modem Request (object)
+
+
+### Properties
++ `productable_id` (string, required)
++ `productable_type`: `product` (string, required)
++ `order_detail`: `product` (OrderDetail, required)
 
 
 ## OrderDetail (object)
 
 
 ### Properties
-+ `qty`: `1` (number, required) 
++ `qty`: `1` (number, required)
 
 
-## Local Login  AdminRequest (object)
-
-
-### Properties
-+ `email`: `admin@passpod.id` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
-
-
-## Add Attraction to Current User WishlistRequest (object)
+## Local Login  Admin Request (object)
 
 
 ### Properties
-+ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
++ `email`: `admin@passpod.id` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
 
 
-## Resend Activation mailRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-
-
-## Update one ModemRequest (object)
+## Add Attraction to Current User Wishlist Request (object)
 
 
 ### Properties
-+ `title`: `Modem One` (string, required) 
-+ `description`: `Vodafone modem available to rent.` (string, required) 
-+ `price`: `100` (number, required) 
-+ `currency_code`: `USD` (string, required) 
-+ `image_file`: `image-data.jpg` (string, required) 
-+ `product_type`: `modem` (string, required) 
-+ `status`: `active` (string, required) 
-+ `details`: `active` (Details, required) 
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
+
+
+## Resend Activation mail Request (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
+
+
+## Update one Modem Request (object)
+
+
+### Properties
++ `title`: `Modem One` (string, required)
++ `description`: `Vodafone modem available to rent.` (string, required)
++ `price`: `100` (number, required)
++ `currency_code`: `USD` (string, required)
++ `image_file`: `image-data.jpg` (string, required)
++ `product_type`: `modem` (string, required)
++ `status`: `active` (string, required)
++ `details`: `active` (Details, required)
 
 
 ## Details (object)
 
 
 ### Properties
-+ `country_id`: `10a34500-5b55-53f8-baae-6f7f038eaa56` (string, required) 
++ `country_id`: `10a34500-5b55-53f8-baae-6f7f038eaa56` (string, required)
 
 
-## Eligible UsersDelete coupons eligibleusers relation with userRequest (object)
-
-
-### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-
-
-## ClaimersCreate coupons claimer relationship with userRequest (object)
+## Eligible UsersDelete coupons eligibleusers relation with user Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
 
 
-## Social LoginRequest (object)
-
-
-### Properties
-+ `provider_type`: `facebook` (string, required) 
-+ `provider_id`: `10209485407847211` (string, required) 
-+ `provider_token`: `zEAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required) 
-+ `notification_key`: `fhh33XfKLe4:APA91bEXCK09U4j2t33r7EE1-kMm0ryx4YR0bVsNguAePGruhsO5nCODvAiHYcVNunW-3UnJzvjhugFXDEvSQ1ECCiHnXFNLZ9xAyythGgboS0Lg9Xz7LJ8154WtvYUoS_kQ7zV7lxqE` (string, optional) 
-
-
-## Create DestinationRequest (object)
+## ClaimersCreate coupons claimer relationship with user Request (object)
 
 
 ### Properties
-+ `name`: `Java` (string, required) 
-+ `image_file`: `Java` (ImageFile, required) 
-+ `experience_count`: `0` (number, required) 
-+ `priority`: `1` (number, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
+
+
+## Social Login Request (object)
+
+
+### Properties
++ `provider_type`: `facebook` (string, required)
++ `provider_id`: `10209485407847211` (string, required)
++ `provider_token`: `zEAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required)
++ `notification_key`: `fhh33XfKLe4:APA91bEXCK09U4j2t33r7EE1-kMm0ryx4YR0bVsNguAePGruhsO5nCODvAiHYcVNunW-3UnJzvjhugFXDEvSQ1ECCiHnXFNLZ9xAyythGgboS0Lg9Xz7LJ8154WtvYUoS_kQ7zV7lxqE` (string, optional)
+
+
+## Create Destination Request (object)
+
+
+### Properties
++ `name`: `Java` (string, required)
++ `image_file`: `Java` (ImageFile, required)
++ `experience_count`: `0` (number, required)
++ `priority`: `1` (number, required)
 
 
 ## ImageFile (object)
 
 
 ### Properties
-+ `wide`: `singapore-wide.jpg` (string, required) 
-+ `narrow`: `singapore-narrow.jpg` (string, required) 
++ `wide`: `singapore-wide.jpg` (string, required)
++ `narrow`: `singapore-narrow.jpg` (string, required)
 
 
-## Update couponRequest (object)
-
-
-### Properties
-+ `id`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
-+ `code`: `YEYEAH` (string, required) 
-+ `title`: `Discount akhir tahun lagi!` (string, required) 
-+ `status`: `unavailable` (string, required) 
-+ `image_file`: `sample-image.jpg` (string, required) 
-+ `max_usage`: `10` (string, required) 
-+ `max_usage_per_user`: `2` (string, required) 
-+ `platform`: `all` (string, required) 
-+ `first_order_only`: `false` (boolean, required) 
-+ `first_user_only`: `false` (boolean, required) 
-+ `product_type`: `all` (string, required) 
-+ `discount_type`: `PERCENTAGE_CUT` (string, required) 
-+ `discount_amount`: `0` (string, required) 
-+ `start_at`: `3/8/2018 9:57:32 AM` (string, required) 
-+ `end_at`: `4/8/2018 9:57:32 AM` (string, required) 
-+ `description`: `Something is happening! Take cover!` (string, required) 
-+ `min_amount`: `500000` (number, required) 
-+ `country_code` (string, required, nullable) 
-
-
-## Update oneRequest (object)
+## Update coupon Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `id`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
++ `code`: `YEYEAH` (string, required)
++ `title`: `Discount akhir tahun lagi!` (string, required)
++ `status`: `unavailable` (string, required)
++ `image_file`: `sample-image.jpg` (string, required)
++ `max_usage`: `10` (string, required)
++ `max_usage_per_user`: `2` (string, required)
++ `platform`: `all` (string, required)
++ `first_order_only`: `false` (boolean, required)
++ `first_user_only`: `false` (boolean, required)
++ `product_type`: `all` (string, required)
++ `discount_type`: `PERCENTAGE_CUT` (string, required)
++ `discount_amount`: `0` (string, required)
++ `start_at`: `3/8/2018 9:57:32 AM` (string, required)
++ `end_at`: `4/8/2018 9:57:32 AM` (string, required)
++ `description`: `Something is happening! Take cover!` (string, required)
++ `min_amount`: `500000` (number, required)
++ `country_code` (string, required, nullable)
 
 
-## Add to Cart AttractionRequest (object)
+## Update one Request (object)
 
 
 ### Properties
-+ `productable_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
-+ `productable_type`: `attraction` (string, required) 
-+ `order_detail`: `attraction` (OrderDetail24, required) 
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
+
+
+## Add to Cart Attraction Request (object)
+
+
+### Properties
++ `productable_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required)
++ `productable_type`: `attraction` (string, required)
++ `order_detail`: `attraction` (OrderDetail24, required)
 
 
 ## OrderDetail24 (object)
 
 
 ### Properties
-+ `attraction_package_id`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
-+ `date`: `2018-03-16` (string, required) 
-+ `adults`: `1` (number, required) 
-+ `children`: `0` (number, required) 
-+ `seniors`: `0` (number, required) 
-+ `time_slot_id` (string, required, nullable) 
++ `attraction_package_id`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required)
++ `date`: `2018-03-16` (string, required)
++ `adults`: `1` (number, required)
++ `children`: `0` (number, required)
++ `seniors`: `0` (number, required)
++ `time_slot_id` (string, required, nullable)
 
 
-## Update one markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `1200` (string, required) 
-
-
-## RegisterRequest (object)
+## Update one markup prices Request (object)
 
 
 ### Properties
-+ `first_name`: `Skyshi` (string, required) 
-+ `last_name`: `Tampomas` (string, required) 
-+ `email`: `developer@skyshi.com` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
++ `markup_value`: `1200` (string, required)
 
 
-## Request Phone Number Ownership Verification Send OTPRequest (object)
+## Register Request (object)
 
 
 ### Properties
-+ `phone_number`: `+628231231233` (string, required) 
++ `first_name`: `Skyshi` (string, required)
++ `last_name`: `Tampomas` (string, required)
++ `email`: `developer@skyshi.com` (string, required)
++ `password`: `12345678` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
 
 
-## Update UserRequest (object)
-
-
-### Properties
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `country_code`: `ID` (string, required) 
-+ `language_code`: `ID` (string, required) 
-+ `currency_code`: `IDR` (string, required) 
-+ `old_password`: `password` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required) 
-
-
-## Checkout for Current UserRequest (object)
+## Request Phone Number Ownership Verification Send OTP Request (object)
 
 
 ### Properties
-+ `salutation`: `Mr.` (string, required) 
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `phone_number`: `+6282138844644` (string, required) 
++ `phone_number`: `+628231231233` (string, required)
 
 
-## Remove Attraction from Current User WishlistRequest (object)
+## Update User Request (object)
 
 
 ### Properties
-+ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `country_code`: `ID` (string, required)
++ `language_code`: `ID` (string, required)
++ `currency_code`: `IDR` (string, required)
++ `old_password`: `password` (string, required)
++ `password`: `12345678` (string, required)
++ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
 
 
-## Create new markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `120` (string, required) 
-
-
-## Local Login  Normal UserRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
-
-
-## Update single bannerRequest (object)
+## Checkout for Current User Request (object)
 
 
 ### Properties
-+ `title`: `Banner Ones` (string, required) 
-+ `priority`: `3` (number, required) 
-+ `image_file`: `3` (ImageFile34, required) 
++ `salutation`: `Mr.` (string, required)
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `phone_number`: `+6282138844644` (string, required)
+
+
+## Remove Attraction from Current User Wishlist Request (object)
+
+
+### Properties
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
+
+
+## Create new markup prices Request (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
++ `markup_value`: `120` (string, required)
+
+
+## Local Login  Normal User Request (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
+
+
+## Update single banner Request (object)
+
+
+### Properties
++ `title`: `Banner Ones` (string, required)
++ `priority`: `3` (number, required)
++ `image_file`: `3` (ImageFile34, required)
 
 
 ## ImageFile34 (object)
 
 
 ### Properties
-+ `mobile`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg` (string, required) 
-+ `original`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg` (string, required) 
++ `mobile`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg` (string, required)
++ `original`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg` (string, required)
 
 
-## Update DestinationRequest (object)
-
-
-### Properties
-+ `priority`: `100` (number, required) 
-
-
-## Register new bannerRequest (object)
+## Update Destination Request (object)
 
 
 ### Properties
-+ `title`: `Banner One` (string, required) 
-+ `priority`: `3` (number, required) 
-+ `image_file`: `3` (ImageFile34, required) 
++ `priority`: `100` (number, required)
 
 
-## Verify Phone Number ChangeRequest (object)
-
-
-### Properties
-+ `code`: `82233332593` (string, required) 
-
-
-## Add popular attractionRequest (object)
+## Register new banner Request (object)
 
 
 ### Properties
-+ `attraction_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
-+ `modifier_type`: `origin` (string, required) 
-+ `modifier_value`: `id` (string, required) 
-+ `priority`: `1` (number, required) 
++ `title`: `Banner One` (string, required)
++ `priority`: `3` (number, required)
++ `image_file`: `3` (ImageFile34, required)
 
 
-## Reset PasswordRequest (object)
-
-
-### Properties
-+ `token`: `U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==` (string, required) 
-+ `new_password`: `12345678` (string, required) 
-
-
-## Create new couponRequest (object)
+## Verify Phone Number Change Request (object)
 
 
 ### Properties
-+ `title`: `Diskon akhir tahun` (string, required) 
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `image_file`: `sample-image.jpg` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
++ `code`: `82233332593` (string, required)
+
+
+## Add popular attraction Request (object)
+
+
+### Properties
++ `attraction_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required)
++ `modifier_type`: `origin` (string, required)
++ `modifier_value`: `id` (string, required)
++ `priority`: `1` (number, required)
+
+
+## Reset Password Request (object)
+
+
+### Properties
++ `token`: `U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==` (string, required)
++ `new_password`: `12345678` (string, required)
+
+
+## Create new coupon Request (object)
+
+
+### Properties
++ `title`: `Diskon akhir tahun` (string, required)
++ `code`: `BANGBANG` (string, required)
++ `status`: `available` (string, required)
++ `max_usage`: `1` (string, required)
++ `max_usage_per_user`: `1` (string, required)
++ `image_file`: `sample-image.jpg` (string, required)
++ `discount_type`: `PRICE_CUT` (string, required)
++ `discount_amount`: `200000` (string, required)
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required)
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required)
++ `description` (string, required, nullable)
++ `min_amount`: `0` (number, required)
 
 
 ## Create new couponErrorResponse (object)
 
 
 ### Properties
-+ `code`: `400` (number, required) 
-+ `status`: `false` (boolean, required) 
-+ `message`: `Bad Request` (string, required) 
-+ `meta`: `{}` (object, required) 
-+ `data`: `{}` (array[Datum], required) 
++ `code`: `400` (number, required)
++ `status`: `false` (boolean, required)
++ `message`: `Bad Request` (string, required)
++ `meta`: `{}` (object, required)
++ `data`: `{}` (array[Datum], required)
 
 
 ## Datum (object)
 
 
 ### Properties
-+ `title.presence` (TitlePresence, required) 
++ `title.presence` (TitlePresence, required)
 
 
 ## TitlePresence (object)
 
 
 ### Properties
-+ `en`: `Title can't be blank` (string, required) 
-+ `id`: `Title can't be blank` (string, required) 
++ `en`: `Title can't be blank` (string, required)
++ `id`: `Title can't be blank` (string, required)
 
 
-## Update popular attractionRequest (object)
-
-
-### Properties
-+ `attraction_id`: `258c5832-1ac6-11e8-8572-100ba914aaac` (string, required) 
-+ `origin`: `eng` (string, required) 
-+ `priority`: `1` (number, required) 
-
-
-## Eligible UsersCreate coupons eligibleusers relation with userRequest (object)
+## Update popular attraction Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `attraction_id`: `258c5832-1ac6-11e8-8572-100ba914aaac` (string, required)
++ `origin`: `eng` (string, required)
++ `priority`: `1` (number, required)
 
 
-## Forgot PasswordRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-
-
-## Create new ModemRequest (object)
+## Eligible UsersCreate coupons eligibleusers relation with user Request (object)
 
 
 ### Properties
-+ `title`: `Sample Modem One` (string, required) 
-+ `description`: `Vodafone modem available to rent.` (string, required) 
-+ `price`: `100` (number, required) 
-+ `currency_code`: `USD` (string, required) 
-+ `image_file`: `image-data.jpg` (string, required) 
-+ `product_type`: `modem` (string, required) 
-+ `status`: `active` (string, required) 
-+ `details`: `active` (Details, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
 
 
-## Create newRequest (object)
+## Forgot Password Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
 
 
-## Verify Phone Number OwnershipRequest (object)
+## Create new Modem Request (object)
 
 
 ### Properties
-+ `code`: `568124` (string, required) 
++ `title`: `Sample Modem One` (string, required)
++ `description`: `Vodafone modem available to rent.` (string, required)
++ `price`: `100` (number, required)
++ `currency_code`: `USD` (string, required)
++ `image_file`: `image-data.jpg` (string, required)
++ `product_type`: `modem` (string, required)
++ `status`: `active` (string, required)
++ `details`: `active` (Details, required)
 
 
-## Local LoginRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (string, required) 
-
-
-## Request Phone Number ChangeRequest (object)
-
-
-### Properties
-+ `phone_number`: `+6282233332593` (string, required) 
-
-
-## RegisterRequest54 (object)
+## Create new Request (object)
 
 
 ### Properties
-+ `first_name`: `Skyshi` (string, required) 
-+ `last_name`: `Tampomas` (string, required) 
-+ `email`: `developessr@skyshi.com` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `notification_key`: `dF_3FA64NAg:APA91bFkli43f9zA7JAOJt9rzRGIdzLUncUWkTlTP944us2z6_A4s1PbUlozj_lXfzeEg340LxNxbYKu1cCDVjPZIsk5jV8H8e4uyft6ElzZB-jTv4aLQu0jRxmPugZCqSLXFPBrNke-` (string, required) 
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
 
 
-## Booking Status ChangedRequest (object)
-
-
-### Properties
-+ `type`: `booking_status_changed` (string, required) 
-+ `timestamp`: `2017-11-26 10:43:14` (string, required) 
-+ `links`: `2017-11-26 10:43:14` (Links, required) 
-+ `item`: `2017-11-26 10:43:14` (Item, required) 
-
-
-## Create new top destinationRequest (object)
+## Verify Phone Number Ownership Request (object)
 
 
 ### Properties
-+ `name`: `Chiang Mai` (string, required) 
-+ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
-+ `banner_file`: `lalala.jpg` (string, required) 
-+ `experience_count`: `0` (number, required) 
++ `code`: `568124` (string, required)
 
 
-## Update top destinationRequest (object)
+## Local Login Request (object)
 
 
 ### Properties
-+ `name`: `Chiang Mau` (string, required) 
-+ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
-+ `banner_file`: `lalala.jpg` (string, required) 
-+ `experience_count`: `0` (number, required) 
-+ `created_at`: `2/20/2018 11:30:49 AM` (string, required) 
-+ `updated_at`: `2/20/2018 11:30:49 AM` (string, required) 
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (string, required)
 
 
-
-## Update ProfileRequest (object)
+## Request Phone Number Change Request (object)
 
 
 ### Properties
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `country_code`: `ID` (string, required) 
-+ `language_code`: `ID` (string, required) 
-+ `currency_code`: `IDR` (string, required) 
-+ `old_password`: `password` (string, required) 
-+ `password`: `12345678` (string, required) 
++ `phone_number`: `+6282233332593` (string, required)
+
+## Register Request54 (object)
+
+### Properties
++ `first_name`: `Skyshi` (string, required)
++ `last_name`: `Tampomas` (string, required)
++ `email`: `developessr@skyshi.com` (string, required)
++ `password`: `12345678` (string, required)
++ `notification_key`: `dF_3FA64NAg:APA91bFkli43f9zA7JAOJt9rzRGIdzLUncUWkTlTP944us2z6_A4s1PbUlozj_lXfzeEg340LxNxbYKu1cCDVjPZIsk5jV8H8e4uyft6ElzZB-jTv4aLQu0jRxmPugZCqSLXFPBrNke-` (string, required)
+
+
+## Booking Status Changed Request (object)
+
+
+### Properties
++ `type`: `booking_status_changed` (string, required)
++ `timestamp`: `2017-11-26 10:43:14` (string, required)
++ `links`: `2017-11-26 10:43:14` (Links, required)
++ `item`: `2017-11-26 10:43:14` (Item, required)
+
+
+## Create new top destination Request (object)
+
+
+### Properties
++ `name`: `Chiang Mai` (string, required)
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required)
++ `banner_file`: `lalala.jpg` (string, required)
++ `experience_count`: `0` (number, required)
+
+
+## Update top destination Request (object)
+
+
+### Properties
++ `name`: `Chiang Mau` (string, required)
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required)
++ `banner_file`: `lalala.jpg` (string, required)
++ `experience_count`: `0` (number, required)
++ `created_at`: `2/20/2018 11:30:49 AM` (string, required)
++ `updated_at`: `2/20/2018 11:30:49 AM` (string, required)
+
+
+
+## Update Profile Request (object)
+
+
+### Properties
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `country_code`: `ID` (string, required)
++ `language_code`: `ID` (string, required)
++ `currency_code`: `IDR` (string, required)
++ `old_password`: `password` (string, required)
++ `password`: `12345678` (string, required)
 + `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
