@@ -15,5 +15,36 @@
             "meta": {}
         }
 
+### Set maintenance status [PUT {{base_url}}/maintenance-status/]
+
++ Request (application/json)
+    + Headers
+            Authorization: {{authorization}}
+
+    + Attributes (Set maintenance status Request)
+
+    + Body
+
+        {
+        "value": true
+        }
+
+
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success setting maintenance status preset",
+            "i18n": {},
+            "data": {},
+            "meta": {}
+        }
+
 
 # Data Structures
+
+## Set maintenance status Request (object)
+### Properties
++ `value`: true (boolean, required)
