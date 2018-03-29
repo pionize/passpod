@@ -920,6 +920,112 @@ HOST: http://api.passpod.project.skyshi.com
 
 ## Banners [/banners]
 
+### View single banner [GET /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)
+    
++ Request 
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Banner data for 43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "i18n": {},
+                "data": {
+                    "image_file": {
+                        "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                        "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                    },
+                    "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                    "title": "Banner One",
+                    "priority": 3,
+                    "created_at": "2018-03-27T09:38:11.000Z",
+                    "updated_at": "2018-03-27T09:38:11.000Z",
+                    "image_url": {
+                        "original": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                        "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                    }
+                },
+                "meta": {}
+            }
+            
+### Update single banner [PUT /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
+    + Attributes (Update single bannerRequest)
+
+    + Body
+
+            {
+                "title": "Banner Ones",
+                "priority": 3,
+                "image_file": {
+                    "mobile": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg",
+                    "original": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg"
+                }
+            }
+
+
++ Response 200 
+
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Banner data for 43fdba00-1de8-11e8-aa29-09de6febcf21",
+            "i18n": {},
+            "data": {
+                "image_file": {
+                    "original": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.png",
+                    "mobile": "9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.png"
+                },
+                "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "title": "Banner One",
+                "priority": 3,
+                "created_at": "2018-03-27T09:38:11.000Z",
+                "updated_at": "2018-03-27T09:38:11.000Z",
+                "image_url": {
+                    "original": "https://cdn.passpod.project.skyshi.com/image/banner/9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.png",
+                    "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.png"
+                }
+            },
+            "meta": {}
+        }
+
+### Delete single banner [DELETE /banners/{id}]
+
++ Parameters
+    + id: 43fdba00-1de8-11e8-aa29-09de6febcf21 (string, required)}]
+
++ Request (application/json)
+    + Headers
+
+            Authorization:{{authorization}}
+
++ Response 200 
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Success deleting banner #43fdba00-1de8-11e8-aa29-09de6febcf21",
+                "i18n": {},
+                "data": {},
+                "meta": {}
+            }
+
 ### View all banners [GET /banners]
 
 + Request 
@@ -932,19 +1038,56 @@ HOST: http://api.passpod.project.skyshi.com
             {
                 "code": 200,
                 "status": true,
-                "message": "All Banner data",
-                "meta": {},
+                "message": "All banner datas",
+                "i18n": {},
                 "data": [
                     {
-                        "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
-                        "title": "Banner main",
-                        "filename": "bannermain.jpg",
+                        "image_file": {
+                            "original": "616e8aa0-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "616e8aa0-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        },
+                        "id": "6bb96de0-1de9-11e8-94e1-f38955ee3931",
+                        "title": "Banner Two",
+                        "priority": 1,
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/616e8aa0-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/616e8aa0-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        }
+                    },
+                    {
+                        "image_file": {
+                            "original": "777f3150-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "777f3150-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        },
+                        "id": "7fdc9c70-1de9-11e8-94e1-f38955ee3931",
+                        "title": "Banner Number Three",
+                        "priority": 2,
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/777f3150-1de9-11e8-94e1-f38955ee3931-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/777f3150-1de9-11e8-94e1-f38955ee3931-mobile.png"
+                        }
+                    },
+                    {
+                        "image_file": {
+                            "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                            "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                        },
+                        "id": "43fdba00-1de8-11e8-aa29-09de6febcf21",
+                        "title": "Banner One",
                         "priority": 3,
-                        "link": null,
-                        "created_at": "2018-02-19T16:58:27.000Z",
-                        "updated_at": "2018-02-20T08:09:05.000Z"
+                        "created_at": "2018-03-27T09:38:11.000Z",
+                        "updated_at": "2018-03-27T09:38:11.000Z",
+                        "image_url": {
+                            "original": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png",
+                            "mobile": "https://cdn.passpod.project.skyshi.com/image/banner/f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png"
+                        }
                     }
-                ]
+                ],
+                "meta": {}
             }
 
 ### Register new banner [POST /banners]
@@ -955,17 +1098,17 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization: {{authorization}}
 
     + Attributes (Register new bannerRequest)
-
+    
     + Body
 
             {
-                "title": "Banner main",
-                "filename": "bannermain.jpg",
-                "priority": "3",
-                "created_at": "2018-02-19T16:58:27Z",
-                "updated_at": "2018-02-19T16:58:27Z"
+                "title": "Banner One",
+                "priority": 3,
+                "image_file": {
+                    "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png",
+                    "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png"
+                }
             }
-
 
 + Response 200 
 
@@ -973,18 +1116,25 @@ HOST: http://api.passpod.project.skyshi.com
                 "code": 200,
                 "status": true,
                 "message": "Success creating new banner",
-                "meta": {},
+                "i18n": {},
                 "data": {
-                    "created_at": "2018-02-19T16:58:27.000Z",
+                    "image_file": {
+                        "mobile": "f75f9f10-1de7-11e8-aa29-09de6febcf21-mobile.png",
+                        "original": "f75f9f10-1de7-11e8-aa29-09de6febcf21-original.png"
+                    },
+                    "created_at": {
+                        "fn": "NOW",
+                        "args": []
+                    },
                     "updated_at": {
                         "fn": "NOW",
                         "args": []
                     },
-                    "id": "51722700-1615-11e8-9989-3f0ebc7399ba",
-                    "title": "Banner main",
-                    "filename": "bannermain.jpg",
-                    "priority": "3"
-                }
+                    "id": "27b8cc00-332c-11e8-9b6b-230f5c5aec4e",
+                    "title": "Banner One",
+                    "priority": 3
+                },
+                "meta": {}
             }
 
 
