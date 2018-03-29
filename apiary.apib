@@ -9,9 +9,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Social Login [POST /auth/login/social]
 
 + Request (application/json)
-    + Attributes (Social LoginRequest)
+    + Attributes (Social Login Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -52,9 +52,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Register [POST /auth/register]
 
 + Request (application/json)
-    + Attributes (RegisterRequest)
+    + Attributes (Register Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -95,7 +95,7 @@ HOST: http://api.passpod.project.skyshi.com
 ### Forgot Password [POST /auth/reset]
 
 + Request (application/json)
-    + Attributes (Forgot PasswordRequest)
+    + Attributes (Forgot Password Request)
 
     + Body
 
@@ -104,7 +104,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -120,7 +120,7 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: U2FsdGVkX1+PvbfttWFkxVdMPJthZTIC8ECBW2P3JpEw9BOfc9H/P3vcZekSuPMq
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -138,7 +138,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -152,9 +152,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Reset Password [POST /auth/reset-password]
 
 + Request (application/json)
-    + Attributes (Reset PasswordRequest)
+    + Attributes (Reset Password Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -168,9 +168,9 @@ HOST: http://api.passpod.project.skyshi.com
 ### Local Login [POST /auth/login]
 
 + Request (application/json)
-    + Attributes (Local LoginRequest)
+    + Attributes (Local Login Request)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -214,12 +214,12 @@ HOST: http://api.passpod.project.skyshi.com
 + Parameters
     + id: e7e596d0-10ad-11e8-8bed-776a5cc09ce6 (string, required)
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -266,12 +266,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: 10
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -456,12 +456,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get Profile [GET /users/me]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -506,7 +506,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update ProfileRequest)
+    + Attributes (Update Profile Request)
 
     + Body
 
@@ -520,7 +520,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -559,7 +559,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Notification List [GET /users/notifications/]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
@@ -567,7 +567,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 
 
-+ Response 200 
++ Response 200
 
         {
             "code": 200,
@@ -596,12 +596,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get Saved Coupons [GET /users/saved_coupons]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
         {
             "code": 200,
@@ -641,7 +641,7 @@ HOST: http://api.passpod.project.skyshi.com
             ],
             "meta": {}
         }
-        
+
 ### Add Coupon to Wishlist [POST /users/saved_coupons/]
 
 + Request (application/json)
@@ -649,7 +649,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Add Attraction to Current User WishlistRequest)
+    + Attributes (Add Attraction to Current User Wishlist Request)
 
     + Body
 
@@ -658,7 +658,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -674,7 +674,7 @@ HOST: http://api.passpod.project.skyshi.com
                 },
                 "meta": {}
             }
-            
+
 ### Remove Coupon From User Wishlist [DELETE /users/saved_coupons/{id}]
 
 + Parameters
@@ -685,7 +685,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Remove Attraction from Current User WishlistRequest)
+    + Attributes (Remove Attraction from Current User Wishlist Request)
 
     + Body
 
@@ -694,7 +694,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
             {
@@ -705,7 +705,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Get Current User Wishlist [GET /users/wishlists{?language_code,currency_code}]
 + Parameters
     + language_code (string, required)
@@ -774,7 +774,7 @@ HOST: http://api.passpod.project.skyshi.com
                     "count": 1
                 }
             }
-            
+
 ### Remove Attraction from Wishlist [DELETE /users/wishlists/{id}]
 + Parameters
     + id (string, required)
@@ -784,7 +784,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -794,7 +794,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Add Attraction to Wishlist [POST /users/wishlists]
 
 + Request (application/json)
@@ -802,7 +802,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Add Attraction to WishlistRequest)
+    + Attributes (Add Attraction to Wishlist Request)
 
     + Body
 
@@ -811,7 +811,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -833,7 +833,7 @@ HOST: http://api.passpod.project.skyshi.com
                 },
                 "meta": {}
             }
-            
+
 ### Resend Activation mail [POST /auth/resend-activation-mail]
 
 + Request (application/json)
@@ -841,7 +841,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Resend Activation mailRequest)
+    + Attributes (Resend Activation mail Request)
 
     + Body
 
@@ -860,7 +860,7 @@ HOST: http://api.passpod.project.skyshi.com
                 "data": {},
                 "meta": {}
             }
-            
+
 ### Verify Phone Number Change [POST /users/phone/verify]
 
 + Request (application/json)
@@ -868,7 +868,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Verify Phone Number ChangeRequest)
+    + Attributes (Verify Phone Number Change Request)
 
     + Body
 
@@ -877,7 +877,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -922,12 +922,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### View all banners [GET /banners]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -954,7 +954,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Register new bannerRequest)
+    + Attributes (Register new banner Request)
 
     + Body
 
@@ -967,7 +967,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -992,13 +992,13 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### Get All [GET /coupons]
 
-+ Request 
++ Request
     + Headers
 
             Authorization: {{authorization}}
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1083,7 +1083,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Create new couponRequest)
+    + Attributes (Create new coupon Request)
 
     + Body
 
@@ -1115,7 +1115,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization: {{authorization}}
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1156,7 +1156,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update couponRequest)
+    + Attributes (Update coupon Request)
 
     + Body
 
@@ -1174,7 +1174,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 ### Delete coupon [DELETE]
 
@@ -1184,7 +1184,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization: {{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1203,7 +1203,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1229,8 +1229,8 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
-    
++ Response 200
+
             {
                 "code": 200,
                 "status": true,
@@ -1261,7 +1261,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization: {{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1275,7 +1275,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Update top destinationRequest)
+    + Attributes (Update top destination Request)
 
     + Body
 
@@ -1289,7 +1289,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1300,7 +1300,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization: {{authorization}}
 
-    + Attributes (Create new top destinationRequest)
+    + Attributes (Create new top destination Request)
 
     + Body
 
@@ -1312,7 +1312,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1320,7 +1320,7 @@ HOST: http://api.passpod.project.skyshi.com
 
 + Request (application/json)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1357,7 +1357,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1371,7 +1371,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Update one markup pricesRequest)
+    + Attributes (Update one markup prices Request)
 
     + Body
 
@@ -1381,7 +1381,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1394,7 +1394,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 
@@ -1405,7 +1405,7 @@ HOST: http://api.passpod.project.skyshi.com
 
             Authorization:{{authorization}}
 
-    + Attributes (Create new markup pricesRequest)
+    + Attributes (Create new markup prices Request)
 
     + Body
 
@@ -1415,7 +1415,7 @@ HOST: http://api.passpod.project.skyshi.com
             }
 
 
-+ Response 200 
++ Response 200
 
 
 ### Delete one markup prices [DELETE /markup_prices/{id}]
@@ -1429,7 +1429,7 @@ HOST: http://api.passpod.project.skyshi.com
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
 
 ## Attractions [/attractions]
@@ -1440,7 +1440,7 @@ HOST: http://api.passpod.project.skyshi.com
 + Parameters
     + id: d5a03ea2-e06e-5d01-84b7-94530b1059f7 (string, required)
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -1651,13 +1651,13 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### List Categories [GET /attractions/categories]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2065,12 +2065,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: indonesia
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2249,12 +2249,12 @@ HOST: http://api.passpod.project.skyshi.com
 
 ### List Countries [GET /attractions/countries]
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2354,12 +2354,12 @@ HOST: http://api.passpod.project.skyshi.com
 
         + Sample: 3
 
-+ Request 
++ Request
     + Headers
 
             Authorization:{{authorization}}
 
-+ Response 200 
++ Response 200
 
             {
                 "code": 200,
@@ -2446,563 +2446,563 @@ HOST: http://api.passpod.project.skyshi.com
 
 # Data Structures
 
-## Delete oneRequest (object)
+## Delete one Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
 
 
-## Add Attraction to WishlistRequest (object)
-
-
-### Properties
-+ `attractionUUID`: `642cf2e0-f2bf-5120-a496-6383be750b62` (string, required) 
-
-
-## Voucher ReadyRequest (object)
+## Add Attraction to Wishlist Request (object)
 
 
 ### Properties
-+ `type`: `vouchers_ready` (string, required) 
-+ `timestamp`: `2017-11-26 10:43:14` (string, required) 
-+ `links`: `2017-11-26 10:43:14` (Links, required) 
-+ `item`: `2017-11-26 10:43:14` (Item, required) 
++ `attractionUUID`: `642cf2e0-f2bf-5120-a496-6383be750b62` (string, required)
+
+
+## Voucher Ready Request (object)
+
+
+### Properties
++ `type`: `vouchers_ready` (string, required)
++ `timestamp`: `2017-11-26 10:43:14` (string, required)
++ `links`: `2017-11-26 10:43:14` (Links, required)
++ `item`: `2017-11-26 10:43:14` (Item, required)
 
 
 ## Links (object)
 
 
 ### Properties
-+ `self`: `https://api.bemyguest.com.sg/v2/bookings/8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
++ `self`: `https://api.bemyguest.com.sg/v2/bookings/8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required)
 
 
 ## Item (object)
 
 
 ### Properties
-+ `uuid`: `8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required) 
-+ `code`: `UVWXP81` (string, required) 
-+ `partnerReference` (string, required, nullable) 
-+ `status`: `approved` (string, required) 
-+ `productTypeTitle`: `Universal Studios Singapore E-ticket` (string, required) 
-+ `productTypeTitleTranslated`: `Universal Studios Singapore E-ticket` (string, required) 
-+ `productTypeUuid`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
-+ `currencyCode`: `SGD` (string, required) 
-+ `currencyUuid`: `cd15153e-dfd1-5039-8aa3-115bec58e86e` (string, required) 
-+ `totalAmount`: `113.5` (number, required) 
-+ `amountBreakdown`: `113.5` (array[AmountBreakdown], required) 
-+ `arrivalDate`: `2017-12-25` (string, required) 
-+ `createdAt`: `2017-11-06 14:31:59` (string, required) 
-+ `updatedAt`: `2017-12-12 16:16:36` (string, required) 
-+ `salutation`: `Mr.` (string, required) 
-+ `firstName`: `John` (string, required) 
-+ `lastName`: `Doe` (string, required) 
-+ `email`: `john@sample.com` (string, required) 
-+ `phone`: `+222333111` (string, required) 
-+ `adults`: `1` (number, required) 
-+ `children`: `1` (number, required) 
-+ `seniors`: `0` (number, required) 
-+ `options`: `[]` (array[string], required) 
-+ `completedAt` (string, required, nullable) 
-+ `cancellationRequestAt` (string, required, nullable) 
-+ `refundDate` (string, required, nullable) 
-+ `refundAmount` (string, required, nullable) 
-+ `refundTransaction` (string, required, nullable) 
++ `uuid`: `8a4970bf-b9dd-448b-8c24-59dadb5c3766` (string, required)
++ `code`: `UVWXP81` (string, required)
++ `partnerReference` (string, required, nullable)
++ `status`: `approved` (string, required)
++ `productTypeTitle`: `Universal Studios Singapore E-ticket` (string, required)
++ `productTypeTitleTranslated`: `Universal Studios Singapore E-ticket` (string, required)
++ `productTypeUuid`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required)
++ `currencyCode`: `SGD` (string, required)
++ `currencyUuid`: `cd15153e-dfd1-5039-8aa3-115bec58e86e` (string, required)
++ `totalAmount`: `113.5` (number, required)
++ `amountBreakdown`: `113.5` (array[AmountBreakdown], required)
++ `arrivalDate`: `2017-12-25` (string, required)
++ `createdAt`: `2017-11-06 14:31:59` (string, required)
++ `updatedAt`: `2017-12-12 16:16:36` (string, required)
++ `salutation`: `Mr.` (string, required)
++ `firstName`: `John` (string, required)
++ `lastName`: `Doe` (string, required)
++ `email`: `john@sample.com` (string, required)
++ `phone`: `+222333111` (string, required)
++ `adults`: `1` (number, required)
++ `children`: `1` (number, required)
++ `seniors`: `0` (number, required)
++ `options`: `[]` (array[string], required)
++ `completedAt` (string, required, nullable)
++ `cancellationRequestAt` (string, required, nullable)
++ `refundDate` (string, required, nullable)
++ `refundAmount` (string, required, nullable)
++ `refundTransaction` (string, required, nullable)
 
 
 ## AmountBreakdown (object)
 
 
 ### Properties
-+ `name`: `adult` (string, required) 
-+ `quantity`: `1` (number, required) 
-+ `price`: `65` (number, required) 
++ `name`: `adult` (string, required)
++ `quantity`: `1` (number, required)
++ `price`: `65` (number, required)
 
 
-## Set maintenance statusRequest (object)
-
-
-### Properties
-+ `value`: `true` (boolean, required) 
-
-
-## ClaimersDelete coupons claimer relationship with userRequest (object)
+## Set maintenance status Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `value`: `true` (boolean, required)
 
 
-## Add to Cart ModemRequest (object)
+## ClaimersDelete coupons claimer relationship with user Request (object)
 
 
 ### Properties
-+ `productable_id` (string, required) 
-+ `productable_type`: `product` (string, required) 
-+ `order_detail`: `product` (OrderDetail, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
+
+
+## Add to Cart Modem Request (object)
+
+
+### Properties
++ `productable_id` (string, required)
++ `productable_type`: `product` (string, required)
++ `order_detail`: `product` (OrderDetail, required)
 
 
 ## OrderDetail (object)
 
 
 ### Properties
-+ `qty`: `1` (number, required) 
++ `qty`: `1` (number, required)
 
 
-## Local Login  AdminRequest (object)
-
-
-### Properties
-+ `email`: `admin@passpod.id` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
-
-
-## Add Attraction to Current User WishlistRequest (object)
+## Local Login  Admin Request (object)
 
 
 ### Properties
-+ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
++ `email`: `admin@passpod.id` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
 
 
-## Resend Activation mailRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-
-
-## Update one ModemRequest (object)
+## Add Attraction to Current User Wishlist Request (object)
 
 
 ### Properties
-+ `title`: `Modem One` (string, required) 
-+ `description`: `Vodafone modem available to rent.` (string, required) 
-+ `price`: `100` (number, required) 
-+ `currency_code`: `USD` (string, required) 
-+ `image_file`: `image-data.jpg` (string, required) 
-+ `product_type`: `modem` (string, required) 
-+ `status`: `active` (string, required) 
-+ `details`: `active` (Details, required) 
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
+
+
+## Resend Activation mail Request (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
+
+
+## Update one Modem Request (object)
+
+
+### Properties
++ `title`: `Modem One` (string, required)
++ `description`: `Vodafone modem available to rent.` (string, required)
++ `price`: `100` (number, required)
++ `currency_code`: `USD` (string, required)
++ `image_file`: `image-data.jpg` (string, required)
++ `product_type`: `modem` (string, required)
++ `status`: `active` (string, required)
++ `details`: `active` (Details, required)
 
 
 ## Details (object)
 
 
 ### Properties
-+ `country_id`: `10a34500-5b55-53f8-baae-6f7f038eaa56` (string, required) 
++ `country_id`: `10a34500-5b55-53f8-baae-6f7f038eaa56` (string, required)
 
 
-## Eligible UsersDelete coupons eligibleusers relation with userRequest (object)
-
-
-### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-
-
-## ClaimersCreate coupons claimer relationship with userRequest (object)
+## Eligible UsersDelete coupons eligibleusers relation with user Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
 
 
-## Social LoginRequest (object)
-
-
-### Properties
-+ `provider_type`: `facebook` (string, required) 
-+ `provider_id`: `10209485407847211` (string, required) 
-+ `provider_token`: `zEAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required) 
-+ `notification_key`: `fhh33XfKLe4:APA91bEXCK09U4j2t33r7EE1-kMm0ryx4YR0bVsNguAePGruhsO5nCODvAiHYcVNunW-3UnJzvjhugFXDEvSQ1ECCiHnXFNLZ9xAyythGgboS0Lg9Xz7LJ8154WtvYUoS_kQ7zV7lxqE` (string, optional) 
-
-
-## Create DestinationRequest (object)
+## ClaimersCreate coupons claimer relationship with user Request (object)
 
 
 ### Properties
-+ `name`: `Java` (string, required) 
-+ `image_file`: `Java` (ImageFile, required) 
-+ `experience_count`: `0` (number, required) 
-+ `priority`: `1` (number, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
+
+
+## Social Login Request (object)
+
+
+### Properties
++ `provider_type`: `facebook` (string, required)
++ `provider_id`: `10209485407847211` (string, required)
++ `provider_token`: `zEAAQiGg8LuYMBAC4TDm4VeZC2iEP9qiCxDZBivg89baV8kFjvxhPwOoWHvVroZCz1XsiPGeS8o0DeKIgZBJnIB6aDH29XXebffuoZAD8NjRNEN34E7dfhaDtKZAS7Cq4N2fBtK8OJzuYuqruiw0QYOfqCA20a4dRBAZD` (string, required)
++ `notification_key`: `fhh33XfKLe4:APA91bEXCK09U4j2t33r7EE1-kMm0ryx4YR0bVsNguAePGruhsO5nCODvAiHYcVNunW-3UnJzvjhugFXDEvSQ1ECCiHnXFNLZ9xAyythGgboS0Lg9Xz7LJ8154WtvYUoS_kQ7zV7lxqE` (string, optional)
+
+
+## Create Destination Request (object)
+
+
+### Properties
++ `name`: `Java` (string, required)
++ `image_file`: `Java` (ImageFile, required)
++ `experience_count`: `0` (number, required)
++ `priority`: `1` (number, required)
 
 
 ## ImageFile (object)
 
 
 ### Properties
-+ `wide`: `singapore-wide.jpg` (string, required) 
-+ `narrow`: `singapore-narrow.jpg` (string, required) 
++ `wide`: `singapore-wide.jpg` (string, required)
++ `narrow`: `singapore-narrow.jpg` (string, required)
 
 
-## Update couponRequest (object)
-
-
-### Properties
-+ `id`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
-+ `code`: `YEYEAH` (string, required) 
-+ `title`: `Discount akhir tahun lagi!` (string, required) 
-+ `status`: `unavailable` (string, required) 
-+ `image_file`: `sample-image.jpg` (string, required) 
-+ `max_usage`: `10` (string, required) 
-+ `max_usage_per_user`: `2` (string, required) 
-+ `platform`: `all` (string, required) 
-+ `first_order_only`: `false` (boolean, required) 
-+ `first_user_only`: `false` (boolean, required) 
-+ `product_type`: `all` (string, required) 
-+ `discount_type`: `PERCENTAGE_CUT` (string, required) 
-+ `discount_amount`: `0` (string, required) 
-+ `start_at`: `3/8/2018 9:57:32 AM` (string, required) 
-+ `end_at`: `4/8/2018 9:57:32 AM` (string, required) 
-+ `description`: `Something is happening! Take cover!` (string, required) 
-+ `min_amount`: `500000` (number, required) 
-+ `country_code` (string, required, nullable) 
-
-
-## Update oneRequest (object)
+## Update coupon Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `id`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
++ `code`: `YEYEAH` (string, required)
++ `title`: `Discount akhir tahun lagi!` (string, required)
++ `status`: `unavailable` (string, required)
++ `image_file`: `sample-image.jpg` (string, required)
++ `max_usage`: `10` (string, required)
++ `max_usage_per_user`: `2` (string, required)
++ `platform`: `all` (string, required)
++ `first_order_only`: `false` (boolean, required)
++ `first_user_only`: `false` (boolean, required)
++ `product_type`: `all` (string, required)
++ `discount_type`: `PERCENTAGE_CUT` (string, required)
++ `discount_amount`: `0` (string, required)
++ `start_at`: `3/8/2018 9:57:32 AM` (string, required)
++ `end_at`: `4/8/2018 9:57:32 AM` (string, required)
++ `description`: `Something is happening! Take cover!` (string, required)
++ `min_amount`: `500000` (number, required)
++ `country_code` (string, required, nullable)
 
 
-## Add to Cart AttractionRequest (object)
+## Update one Request (object)
 
 
 ### Properties
-+ `productable_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
-+ `productable_type`: `attraction` (string, required) 
-+ `order_detail`: `attraction` (OrderDetail24, required) 
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
+
+
+## Add to Cart Attraction Request (object)
+
+
+### Properties
++ `productable_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required)
++ `productable_type`: `attraction` (string, required)
++ `order_detail`: `attraction` (OrderDetail24, required)
 
 
 ## OrderDetail24 (object)
 
 
 ### Properties
-+ `attraction_package_id`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required) 
-+ `date`: `2018-03-16` (string, required) 
-+ `adults`: `1` (number, required) 
-+ `children`: `0` (number, required) 
-+ `seniors`: `0` (number, required) 
-+ `time_slot_id` (string, required, nullable) 
++ `attraction_package_id`: `efedb1fc-f150-5eaa-bf6e-fc202f6114bd` (string, required)
++ `date`: `2018-03-16` (string, required)
++ `adults`: `1` (number, required)
++ `children`: `0` (number, required)
++ `seniors`: `0` (number, required)
++ `time_slot_id` (string, required, nullable)
 
 
-## Update one markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `1200` (string, required) 
-
-
-## RegisterRequest (object)
+## Update one markup prices Request (object)
 
 
 ### Properties
-+ `first_name`: `Skyshi` (string, required) 
-+ `last_name`: `Tampomas` (string, required) 
-+ `email`: `developer@skyshi.com` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
++ `markup_value`: `1200` (string, required)
 
 
-## Request Phone Number Ownership Verification Send OTPRequest (object)
+## Register Request (object)
 
 
 ### Properties
-+ `phone_number`: `+628231231233` (string, required) 
++ `first_name`: `Skyshi` (string, required)
++ `last_name`: `Tampomas` (string, required)
++ `email`: `developer@skyshi.com` (string, required)
++ `password`: `12345678` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
 
 
-## Update UserRequest (object)
-
-
-### Properties
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `country_code`: `ID` (string, required) 
-+ `language_code`: `ID` (string, required) 
-+ `currency_code`: `IDR` (string, required) 
-+ `old_password`: `password` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required) 
-
-
-## Checkout for Current UserRequest (object)
+## Request Phone Number Ownership Verification Send OTP Request (object)
 
 
 ### Properties
-+ `salutation`: `Mr.` (string, required) 
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `phone_number`: `+6282138844644` (string, required) 
++ `phone_number`: `+628231231233` (string, required)
 
 
-## Remove Attraction from Current User WishlistRequest (object)
+## Update User Request (object)
 
 
 ### Properties
-+ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required) 
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `country_code`: `ID` (string, required)
++ `language_code`: `ID` (string, required)
++ `currency_code`: `IDR` (string, required)
++ `old_password`: `password` (string, required)
++ `password`: `12345678` (string, required)
++ `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
 
 
-## Create new markup pricesRequest (object)
-
-
-### Properties
-+ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
-+ `markup_value`: `120` (string, required) 
-
-
-## Local Login  Normal UserRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string) 
-
-
-## Update single bannerRequest (object)
+## Checkout for Current User Request (object)
 
 
 ### Properties
-+ `title`: `Banner Ones` (string, required) 
-+ `priority`: `3` (number, required) 
-+ `image_file`: `3` (ImageFile34, required) 
++ `salutation`: `Mr.` (string, required)
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `phone_number`: `+6282138844644` (string, required)
+
+
+## Remove Attraction from Current User Wishlist Request (object)
+
+
+### Properties
++ `couponUUID`: `262c2580-1775-11e8-9284-07fb71fb3431` (string, required)
+
+
+## Create new markup prices Request (object)
+
+
+### Properties
++ `attraction_id`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
++ `markup_value`: `120` (string, required)
+
+
+## Local Login  Normal User Request (object)
+
+
+### Properties
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (optional, string)
+
+
+## Update single banner Request (object)
+
+
+### Properties
++ `title`: `Banner Ones` (string, required)
++ `priority`: `3` (number, required)
++ `image_file`: `3` (ImageFile34, required)
 
 
 ## ImageFile34 (object)
 
 
 ### Properties
-+ `mobile`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg` (string, required) 
-+ `original`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg` (string, required) 
++ `mobile`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-mobile.jpg` (string, required)
++ `original`: `9bd88ed0-2365-11e8-aedc-2d60910e9b56-original.jpg` (string, required)
 
 
-## Update DestinationRequest (object)
-
-
-### Properties
-+ `priority`: `100` (number, required) 
-
-
-## Register new bannerRequest (object)
+## Update Destination Request (object)
 
 
 ### Properties
-+ `title`: `Banner One` (string, required) 
-+ `priority`: `3` (number, required) 
-+ `image_file`: `3` (ImageFile34, required) 
++ `priority`: `100` (number, required)
 
 
-## Verify Phone Number ChangeRequest (object)
-
-
-### Properties
-+ `code`: `82233332593` (string, required) 
-
-
-## Add popular attractionRequest (object)
+## Register new banner Request (object)
 
 
 ### Properties
-+ `attraction_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required) 
-+ `modifier_type`: `origin` (string, required) 
-+ `modifier_value`: `id` (string, required) 
-+ `priority`: `1` (number, required) 
++ `title`: `Banner One` (string, required)
++ `priority`: `3` (number, required)
++ `image_file`: `3` (ImageFile34, required)
 
 
-## Reset PasswordRequest (object)
-
-
-### Properties
-+ `token`: `U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==` (string, required) 
-+ `new_password`: `12345678` (string, required) 
-
-
-## Create new couponRequest (object)
+## Verify Phone Number Change Request (object)
 
 
 ### Properties
-+ `title`: `Diskon akhir tahun` (string, required) 
-+ `code`: `BANGBANG` (string, required) 
-+ `status`: `available` (string, required) 
-+ `max_usage`: `1` (string, required) 
-+ `max_usage_per_user`: `1` (string, required) 
-+ `image_file`: `sample-image.jpg` (string, required) 
-+ `discount_type`: `PRICE_CUT` (string, required) 
-+ `discount_amount`: `200000` (string, required) 
-+ `start_at`: `2/18/2018 12:00:00 AM` (string, required) 
-+ `end_at`: `2/21/2018 12:00:00 AM` (string, required) 
-+ `description` (string, required, nullable) 
-+ `min_amount`: `0` (number, required) 
++ `code`: `82233332593` (string, required)
+
+
+## Add popular attraction Request (object)
+
+
+### Properties
++ `attraction_id`: `d5a03ea2-e06e-5d01-84b7-94530b1059f7` (string, required)
++ `modifier_type`: `origin` (string, required)
++ `modifier_value`: `id` (string, required)
++ `priority`: `1` (number, required)
+
+
+## Reset Password Request (object)
+
+
+### Properties
++ `token`: `U2FsdGVkX1/KszvvNLReh6J89uW7WSC6qzjn5m7lINSnN8lwGeaa9yGL2VEi4HX+/jeb1zNtvjLRJvxt4twiXQ==` (string, required)
++ `new_password`: `12345678` (string, required)
+
+
+## Create new coupon Request (object)
+
+
+### Properties
++ `title`: `Diskon akhir tahun` (string, required)
++ `code`: `BANGBANG` (string, required)
++ `status`: `available` (string, required)
++ `max_usage`: `1` (string, required)
++ `max_usage_per_user`: `1` (string, required)
++ `image_file`: `sample-image.jpg` (string, required)
++ `discount_type`: `PRICE_CUT` (string, required)
++ `discount_amount`: `200000` (string, required)
++ `start_at`: `2/18/2018 12:00:00 AM` (string, required)
++ `end_at`: `2/21/2018 12:00:00 AM` (string, required)
++ `description` (string, required, nullable)
++ `min_amount`: `0` (number, required)
 
 
 ## Create new couponErrorResponse (object)
 
 
 ### Properties
-+ `code`: `400` (number, required) 
-+ `status`: `false` (boolean, required) 
-+ `message`: `Bad Request` (string, required) 
-+ `meta`: `{}` (object, required) 
-+ `data`: `{}` (array[Datum], required) 
++ `code`: `400` (number, required)
++ `status`: `false` (boolean, required)
++ `message`: `Bad Request` (string, required)
++ `meta`: `{}` (object, required)
++ `data`: `{}` (array[Datum], required)
 
 
 ## Datum (object)
 
 
 ### Properties
-+ `title.presence` (TitlePresence, required) 
++ `title.presence` (TitlePresence, required)
 
 
 ## TitlePresence (object)
 
 
 ### Properties
-+ `en`: `Title can't be blank` (string, required) 
-+ `id`: `Title can't be blank` (string, required) 
++ `en`: `Title can't be blank` (string, required)
++ `id`: `Title can't be blank` (string, required)
 
 
-## Update popular attractionRequest (object)
-
-
-### Properties
-+ `attraction_id`: `258c5832-1ac6-11e8-8572-100ba914aaac` (string, required) 
-+ `origin`: `eng` (string, required) 
-+ `priority`: `1` (number, required) 
-
-
-## Eligible UsersCreate coupons eligibleusers relation with userRequest (object)
+## Update popular attraction Request (object)
 
 
 ### Properties
-+ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required) 
++ `attraction_id`: `258c5832-1ac6-11e8-8572-100ba914aaac` (string, required)
++ `origin`: `eng` (string, required)
++ `priority`: `1` (number, required)
 
 
-## Forgot PasswordRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-
-
-## Create new ModemRequest (object)
+## Eligible UsersCreate coupons eligibleusers relation with user Request (object)
 
 
 ### Properties
-+ `title`: `Sample Modem One` (string, required) 
-+ `description`: `Vodafone modem available to rent.` (string, required) 
-+ `price`: `100` (number, required) 
-+ `currency_code`: `USD` (string, required) 
-+ `image_file`: `image-data.jpg` (string, required) 
-+ `product_type`: `modem` (string, required) 
-+ `status`: `active` (string, required) 
-+ `details`: `active` (Details, required) 
++ `userUUID`: `6d730960-1133-11e8-b815-ef31569eb8a0` (string, required)
 
 
-## Create newRequest (object)
+## Forgot Password Request (object)
 
 
 ### Properties
-+ `name`: `modem-1` (string, required) 
-+ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required) 
-+ `supplier`: `vodafone` (string, required) 
-+ `status`: `broken` (string, required) 
-+ `purchase_price`: `700.0000` (string, required) 
-+ `warehouse`: `sing-tel-ware` (string, required) 
-+ `currency_code`: `USD` (string, required) 
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
 
 
-## Verify Phone Number OwnershipRequest (object)
+## Create new Modem Request (object)
 
 
 ### Properties
-+ `code`: `568124` (string, required) 
++ `title`: `Sample Modem One` (string, required)
++ `description`: `Vodafone modem available to rent.` (string, required)
++ `price`: `100` (number, required)
++ `currency_code`: `USD` (string, required)
++ `image_file`: `image-data.jpg` (string, required)
++ `product_type`: `modem` (string, required)
++ `status`: `active` (string, required)
++ `details`: `active` (Details, required)
 
 
-## Local LoginRequest (object)
-
-
-### Properties
-+ `email`: `wisnugrohosatrio@gmail.com` (string, required) 
-+ `password`: `password` (string, required) 
-+ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (string, required) 
-
-
-## Request Phone Number ChangeRequest (object)
-
-
-### Properties
-+ `phone_number`: `+6282233332593` (string, required) 
-
-
-## RegisterRequest54 (object)
+## Create new Request (object)
 
 
 ### Properties
-+ `first_name`: `Skyshi` (string, required) 
-+ `last_name`: `Tampomas` (string, required) 
-+ `email`: `developessr@skyshi.com` (string, required) 
-+ `password`: `12345678` (string, required) 
-+ `notification_key`: `dF_3FA64NAg:APA91bFkli43f9zA7JAOJt9rzRGIdzLUncUWkTlTP944us2z6_A4s1PbUlozj_lXfzeEg340LxNxbYKu1cCDVjPZIsk5jV8H8e4uyft6ElzZB-jTv4aLQu0jRxmPugZCqSLXFPBrNke-` (string, required) 
++ `name`: `modem-1` (string, required)
++ `purchase_date`: `2/13/2018 12:00:00 AM` (string, required)
++ `supplier`: `vodafone` (string, required)
++ `status`: `broken` (string, required)
++ `purchase_price`: `700.0000` (string, required)
++ `warehouse`: `sing-tel-ware` (string, required)
++ `currency_code`: `USD` (string, required)
 
 
-## Booking Status ChangedRequest (object)
-
-
-### Properties
-+ `type`: `booking_status_changed` (string, required) 
-+ `timestamp`: `2017-11-26 10:43:14` (string, required) 
-+ `links`: `2017-11-26 10:43:14` (Links, required) 
-+ `item`: `2017-11-26 10:43:14` (Item, required) 
-
-
-## Create new top destinationRequest (object)
+## Verify Phone Number Ownership Request (object)
 
 
 ### Properties
-+ `name`: `Chiang Mai` (string, required) 
-+ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
-+ `banner_file`: `lalala.jpg` (string, required) 
-+ `experience_count`: `0` (number, required) 
++ `code`: `568124` (string, required)
 
 
-## Update top destinationRequest (object)
+## Local Login Request (object)
 
 
 ### Properties
-+ `name`: `Chiang Mau` (string, required) 
-+ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required) 
-+ `banner_file`: `lalala.jpg` (string, required) 
-+ `experience_count`: `0` (number, required) 
-+ `created_at`: `2/20/2018 11:30:49 AM` (string, required) 
-+ `updated_at`: `2/20/2018 11:30:49 AM` (string, required) 
++ `email`: `wisnugrohosatrio@gmail.com` (string, required)
++ `password`: `password` (string, required)
++ `notification_key`: `dT4k4zE5ae8:APA91bFkNI42O-UhYk9I27npk24Mt80ltiSEE_7msarN8NMbzGEAg52vMkl8v6Z0m2_bnkXZsL4hDrdjsVbye2RWc0u_xy_uqHfONM4zkyBtsqvub4lqY1QrjBsk99xUEdnejU8NAkv7` (string, required)
 
 
-
-## Update ProfileRequest (object)
+## Request Phone Number Change Request (object)
 
 
 ### Properties
-+ `first_name`: `Satrio` (string, required) 
-+ `last_name`: `Wisnugroho` (string, required) 
-+ `country_code`: `ID` (string, required) 
-+ `language_code`: `ID` (string, required) 
-+ `currency_code`: `IDR` (string, required) 
-+ `old_password`: `password` (string, required) 
-+ `password`: `12345678` (string, required) 
++ `phone_number`: `+6282233332593` (string, required)
+
+// what?
+## Register Request54 (object)
+
+
+### Properties
++ `first_name`: `Skyshi` (string, required)
++ `last_name`: `Tampomas` (string, required)
++ `email`: `developessr@skyshi.com` (string, required)
++ `password`: `12345678` (string, required)
++ `notification_key`: `dF_3FA64NAg:APA91bFkli43f9zA7JAOJt9rzRGIdzLUncUWkTlTP944us2z6_A4s1PbUlozj_lXfzeEg340LxNxbYKu1cCDVjPZIsk5jV8H8e4uyft6ElzZB-jTv4aLQu0jRxmPugZCqSLXFPBrNke-` (string, required)
+
+
+## Booking Status Changed Request (object)
+
+
+### Properties
++ `type`: `booking_status_changed` (string, required)
++ `timestamp`: `2017-11-26 10:43:14` (string, required)
++ `links`: `2017-11-26 10:43:14` (Links, required)
++ `item`: `2017-11-26 10:43:14` (Item, required)
+
+
+## Create new top destination Request (object)
+
+
+### Properties
++ `name`: `Chiang Mai` (string, required)
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required)
++ `banner_file`: `lalala.jpg` (string, required)
++ `experience_count`: `0` (number, required)
+
+
+## Update top destination Request (object)
+
+
+### Properties
++ `name`: `Chiang Mau` (string, required)
++ `remote_id`: `6d730960-1133-11e8-b815-ef21569eb8a0` (string, required)
++ `banner_file`: `lalala.jpg` (string, required)
++ `experience_count`: `0` (number, required)
++ `created_at`: `2/20/2018 11:30:49 AM` (string, required)
++ `updated_at`: `2/20/2018 11:30:49 AM` (string, required)
+
+
+
+## Update Profile Request (object)
+
+
+### Properties
++ `first_name`: `Satrio` (string, required)
++ `last_name`: `Wisnugroho` (string, required)
++ `country_code`: `ID` (string, required)
++ `language_code`: `ID` (string, required)
++ `currency_code`: `IDR` (string, required)
++ `old_password`: `password` (string, required)
++ `password`: `12345678` (string, required)
 + `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
