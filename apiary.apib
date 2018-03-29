@@ -2539,6 +2539,99 @@ HOST: http://api.passpod.project.skyshi.com
             "meta": {}
         }
 
+### Get Popular Searches [GET /suggest/{?popular}]
++ Parameters
+    + popular (boolean, required)
+
+        + Sample: true
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
++ Response 200
+
+            {
+                "code": 200,
+                "status": true,
+                "message": "Suggestion",
+                "i18n": {},
+                "data": [
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5695",
+                        "text": "Singapore",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 19
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5701",
+                        "text": "Seoul",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 5
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5698",
+                        "text": "Kuala Lumpur",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 4
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5702",
+                        "text": "Phuket",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 3
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5699",
+                        "text": "Bangkok",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 3
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5700",
+                        "text": "Osaka",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5697",
+                        "text": "Tokyo",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "5a5682b8-c8d6-5f15-97ef-de4c66ea5696",
+                        "text": "Hong Kong",
+                        "type": "destination",
+                        "city": null,
+                        "popularity": 1
+                    },
+                    {
+                        "id": "ec1897a3-86fb-525c-914b-bfe39a4d5396",
+                        "text": "Tiket Masuk Jurong Bird Park dengan Trem (dengan pilihan makan siang)",
+                        "type": "attraction",
+                        "city": "Singapore",
+                        "popularity": 0
+                    },
+                    {
+                        "id": "ec1897a3-86fb-525c-914b-bfe39a4d5396",
+                        "text": "Jurong Bird Park: Admission with Tram Ride (with Lunch Option)",
+                        "type": "attraction",
+                        "city": "Singapore",
+                        "popularity": 0
+                    }
+                ],
+                "meta": {}
+            }
+
 ## Presets [/presets]
 
 ### Get about preset [GET /presets/about{?language}]
