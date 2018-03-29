@@ -3612,13 +3612,54 @@ HOST: http://api.passpod.project.skyshi.com
             "meta": {}
         }
 
+## Maintenance Status [/maintenance-status]
 
-# Data Structures
+### Maintenance status [GET /]
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success accessing maintenance status preset",
+            "i18n": {},
+            "data": {
+                "maintenance_status": "false"
+            },
+            "meta": {}
+        }
+
+### Set maintenance status [PUT /]
+
++ Request (application/json)
+    + Headers
+
+            Authorization: {{authorization}}
+
+    + Attributes (Set maintenance status Request)
+
+    + Body
+
+            {
+                "value": true
+            }
+
+
+
++ Response 200
+
+        {
+            "code": 200,
+            "status": true,
+            "message": "Success setting maintenance status preset",
+            "i18n": {},
+            "data": {},
+            "meta": {}
+        }
 
 # Data Structures
 
 ## Delete one Request (object)
-
 
 ### Properties
 + `name`: `modem-1` (string, required)
@@ -4175,3 +4216,7 @@ HOST: http://api.passpod.project.skyshi.com
 + `old_password`: `password` (string, required)
 + `password`: `12345678` (string, required)
 + `profile_picture`: `profile_693e9af84d10c16df38c1e27e1dbb7_0.png` (string, required)
+
+## Set maintenance status Request (object)
+### Properties
++ `value`: true (boolean, required)
